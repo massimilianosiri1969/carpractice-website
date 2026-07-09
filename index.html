@@ -1,194 +1,77 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CarPractice — L'intelligenza operativa per la tua carrozzeria</title>
-  <meta name="description" content="CarPractice identifica il veicolo dalla targa, documenta la riparazione e genera il dossier digitale completo.">
-  <link rel="stylesheet" href="styles.css">
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CarPractice — Ogni riparazione inizia con una targa</title>
+<link rel="stylesheet" href="styles.css">
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
-  <div class="intro">
-    <div class="intro-line"></div>
-    <img src="logo-carpractice.png" alt="CarPractice">
-    <p>L'intelligenza operativa per la tua carrozzeria</p>
+<div class="noise"></div>
+<div class="orange-glow"></div>
+
+<header class="nav">
+  <a class="brand" href="#"><img src="logo-carpractice.png" alt="CarPractice"></a>
+  <nav class="menu">
+    <a href="#funzionalita">Funzionalità</a>
+    <a href="#workflow">Come funziona</a>
+    <a href="#prezzi">Prezzi</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
+  <div class="nav-actions">
+    <a class="access" href="https://app.carpractice.it">Accedi</a>
+    <a class="trial" href="https://app.carpractice.it">Prova gratuita</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Digital Repair Platform</p>
+    <h1>Ogni riparazione inizia con una targa. Tutto il resto è automatico.</h1>
+    <p class="lead">
+      CarPractice riconosce il veicolo dalla targa, organizza la pratica,
+      crea il dossier fotografico, gestisce danni, documenti e workflow
+      in un'unica piattaforma operativa per carrozzerie.
+    </p>
+    <div class="actions">
+      <a class="button primary" href="https://app.carpractice.it">Inizia la prova gratuita</a>
+      <a class="button secondary" href="#workflow">Guarda il flusso di lavoro</a>
+    </div>
+    <p class="microcopy">72 ore gratuite dopo la validazione dell'account. Nessuna carta richiesta.</p>
+    <div class="badges">
+      <span>Ricerca veicolo dalla targa</span>
+      <span>Dossier fotografico intelligente</span>
+      <span>Modello 3D dei danni</span>
+      <span>OCR documentale</span>
+    </div>
   </div>
 
-  <div class="glow"></div>
-
-  <header class="nav">
-    <a href="#top" class="brand"><img src="logo-carpractice.png" alt="CarPractice"></a>
-    <div class="links">
-      <a href="#workflow">Workflow</a>
-      <a href="#software">Software</a>
-      <a href="#prezzi">Prezzi</a>
-      <a href="#fenix">Fenix System</a>
+  <div class="hero-visual">
+    <div class="scan scan-a"></div>
+    <div class="scan scan-b"></div>
+    <div class="car-shell">
+      <model-viewer
+        src="panda.glb"
+        camera-controls
+        disable-pan
+        auto-rotate
+        interaction-prompt="none"
+        loading="eager"
+        reveal="auto"
+        rotation-per-second="3deg"
+        camera-orbit="35deg 72deg 8m"
+        field-of-view="28deg"
+        exposure="1.12"
+        shadow-intensity="1"
+        environment-image="neutral"
+        alt="Modello 3D CarPractice">
+      </model-viewer>
+      <div class="car-shadow"></div>
     </div>
-    <div class="cta">
-      <a class="login" href="https://app.carpractice.it">Accedi</a>
-      <a class="trial" href="https://app.carpractice.it">Inizia prova gratuita</a>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Automotive Intelligence Platform</p>
-        <h1>L'intelligenza operativa per la tua carrozzeria.</h1>
-        <p class="lead">Dalla targa al dossier digitale della riparazione. CarPractice identifica automaticamente il veicolo, documenta ogni fase del lavoro e genera una pratica completa per clienti, periti e assicurazioni.</p>
-        <div class="badges">
-          <span>72 ore gratuite</span>
-          <span>Cloud incluso</span>
-          <span>Assistenza inclusa</span>
-        </div>
-        <div class="actions">
-          <a class="button primary" href="https://app.carpractice.it">Inizia la prova gratuita</a>
-          <a class="button secondary" href="https://app.carpractice.it">Accedi</a>
-        </div>
-        <small>Attivazione dell'account dopo verifica da parte del nostro team.</small>
-      </div>
-
-      <div class="vehicle-box">
-        <model-viewer
-          src="panda.glb"
-          camera-controls
-          disable-pan
-          auto-rotate
-          interaction-prompt="none"
-          loading="eager"
-          reveal="auto"
-          rotation-per-second="3deg"
-          camera-orbit="35deg 72deg 8m"
-          field-of-view="28deg"
-          exposure="1.1"
-          shadow-intensity="1"
-          environment-image="neutral"
-          alt="Veicolo 3D CarPractice">
-        </model-viewer>
-        <div class="shadow"></div>
-      </div>
-    </section>
-
-    <section class="flow-intro" id="workflow">
-      <p class="eyebrow">Workflow</p>
-      <h2>Una riparazione. Un unico flusso.</h2>
-      <div class="flow-line">
-        <span>Targa</span><i></i><span>Veicolo</span><i></i><span>Cliente</span><i></i><span>Foto</span><i></i><span>Danni 3D</span><i></i><span>Documenti</span><i></i><span>Dossier</span>
-      </div>
-    </section>
-
-    <section class="story" id="software">
-      <div class="copy">
-        <p class="eyebrow">01 — Acquisizione</p>
-        <h2>Tutto inizia dalla targa.</h2>
-        <p>Scansiona oppure inserisci manualmente la targa. CarPractice avvia il processo e prepara la pratica riducendo tempi, errori e passaggi manuali.</p>
-      </div>
-      <div class="screen"><img src="screen-home.png" alt="Schermata iniziale CarPractice"></div>
-    </section>
-
-    <section class="story reverse">
-      <div class="copy">
-        <p class="eyebrow">02 — Identificazione</p>
-        <h2>Il veicolo si compila da solo.</h2>
-        <p>Marca, modello, versione, allestimento, cilindrata e potenza vengono recuperati automaticamente, evitando errori nella scelta del veicolo e dei ricambi.</p>
-      </div>
-      <div class="screen"><img src="screen-vehicle.png" alt="Dati veicolo automatici"></div>
-    </section>
-
-    <section class="story">
-      <div class="copy">
-        <p class="eyebrow">03 — Documentazione</p>
-        <h2>Ogni fase viene documentata.</h2>
-        <p>Le fotografie vengono classificate per stato della riparazione: veicolo danneggiato, in lavorazione e ultimato. Nasce così un fascicolo fotografico ordinato e professionale.</p>
-      </div>
-      <div class="screen"><img src="screen-photos.png" alt="Fascicolo fotografico"></div>
-    </section>
-
-    <section class="damage">
-      <div class="damage-text">
-        <p class="eyebrow">04 — Analisi 3D</p>
-        <h2>Lavora direttamente sull'automobile.</h2>
-        <p>Il tecnico seleziona il livello del danno e clicca direttamente sul particolare interessato. Il modello 3D diventa una mappa tecnica della riparazione.</p>
-      </div>
-      <div class="damage-grid">
-        <div class="screen"><img src="screen-damage.png" alt="Analisi danni su modello 3D"></div>
-        <div class="mini-car">
-          <model-viewer
-            src="panda.glb"
-            auto-rotate
-            interaction-prompt="none"
-            loading="lazy"
-            reveal="auto"
-            rotation-per-second="2deg"
-            camera-orbit="-30deg 72deg 8m"
-            field-of-view="30deg"
-            exposure="1.05"
-            environment-image="neutral">
-          </model-viewer>
-        </div>
-      </div>
-    </section>
-
-    <section class="story reverse">
-      <div class="copy">
-        <p class="eyebrow">05 — OCR documenti</p>
-        <h2>Digitalizza ogni documento.</h2>
-        <p>Libretto, polizza, CID e documenti possono essere caricati o scansionati. L'OCR consente di estrarre informazioni e allegarle alla pratica.</p>
-      </div>
-      <div class="screen"><img src="screen-docs.png" alt="Documenti e OCR"></div>
-    </section>
-
-    <section class="dossier">
-      <p class="eyebrow">Output finale</p>
-      <h2>Dossier Digitale della Riparazione</h2>
-      <p>Cliente, veicolo, fotografie, analisi danni, documenti, privacy, firma e allegati: tutto confluisce in un fascicolo digitale completo.</p>
-      <div class="checks">
-        <span>Cliente</span><span>Veicolo</span><span>Fotografie</span><span>Danni 3D</span><span>Documenti</span><span>Privacy</span><span>Firma</span><span>Allegati</span>
-      </div>
-    </section>
-
-    <section class="pricing" id="prezzi">
-      <div class="price-card main">
-        <p class="eyebrow">Licenza annuale</p>
-        <h2>165 € + IVA</h2>
-        <p>Tutto ciò che serve per iniziare a lavorare con CarPractice.</p>
-        <ul>
-          <li>Aggiornamenti software inclusi</li>
-          <li>Cloud incluso</li>
-          <li>Backup automatici inclusi</li>
-          <li>Assistenza inclusa</li>
-        </ul>
-      </div>
-      <div class="price-card">
-        <h3>Ricerca targhe</h3>
-        <p>Le interrogazioni alle banche dati ministeriali utilizzano crediti acquistabili separatamente.</p>
-        <strong>1 ricerca = 1 credito</strong>
-      </div>
-      <div class="price-card">
-        <h3>Moduli futuri</h3>
-        <p>Magazzino, consuntivo di lavorazione, fatturazione elettronica e moduli AI potranno essere attivati solo quando necessari.</p>
-      </div>
-    </section>
-
-    <section class="fenix" id="fenix">
-      <p class="eyebrow">Powered by</p>
-      <img src="logo-fenix.png" alt="Fenix System">
-      <h2>Tecnologia sviluppata da Fenix System.</h2>
-      <p>Software house italiana specializzata nello sviluppo di piattaforme digitali e soluzioni tecnologiche per il settore automotive.</p>
-    </section>
-
-    <section class="final-cta">
-      <h2>Inizia oggi.</h2>
-      <p>Registrati gratuitamente. Dopo la validazione del tuo account potrai usare CarPractice per 72 ore senza limitazioni.</p>
-      <a class="button primary" href="https://app.carpractice.it">Inizia la prova gratuita</a>
-    </section>
-  </main>
-
-  <footer>
-    <img src="logo-carpractice.png" alt="CarPractice">
-    <span>Powered by Fenix System</span>
-    <span>Privacy · Cookie · Termini · Contatti</span>
-  </footer>
+  </div>
+</section>
+</main>
 </body>
 </html>
