@@ -1,0 +1,10 @@
+CARPRACTICE HOME V1
+
+Avvio:
+python3 -m http.server 8000
+
+Poi apri:
+http://localhost:8000
+
+Nota:
+serve connessione internet per il visualizzatore GLB.
