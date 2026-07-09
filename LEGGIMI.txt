@@ -1,10 +1,2 @@
-CARPRACTICE HOME V1
-
-Avvio:
-python3 -m http.server 8000
-
-Poi apri:
-http://localhost:8000
-
-Nota:
-serve connessione internet per il visualizzatore GLB.
+CarPractice Home V3 completa
+Carica index.html, styles.css e gli asset PNG su GitHub.
