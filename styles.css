@@ -495,3 +495,76 @@
 .modules-closing{max-width:940px;margin:70px auto 0;padding:38px 42px;text-align:center;border-radius:34px;border:1px solid rgba(255,122,26,.22);background:rgba(255,122,26,.055)}.modules-closing strong{display:block;margin-bottom:14px;font-size:clamp(24px,3vw,40px);letter-spacing:-.045em}.modules-closing p{margin:0;color:var(--muted);font-size:18px;line-height:1.7}
 @media(max-width:1000px){.pricing-two,.module-grid{grid-template-columns:1fr}.module-connectors{display:none}.core-module{margin-bottom:20px}}
 @media(max-width:760px){.modules-section{padding:90px 22px}.core-module{padding:28px;border-radius:32px}.core-module ul{grid-template-columns:1fr}.module-card{min-height:auto}.modules-closing{padding:30px 22px}}
+
+
+/* =========================================================
+   FIX GLB SOLO MOBILE — DESKTOP INVARIATO
+   ========================================================= */
+@media (max-width: 900px) {
+  .hero {
+    display:flex !important;
+    flex-direction:column !important;
+    grid-template-columns:none !important;
+    align-items:stretch !important;
+    gap:28px !important;
+  }
+
+  .hero-visual {
+    order:1 !important;
+    position:relative !important;
+    width:100% !important;
+    height:440px !important;
+    min-height:440px !important;
+    max-height:440px !important;
+    margin:0 !important;
+    overflow:hidden !important;
+    border-radius:30px !important;
+    transform:translateZ(0);
+    backface-visibility:hidden;
+  }
+
+  .hero-copy {
+    order:2 !important;
+    width:100% !important;
+  }
+
+  .hero-visual model-viewer,
+  model-viewer#heroModel {
+    display:block !important;
+    width:100% !important;
+    height:440px !important;
+    min-height:440px !important;
+    max-height:440px !important;
+    background:transparent !important;
+    touch-action:pan-y pinch-zoom;
+    contain:layout paint style;
+  }
+
+  .hero-visual:before {
+    inset:18px !important;
+    border-radius:22px !important;
+  }
+
+  .car-shadow {
+    left:11% !important;
+    right:11% !important;
+    bottom:12% !important;
+    filter:blur(9px) !important;
+  }
+
+  /* Durante il tocco evitiamo animazioni concorrenti. */
+  .hero-visual:active .scan,
+  .hero-visual:focus-within .scan {
+    animation-play-state:paused;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-visual,
+  .hero-visual model-viewer,
+  model-viewer#heroModel {
+    height:390px !important;
+    min-height:390px !important;
+    max-height:390px !important;
+  }
+}
