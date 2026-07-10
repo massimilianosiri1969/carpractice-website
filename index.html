@@ -9,10 +9,10 @@
 </head>
 <body>
 
-<div class="site-intro" aria-hidden="true">
-  <div class="site-intro-glow"></div>
-  <img src="logo-carpractice.png" alt="">
-  <span>L'intelligenza operativa per la tua carrozzeria</span>
+<div id="siteIntro" class="site-intro" aria-hidden="true">
+  <div class="site-intro__glow"></div>
+  <img src="logo-carpractice.png" alt="CarPractice">
+  <p>L'intelligenza operativa per la tua carrozzeria</p>
 </div>
 
 <div class="noise"></div>
@@ -60,6 +60,7 @@
     <div class="scan scan-b"></div>
     <div class="car-shell">
       <model-viewer
+        id="heroModel"
         src="Fiat_Grande_Panda_2025.glb"
         camera-controls
         disable-pan
@@ -300,5 +301,33 @@
 </footer>
 
 </main>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const intro = document.getElementById('siteIntro');
+  window.setTimeout(() => {
+    if (intro) {
+      intro.classList.add('is-leaving');
+      window.setTimeout(() => intro.remove(), 700);
+    }
+  }, 3000);
+
+  const model = document.getElementById('heroModel');
+  if (model) {
+    const fallbackPaths = [
+      'models/Fiat_Grande_Panda_2025.glb',
+      './models/Fiat_Grande_Panda_2025.glb'
+    ];
+    let fallbackIndex = 0;
+
+    model.addEventListener('error', () => {
+      if (fallbackIndex < fallbackPaths.length) {
+        model.src = fallbackPaths[fallbackIndex++];
+      }
+    });
+  }
+});
+</script>
+
 </body>
 </html>
