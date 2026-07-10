@@ -9,51 +9,21 @@
 </head>
 <body>
 
+
 <div id="siteIntro" class="site-intro" aria-hidden="true">
-  <div class="site-intro__glow"></div>
-  <img src="logo-carpractice.png" alt="CarPractice">
-  <p>L'intelligenza operativa per la tua carrozzeria</p>
+  <div class="site-intro__ambient"></div>
+  <div class="site-intro__grid"></div>
+
+  <div class="site-intro__logo-wrap">
+    <div class="site-intro__scan"></div>
+    <div class="site-intro__flare"></div>
+    <img src="logo-carpractice.png" alt="CarPractice">
+  </div>
+
+  <p class="site-intro__tagline">L'intelligenza operativa per la tua carrozzeria</p>
+  <div class="site-intro__progress"><span></span></div>
 </div>
 
-<div class="noise"></div>
-<div class="orange-glow"></div>
-
-<header class="nav">
-  <a class="brand" href="#"><img src="logo-carpractice.png" alt="CarPractice"></a>
-  <nav class="menu">
-    <a href="#funzionalita">Funzionalità</a>
-    <a href="#workflow">Come funziona</a>
-    <a href="#prezzi">Prezzi</a>
-    <a href="#contatti">Contatti</a>
-  </nav>
-  <div class="nav-actions">
-    <a class="access" href="https://app.carpractice.it">Accedi</a>
-    <a class="trial" href="https://app.carpractice.it">Prova gratuita</a>
-  </div>
-</header>
-
-<main>
-<section class="hero">
-  <div class="hero-copy">
-    <p class="eyebrow">Digital Repair Platform</p>
-    <h1>Ogni riparazione inizia con una targa. Tutto il resto è automatico.</h1>
-    <p class="lead">
-      CarPractice riconosce il veicolo dalla targa, organizza la pratica,
-      crea il dossier fotografico, gestisce danni, documenti e workflow
-      in un'unica piattaforma operativa per carrozzerie.
-    </p>
-    <div class="actions">
-      <a class="button primary" href="https://app.carpractice.it">Inizia la prova gratuita</a>
-      <a class="button secondary" href="#workflow">Guarda il flusso di lavoro</a>
-    </div>
-    <p class="microcopy">72 ore gratuite dopo la validazione dell'account. Nessuna carta richiesta.</p>
-    <div class="badges">
-      <span>Ricerca veicolo dalla targa</span>
-      <span>Dossier fotografico intelligente</span>
-      <span>Modello 3D dei danni</span>
-      <span>OCR documentale</span>
-    </div>
-  </div>
 
   <div class="hero-visual">
     <div class="scan scan-a"></div>
@@ -310,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
       intro.classList.add('is-leaving');
       window.setTimeout(() => intro.remove(), 700);
     }
-  }, 3000);
+  }, 3300);
 
   const model = document.getElementById('heroModel');
   if (model) {
