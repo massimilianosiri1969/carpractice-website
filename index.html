@@ -10,8 +10,12 @@
 <body>
 
 <div id="siteIntro" class="site-intro" aria-hidden="true">
-  <div class="site-intro__glow"></div>
-  <img src="logo-carpractice.png" alt="CarPractice">
+  <div class="site-intro__particles" aria-hidden="true"></div>
+  <div class="site-intro__flare" aria-hidden="true"></div>
+  <div class="site-intro__logo-wrap">
+    <div class="site-intro__scan" aria-hidden="true"></div>
+    <img src="logo-carpractice.png" alt="CarPractice">
+  </div>
   <p>L'intelligenza operativa per la tua carrozzeria</p>
 </div>
 
@@ -310,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
       intro.classList.add('is-leaving');
       window.setTimeout(() => intro.remove(), 700);
     }
-  }, 3000);
+  }, 2800);
 
   const model = document.getElementById('heroModel');
   if (model) {
