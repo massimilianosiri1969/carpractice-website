@@ -52,7 +52,7 @@
     0 0 10px rgba(255,122,26,.55),
     0 0 36px rgba(255,122,26,.20);
   transform:translateX(-30%);
-  animation:introFlareSweep 1.65s .85s cubic-bezier(.45,0,.55,1) forwards;
+  animation:introFlareSweep 2.45s .55s cubic-bezier(.45,0,.55,1) forwards;
 }
 .site-intro__logo-wrap{
   position:relative;
@@ -96,7 +96,7 @@
   box-shadow:
     0 0 9px rgba(255,122,26,.62),
     0 0 28px rgba(255,122,26,.26);
-  animation:introLogoScan 1.75s 1.20s cubic-bezier(.45,0,.55,1) forwards;
+  animation:introLogoScan 2.55s .95s cubic-bezier(.45,0,.55,1) forwards;
 }
 .site-intro p{
   position:relative;
@@ -120,18 +120,22 @@
   100%{opacity:.21;transform:scale(1)}
 }
 @keyframes introFlareSweep{
-  0%{opacity:0;transform:translateX(-30%)}
-  18%{opacity:.85}
-  100%{opacity:0;transform:translateX(30%)}
+  0%{opacity:0;transform:translateX(-24%)}
+  12%{opacity:.55}
+  28%{opacity:.88}
+  72%{opacity:.78}
+  100%{opacity:0;transform:translateX(24%)}
 }
 @keyframes introLogoReveal{
   to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
 }
 @keyframes introLogoScan{
-  0%{top:-12%;opacity:0}
-  12%{opacity:.95}
-  82%{opacity:.72}
-  100%{top:112%;opacity:0}
+  0%{top:-10%;opacity:0}
+  10%{opacity:.72}
+  24%{opacity:.95}
+  76%{opacity:.82}
+  92%{opacity:.42}
+  100%{top:110%;opacity:0}
 }
 @keyframes introTaglineReveal{
   to{opacity:1;transform:translateY(0)}
