@@ -10,12 +10,50 @@
 <body>
 
 <div id="siteIntro" class="site-intro" aria-hidden="true">
+  <div class="site-intro__glow"></div>
   <img src="logo-carpractice.png" alt="CarPractice">
   <p>L'intelligenza operativa per la tua carrozzeria</p>
 </div>
 
+<div class="noise"></div>
+<div class="orange-glow"></div>
 
+<header class="nav">
+  <a class="brand" href="#"><img src="logo-carpractice.png" alt="CarPractice"></a>
+  <nav class="menu">
+    <a href="#funzionalita">Funzionalità</a>
+    <a href="#workflow">Come funziona</a>
+    <a href="#prezzi">Prezzi</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
+  <div class="nav-actions">
+    <a class="access" href="https://app.carpractice.it">Accedi</a>
+    <a class="trial" href="https://app.carpractice.it">Prova gratuita</a>
+  </div>
+</header>
 
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Digital Repair Platform</p>
+    <h1>Ogni riparazione inizia con una targa. Tutto il resto è automatico.</h1>
+    <p class="lead">
+      CarPractice riconosce il veicolo dalla targa, organizza la pratica,
+      crea il dossier fotografico, gestisce danni, documenti e workflow
+      in un'unica piattaforma operativa per carrozzerie.
+    </p>
+    <div class="actions">
+      <a class="button primary" href="https://app.carpractice.it">Inizia la prova gratuita</a>
+      <a class="button secondary" href="#workflow">Guarda il flusso di lavoro</a>
+    </div>
+    <p class="microcopy">72 ore gratuite dopo la validazione dell'account. Nessuna carta richiesta.</p>
+    <div class="badges">
+      <span>Ricerca veicolo dalla targa</span>
+      <span>Dossier fotografico intelligente</span>
+      <span>Modello 3D dei danni</span>
+      <span>OCR documentale</span>
+    </div>
+  </div>
 
   <div class="hero-visual">
     <div class="scan scan-a"></div>
@@ -264,48 +302,30 @@
 
 </main>
 
-
-
-
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const intro = document.getElementById('siteIntro');
-  setTimeout(() => {
+  window.setTimeout(() => {
     if (intro) {
       intro.classList.add('is-leaving');
-      setTimeout(() => intro.remove(), 600);
+      window.setTimeout(() => intro.remove(), 700);
     }
-  }, 2600);
+  }, 3000);
 
   const model = document.getElementById('heroModel');
-  if (!model) return;
+  if (model) {
+    const fallbackPaths = [
+      'models/Fiat_Grande_Panda_2025.glb',
+      './models/Fiat_Grande_Panda_2025.glb'
+    ];
+    let fallbackIndex = 0;
 
-  const isMobile = window.matchMedia('(max-width: 900px)').matches;
-
-  if (isMobile) {
-    model.removeAttribute('auto-rotate');
-    model.setAttribute('camera-orbit', '35deg 72deg 5.4m');
-    model.setAttribute('field-of-view', '31deg');
-    model.setAttribute('shadow-intensity', '0.25');
-    model.setAttribute('minimum-render-scale', '0.5');
-  } else {
-    model.setAttribute('camera-orbit', '35deg 72deg 8m');
-    model.setAttribute('field-of-view', '28deg');
-    model.setAttribute('shadow-intensity', '0.75');
+    model.addEventListener('error', () => {
+      if (fallbackIndex < fallbackPaths.length) {
+        model.src = fallbackPaths[fallbackIndex++];
+      }
+    });
   }
-
-  const stopAutoRotate = () => model.removeAttribute('auto-rotate');
-  model.addEventListener('pointerdown', stopAutoRotate, { once: true });
-  model.addEventListener('touchstart', stopAutoRotate, { once: true, passive: true });
-
-  const fallbacks = [
-    'models/Fiat_Grande_Panda_2025.glb',
-    './models/Fiat_Grande_Panda_2025.glb'
-  ];
-  let i = 0;
-  model.addEventListener('error', () => {
-    if (i < fallbacks.length) model.src = fallbacks[i++];
-  });
 });
 </script>
 
