@@ -74,47 +74,48 @@
   position:absolute;
   left:-14%;
   right:-14%;
-  height:1px;
+  height:1.5px;
   z-index:6;
   pointer-events:none;
   background:linear-gradient(
     90deg,
     transparent 0%,
-    rgba(255,122,26,.02) 15%,
-    rgba(255,132,34,.18) 42%,
-    rgba(255,188,115,.38) 50%,
-    rgba(255,132,34,.18) 58%,
-    rgba(255,122,26,.02) 85%,
+    rgba(255,122,26,.05) 12%,
+    rgba(255,132,34,.30) 38%,
+    rgba(255,193,126,.66) 50%,
+    rgba(255,132,34,.30) 62%,
+    rgba(255,122,26,.05) 88%,
     transparent 100%
   );
   box-shadow:
-    0 0 4px rgba(255,122,26,.16),
-    0 0 14px rgba(255,122,26,.08);
+    0 0 7px rgba(255,122,26,.32),
+    0 0 22px rgba(255,122,26,.16),
+    0 0 42px rgba(255,122,26,.07);
   mix-blend-mode:screen;
 }
 .scan-a{
   top:38%;
-  opacity:.20;
-  animation:lidarA 7s ease-in-out infinite;
+  opacity:.46;
+  animation:lidarA 6.6s ease-in-out infinite;
 }
 .scan-b{
   top:56%;
-  opacity:.11;
-  animation:lidarB 8.4s ease-in-out infinite;
+  opacity:.27;
+  animation:lidarB 8s ease-in-out infinite;
 }
 @keyframes lidarA{
-  0%,100%{transform:translateY(-145px);opacity:.06}
-  25%{opacity:.18}
-  50%{transform:translateY(145px);opacity:.23}
-  75%{opacity:.14}
+  0%,100%{transform:translateY(-145px);opacity:.16}
+  22%{opacity:.39}
+  50%{transform:translateY(145px);opacity:.52}
+  78%{opacity:.31}
 }
 @keyframes lidarB{
-  0%,100%{transform:translateY(125px);opacity:.04}
-  25%{opacity:.10}
-  50%{transform:translateY(-125px);opacity:.14}
-  75%{opacity:.08}
+  0%,100%{transform:translateY(125px);opacity:.09}
+  22%{opacity:.22}
+  50%{transform:translateY(-125px);opacity:.31}
+  78%{opacity:.18}
 }
-50%{transform:translateY(120px)}}
+
 @media(max-width:1150px){.hero{grid-template-columns:1fr}.hero-visual{min-height:520px}.menu{display:none}}
 @media(max-width:760px){.nav{height:74px;padding:0 22px}.brand img{width:160px}.access{display:none}.trial{padding:10px 13px;font-size:13px}.hero{padding:108px 22px 52px;gap:34px}h1{font-size:clamp(43px,13vw,68px)}.hero-visual{min-height:360px;border-radius:34px}}
 
@@ -400,3 +401,116 @@
 .modules-closing{max-width:940px;margin:70px auto 0;padding:38px 42px;text-align:center;border-radius:34px;border:1px solid rgba(255,122,26,.22);background:rgba(255,122,26,.055)}.modules-closing strong{display:block;margin-bottom:14px;font-size:clamp(24px,3vw,40px);letter-spacing:-.045em}.modules-closing p{margin:0;color:var(--muted);font-size:18px;line-height:1.7}
 @media(max-width:1000px){.pricing-two,.module-grid{grid-template-columns:1fr}.module-connectors{display:none}.core-module{margin-bottom:20px}}
 @media(max-width:760px){.modules-section{padding:90px 22px}.core-module{padding:28px;border-radius:32px}.core-module ul{grid-template-columns:1fr}.module-card{min-height:auto}.modules-closing{padding:30px 22px}}
+
+
+/* ===== MOBILE FIX DEFINITIVO ===== */
+@media (max-width: 900px){
+  .nav{
+    height:72px !important;
+    padding:0 18px !important;
+  }
+  .brand img{
+    width:170px !important;
+    max-width:52vw !important;
+  }
+  .menu{
+    display:none !important;
+  }
+  .nav-actions{
+    margin-left:auto !important;
+  }
+  .access{
+    display:none !important;
+  }
+  .trial{
+    padding:10px 14px !important;
+    font-size:12px !important;
+    white-space:nowrap !important;
+  }
+
+  .hero{
+    display:flex !important;
+    flex-direction:column !important;
+    grid-template-columns:none !important;
+    min-height:auto !important;
+    padding:96px 18px 58px !important;
+    gap:28px !important;
+    align-items:stretch !important;
+  }
+
+  .hero-visual{
+    order:1 !important;
+    width:100% !important;
+    min-height:430px !important;
+    height:58vh !important;
+    max-height:560px !important;
+    border-radius:32px !important;
+    margin:0 !important;
+  }
+
+  .hero-copy{
+    order:2 !important;
+    width:100% !important;
+  }
+
+  .hero-visual:before{
+    inset:18px !important;
+    border-radius:24px !important;
+  }
+
+  model-viewer{
+    width:100% !important;
+    height:100% !important;
+  }
+
+  h1{
+    font-size:clamp(44px,14vw,68px) !important;
+    line-height:.94 !important;
+    letter-spacing:-.065em !important;
+  }
+
+  .lead{
+    font-size:18px !important;
+    line-height:1.62 !important;
+  }
+
+  .actions{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+  }
+
+  .button{
+    width:100% !important;
+  }
+
+  .badges{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+  }
+
+  .badges span{
+    font-size:11px !important;
+    text-align:center !important;
+    padding:9px 8px !important;
+  }
+
+  .car-shadow{
+    left:10% !important;
+    right:10% !important;
+    bottom:14% !important;
+  }
+}
+
+@media (max-width: 480px){
+  .hero-visual{
+    min-height:390px !important;
+    height:52vh !important;
+  }
+  .brand img{
+    width:150px !important;
+  }
+  .trial{
+    padding:9px 11px !important;
+    font-size:11px !important;
+  }
+}

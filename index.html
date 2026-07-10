@@ -314,6 +314,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const model = document.getElementById('heroModel');
   if (model) {
+    const tuneModelForViewport = () => {
+      if (window.matchMedia('(max-width: 900px)').matches) {
+        model.setAttribute('camera-orbit', '35deg 72deg 5.2m');
+        model.setAttribute('field-of-view', '32deg');
+        model.setAttribute('min-camera-orbit', 'auto auto 4.6m');
+        model.setAttribute('max-camera-orbit', 'auto auto 7m');
+      } else {
+        model.setAttribute('camera-orbit', '35deg 72deg 8m');
+        model.setAttribute('field-of-view', '28deg');
+        model.removeAttribute('min-camera-orbit');
+        model.removeAttribute('max-camera-orbit');
+      }
+    };
+    tuneModelForViewport();
+    window.addEventListener('resize', tuneModelForViewport);
     const fallbackPaths = [
       'models/Fiat_Grande_Panda_2025.glb',
       './models/Fiat_Grande_Panda_2025.glb'
