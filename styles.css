@@ -498,7 +498,7 @@
 
 
 /* =========================================================
-   FIX GLB SOLO MOBILE — DESKTOP INVARIATO
+   FIX GLB SOLO MOBILE — DESKTOP E INTRO V7.2 INVARIATI
    ========================================================= */
 @media (max-width: 900px) {
   .hero {
@@ -552,7 +552,6 @@
     filter:blur(9px) !important;
   }
 
-  /* Durante il tocco evitiamo animazioni concorrenti. */
   .hero-visual:active .scan,
   .hero-visual:focus-within .scan {
     animation-play-state:paused;

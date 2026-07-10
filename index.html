@@ -329,39 +329,29 @@ document.addEventListener('DOMContentLoaded', () => {
         model.src = fallbackPaths[fallbackIndex++];
       }
     });
+
+    // Modifiche applicate esclusivamente su smartphone/tablet.
+    if (window.matchMedia('(max-width: 900px)').matches) {
+      model.removeAttribute('auto-rotate');
+      model.setAttribute('camera-orbit', '32deg 72deg 5.4m');
+      model.setAttribute('field-of-view', '31deg');
+      model.setAttribute('min-camera-orbit', 'auto auto 4.7m');
+      model.setAttribute('max-camera-orbit', 'auto auto 7m');
+      model.setAttribute('shadow-intensity', '0.28');
+      model.setAttribute('minimum-render-scale', '0.5');
+      model.setAttribute('interaction-prompt', 'none');
+
+      // Conserva la posizione scelta dall'utente.
+      const stopAutomaticRotation = () => {
+        model.removeAttribute('auto-rotate');
+      };
+      model.addEventListener('pointerdown', stopAutomaticRotation, { once: true });
+      model.addEventListener('touchstart', stopAutomaticRotation, {
+        once: true,
+        passive: true
+      });
+    }
   }
-});
-</script>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const model = document.getElementById('heroModel');
-  if (!model) return;
-
-  const mobileQuery = window.matchMedia('(max-width: 900px)');
-  if (!mobileQuery.matches) return;
-
-  // Modifiche applicate esclusivamente su smartphone/tablet.
-  model.removeAttribute('auto-rotate');
-  model.setAttribute('camera-orbit', '32deg 72deg 5.4m');
-  model.setAttribute('field-of-view', '31deg');
-  model.setAttribute('min-camera-orbit', 'auto auto 4.7m');
-  model.setAttribute('max-camera-orbit', 'auto auto 7m');
-  model.setAttribute('shadow-intensity', '0.28');
-  model.setAttribute('minimum-render-scale', '0.5');
-  model.setAttribute('interaction-prompt', 'none');
-
-  // Dopo la rotazione manuale conserva l'angolazione scelta.
-  const stopAutomaticRotation = () => {
-    model.removeAttribute('auto-rotate');
-  };
-
-  model.addEventListener('pointerdown', stopAutomaticRotation, { once: true });
-  model.addEventListener('touchstart', stopAutomaticRotation, {
-    once: true,
-    passive: true
-  });
 });
 </script>
 
