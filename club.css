@@ -1,0 +1,166 @@
+
+/* CarPractice Club — foglio isolato, non modifica la grafica esistente */
+.cp-club{
+  padding:120px 5.5vw;
+  color:#f5efe8;
+  background:
+    radial-gradient(circle at 50% 0,rgba(255,122,26,.11),transparent 36%),
+    linear-gradient(180deg,#0b0d11,#11151c);
+}
+.cp-club *{box-sizing:border-box}
+.cp-club__inner{
+  max-width:1240px;
+  margin:0 auto;
+  padding:72px;
+  text-align:center;
+  border:1px solid rgba(255,122,26,.24);
+  border-radius:42px;
+  background:
+    radial-gradient(circle at 82% 8%,rgba(255,122,26,.15),transparent 33%),
+    #151a22;
+  box-shadow:0 35px 100px rgba(0,0,0,.28);
+}
+.cp-club__eyebrow{
+  margin:0 0 20px;
+  color:#ffab5a;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.25em;
+  text-transform:uppercase;
+}
+.cp-club h2{
+  max-width:950px;
+  margin:0 auto 24px;
+  color:#f5efe8;
+  font-size:clamp(48px,5.6vw,80px);
+  line-height:.96;
+  letter-spacing:-.058em;
+}
+.cp-club__lead{
+  max-width:780px;
+  margin:0 auto;
+  color:#aaa49a;
+  font-size:19px;
+  line-height:1.72;
+}
+.cp-club__levels{
+  margin:58px 0 34px;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px;
+}
+.cp-level{
+  min-height:285px;
+  padding:30px 24px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,.085);
+  border-radius:26px;
+  background:linear-gradient(145deg,#1b2029,#11151b);
+}
+.cp-level--featured{
+  border-color:rgba(255,122,26,.65);
+  box-shadow:0 0 0 1px rgba(255,122,26,.18),0 22px 65px rgba(0,0,0,.30);
+}
+.cp-level__badge{
+  position:absolute;
+  top:-14px;
+  left:50%;
+  transform:translateX(-50%);
+  padding:8px 15px;
+  white-space:nowrap;
+  border-radius:999px;
+  color:#111;
+  background:#ff7a1a;
+  font-size:10px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.cp-level__icon{font-size:38px}
+.cp-level h3{
+  margin:19px 0 8px;
+  color:#fff;
+  font-size:27px;
+}
+.cp-level p{
+  margin:0;
+  color:#aaa49a;
+  line-height:1.5;
+}
+.cp-level strong{
+  display:block;
+  margin-top:24px;
+  color:#ffab5a;
+  font-size:25px;
+}
+.cp-club__progress-card{
+  max-width:760px;
+  margin:0 auto;
+  padding:30px;
+  text-align:left;
+  border:1px solid rgba(255,255,255,.085);
+  border-radius:24px;
+  background:#0f1319;
+}
+.cp-club__progress-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+}
+.cp-club__progress-head span{
+  color:#8f8a82;
+  font-size:13px;
+}
+.cp-club__progress-head strong{
+  color:#fff;
+  font-size:20px;
+}
+.cp-club__progress{
+  height:10px;
+  margin:24px 0 16px;
+  overflow:hidden;
+  border-radius:999px;
+  background:#292e37;
+}
+.cp-club__progress span{
+  display:block;
+  width:60%;
+  height:100%;
+  border-radius:inherit;
+  background:linear-gradient(90deg,#ff7a1a,#ffb563);
+  box-shadow:0 0 20px rgba(255,122,26,.24);
+}
+.cp-club__progress-card p{
+  margin:0;
+  color:#aaa49a;
+}
+.cp-club__cta{
+  display:inline-flex;
+  min-height:56px;
+  margin-top:40px;
+  padding:0 30px;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  color:#111;
+  background:linear-gradient(135deg,#ff7a1a,#ffae5c);
+  font-weight:900;
+  text-decoration:none;
+}
+@media(max-width:1000px){
+  .cp-club__levels{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+  .cp-club{padding:80px 18px}
+  .cp-club__inner{padding:48px 22px;border-radius:30px}
+  .cp-club h2{font-size:45px}
+  .cp-club__lead{font-size:17px}
+  .cp-club__levels{grid-template-columns:1fr}
+  .cp-club__progress-head{display:grid;gap:8px}
+  .cp-club__cta{width:100%}
+}
