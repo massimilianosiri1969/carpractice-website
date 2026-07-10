@@ -303,7 +303,15 @@
     </p>
   </div>
 
-  <form class="booking-form" action="mailto:info@carpractice.it" method="post" enctype="text/plain">
+  <form class="booking-form"
+        action="https://formsubmit.co/info@carpractice.it"
+        method="POST">
+
+    <input type="hidden" name="_subject" value="Nuova richiesta demo CarPractice">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://carpractice-website.vercel.app/grazie-demo.html">
+    <input type="hidden" name="_autoresponse" value="Grazie per aver richiesto una demo di CarPractice. Ti ricontatteremo al più presto per concordare giorno e orario.">
     <label>
       Nome e cognome
       <input type="text" name="Nome" required placeholder="Mario Rossi">
