@@ -173,16 +173,174 @@ h1{
 .case-copy li{position:relative;padding:15px 0 15px 24px;border-top:1px solid var(--line)}
 .case-copy li:before{content:"";position:absolute;left:0;top:22px;width:6px;height:6px;border-radius:50%;background:var(--orange)}
 .plate-card{
-  min-height:390px;padding:46px;border:1px solid rgba(255,122,26,.25);border-radius:38px;
-  display:flex;flex-direction:column;justify-content:center;text-align:center;
-  background:radial-gradient(circle at center,rgba(255,122,26,.18),transparent 42%),#111318;
+  min-height:420px;
+  padding:46px;
+  border:1px solid rgba(255,122,26,.25);
+  border-radius:38px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at center,rgba(255,122,26,.18),transparent 42%),
+    #111318;
 }
-.plate-card span{color:var(--orange2);font-size:11px;font-weight:900;letter-spacing:.20em;text-transform:uppercase}
-.plate-card strong{
-  margin:32px 0 22px;padding:30px;border-radius:20px;color:#111;
-  background:#f1f1ee;border:8px solid #202b84;font-size:56px;letter-spacing:.08em;
+.plate-card-kicker{
+  color:var(--orange2);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.20em;
+  text-transform:uppercase;
 }
-.plate-card p{color:var(--muted);line-height:1.68}
+.italian-plate{
+  position:relative;
+  width:min(520px,100%);
+  aspect-ratio:520/110;
+  margin:34px 0 20px;
+  display:grid;
+  grid-template-columns:58px 1fr 58px;
+  overflow:hidden;
+  border:3px solid #17191d;
+  border-radius:10px;
+  background:
+    linear-gradient(180deg,#ffffff 0%,#f4f5f4 58%,#e9ebe9 100%);
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.38),
+    inset 0 1px 0 rgba(255,255,255,.95),
+    inset 0 -2px 4px rgba(0,0,0,.10);
+}
+.italian-plate:before{
+  content:"";
+  position:absolute;
+  inset:5px;
+  border:1px solid rgba(0,0,0,.15);
+  border-radius:6px;
+  pointer-events:none;
+}
+.plate-band{
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  padding:9px 5px;
+  color:#fff;
+  background:linear-gradient(180deg,#0751c6 0%,#023b9c 100%);
+}
+.eu-stars{
+  width:25px;
+  height:25px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:#ffd533;
+  font-size:20px;
+  line-height:1;
+  text-shadow:
+    0 -7px 0 #ffd533,
+    6px -4px 0 #ffd533,
+    7px 3px 0 #ffd533,
+    3px 7px 0 #ffd533,
+    -4px 7px 0 #ffd533,
+    -7px 2px 0 #ffd533,
+    -6px -5px 0 #ffd533;
+  transform:scale(.48);
+}
+.country-code{
+  font-size:15px;
+  font-weight:850;
+  line-height:1;
+}
+.plate-number{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:24px;
+  padding:0 18px;
+  color:#101114;
+  font-family:"Arial Narrow","DIN Condensed","Helvetica Neue",Arial,sans-serif;
+  font-size:clamp(36px,5vw,62px);
+  font-weight:800;
+  line-height:1;
+  letter-spacing:.09em;
+  text-shadow:0 1px 0 rgba(255,255,255,.8);
+}
+.plate-number span:nth-child(2){
+  letter-spacing:.13em;
+}
+.plate-year,
+.plate-province{
+  min-width:31px;
+  padding:3px 2px;
+  border-radius:4px;
+  color:#fff;
+  font-size:11px;
+  font-weight:800;
+  line-height:1;
+}
+.plate-year{
+  background:rgba(255,255,255,.16);
+}
+.plate-province{
+  background:rgba(255,255,255,.10);
+}
+.plate-scan{
+  position:absolute;
+  z-index:4;
+  top:-15%;
+  bottom:-15%;
+  left:-8%;
+  width:2px;
+  opacity:0;
+  background:#ffcf9a;
+  box-shadow:
+    0 0 8px rgba(255,122,26,.95),
+    0 0 22px rgba(255,122,26,.55),
+    0 0 46px rgba(255,122,26,.25);
+  animation:plateScan 3.6s 1s ease-in-out infinite;
+}
+@keyframes plateScan{
+  0%{left:-8%;opacity:0}
+  10%{opacity:.95}
+  46%{opacity:.85}
+  58%{left:108%;opacity:0}
+  100%{left:108%;opacity:0}
+}
+.recognition-status{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:28px;
+  margin-bottom:14px;
+  color:#d8d2c9;
+}
+.recognition-dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#53d789;
+  box-shadow:0 0 14px rgba(83,215,137,.55);
+  animation:recognitionPulse 1.8s ease-in-out infinite;
+}
+@keyframes recognitionPulse{
+  50%{transform:scale(1.25);opacity:.72}
+}
+.recognition-status strong{
+  font-size:14px;
+  letter-spacing:.01em;
+}
+.plate-card p{
+  max-width:460px;
+  margin:0;
+  color:var(--muted);
+  line-height:1.68;
+}
 .audience{background:linear-gradient(180deg,rgba(255,255,255,.018),transparent)}
 .audience-grid article{min-height:280px}
 .audience-grid h3{margin-top:70px}
@@ -252,7 +410,25 @@ footer span{margin-left:auto}
   .preview-grid article,.audience-grid article{min-height:260px}
   .preview-icon,.audience-grid h3{margin-top:45px}
   .plate-card{padding:28px;min-height:330px}
-  .plate-card strong{font-size:34px}
+  .italian-plate{
+    grid-template-columns:44px 1fr 44px;
+  }
+  .plate-number{
+    gap:10px;
+    padding:0 8px;
+    font-size:clamp(28px,9vw,42px);
+    letter-spacing:.05em;
+  }
+  .plate-band{
+    padding:7px 3px;
+  }
+  .country-code{
+    font-size:12px;
+  }
+  .plate-year,.plate-province{
+    min-width:25px;
+    font-size:9px;
+  }
   .booking{margin:45px 18px 75px;padding:45px 24px}
   .booking-form{grid-template-columns:1fr;padding:20px}
   .booking-form .full,.booking-form button{grid-column:1}
