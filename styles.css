@@ -31,7 +31,7 @@
     radial-gradient(circle,rgba(255,172,92,.42) 0 1px,transparent 1.5px);
   background-size:120px 120px,170px 170px;
   background-position:18px 14px,80px 55px;
-  animation:introParticles 2.3s .15s ease both;
+  animation:introParticles 3.4s .20s ease both;
 }
 .site-intro__flare{
   position:absolute;
@@ -52,7 +52,7 @@
     0 0 10px rgba(255,122,26,.55),
     0 0 36px rgba(255,122,26,.20);
   transform:translateX(-30%);
-  animation:introFlareSweep 1.1s .55s cubic-bezier(.45,0,.55,1) forwards;
+  animation:introFlareSweep 1.65s .85s cubic-bezier(.45,0,.55,1) forwards;
 }
 .site-intro__logo-wrap{
   position:relative;
@@ -66,7 +66,7 @@
   opacity:0;
   transform:translateY(14px) scale(.975);
   filter:blur(6px);
-  animation:introLogoReveal .95s .28s cubic-bezier(.22,1,.36,1) forwards;
+  animation:introLogoReveal 1.35s .42s cubic-bezier(.22,1,.36,1) forwards;
 }
 .site-intro__logo-wrap img{
   display:block;
@@ -96,7 +96,7 @@
   box-shadow:
     0 0 9px rgba(255,122,26,.62),
     0 0 28px rgba(255,122,26,.26);
-  animation:introLogoScan 1.15s .82s cubic-bezier(.45,0,.55,1) forwards;
+  animation:introLogoScan 1.75s 1.20s cubic-bezier(.45,0,.55,1) forwards;
 }
 .site-intro p{
   position:relative;
@@ -112,7 +112,7 @@
   text-align:center;
   opacity:0;
   transform:translateY(8px);
-  animation:introTaglineReveal .65s 1.22s ease forwards;
+  animation:introTaglineReveal .95s 1.85s ease forwards;
 }
 @keyframes introParticles{
   0%{opacity:0;transform:scale(1.03)}
