@@ -435,3 +435,100 @@ footer span{margin-left:auto}
   footer{flex-direction:column;text-align:center}
   footer span{margin-left:0}
 }
+
+
+/* =========================================================
+   V9 — CALENDARIO DEMO BASE44
+   Sostituisce il vecchio modulo FormSubmit.
+   ========================================================= */
+.booking-live{
+  margin:80px 6vw 110px;
+  padding:78px;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:70px;
+  align-items:center;
+  border:1px solid var(--line);
+  border-radius:42px;
+  background:
+    radial-gradient(circle at 15% 5%,rgba(255,122,26,.18),transparent 35%),
+    #111318;
+}
+.booking-live-copy>p:last-of-type{
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.72;
+}
+.booking-live h2{
+  margin-bottom:22px;
+  font-size:clamp(48px,5.5vw,80px);
+  line-height:.96;
+  letter-spacing:-.058em;
+}
+.booking-live-features{
+  margin-top:34px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.booking-live-features span{
+  padding:15px 17px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  color:#d4cec4;
+  background:rgba(255,255,255,.025);
+}
+.booking-live-panel{
+  min-height:440px;
+  padding:46px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  border:1px solid rgba(255,122,26,.25);
+  border-radius:34px;
+  background:
+    radial-gradient(circle at 80% 10%,rgba(255,122,26,.17),transparent 38%),
+    #0d1015;
+}
+.booking-live-kicker{
+  color:var(--orange2);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.20em;
+  text-transform:uppercase;
+}
+.booking-live-panel>strong{
+  display:block;
+  margin:28px 0 20px;
+  font-size:47px;
+  line-height:1.02;
+  letter-spacing:-.045em;
+}
+.booking-live-panel p{
+  color:var(--muted);
+  line-height:1.7;
+}
+.booking-live-button{
+  min-height:56px;
+  margin-top:28px;
+  padding:0 27px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  color:#111;
+  background:linear-gradient(135deg,var(--orange),var(--orange2));
+  font-weight:900;
+}
+@media(max-width:1050px){
+  .booking-live{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .booking-live{
+    margin:45px 18px 75px;
+    padding:45px 24px;
+  }
+  .booking-live-features{grid-template-columns:1fr}
+  .booking-live-panel{min-height:auto;padding:34px 26px}
+  .booking-live-panel>strong{font-size:38px}
+}

@@ -1,0 +1,42 @@
+CARPRACTICE WEBSITE V9.0 — INTEGRAZIONE BASE44
+
+BASE
+- Creata esclusivamente dallo ZIP stabile carpractice-website-main.zip fornito dall'utente.
+- Nessun ridisegno della homepage.
+- Nessuna modifica alle animazioni dell'intro, al layout desktop o al comportamento mobile del GLB.
+
+MODIFICHE
+1. Corretto il percorso del GLB:
+   models/Fiat_Grande_Panda_2025.glb
+
+2. Pagina Club:
+   - rimossi i moduli email temporanei;
+   - CTA collegate a https://app.carpractice.it/club;
+   - aggiunta scelta tra accesso, registrazione e demo congiunta.
+
+3. Pagina Demo:
+   - rimosso il modulo email temporaneo;
+   - CTA collegate a https://app.carpractice.it/prenota-demo;
+   - inserita sezione che spiega calendario, Meet e promemoria reali.
+
+4. Navigazione:
+   - mantenute le pagine marketing;
+   - aggiunta la voce Club dove mancava.
+
+UPLOAD GITHUB
+Caricare l'intero contenuto della cartella, inclusa la cartella models.
+Messaggio commit suggerito:
+CarPractice Website V9.0 - Base44 integration
+
+TEST DOPO IL DEPLOY
+- Home e intro
+- GLB desktop e iPhone
+- Link Club
+- Link Prenota demo
+- Login/prova gratuita
+- Navigazione tra tutte le pagine
+
+NOTA
+Le route Base44 usate sono:
+- https://app.carpractice.it/club
+- https://app.carpractice.it/prenota-demo

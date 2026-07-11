@@ -410,3 +410,91 @@ h1,h2,h3,p{margin-top:0}
   .club-referral-form .full,
   .club-referral-form button{grid-column:1}
 }
+
+
+/* =========================================================
+   V9 — ACCESSO AL CLUB BASE44
+   Sezione isolata, sostituisce il vecchio modulo email.
+   ========================================================= */
+.club-access-section{
+  padding:125px 6vw;
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  gap:70px;
+  align-items:start;
+  background:linear-gradient(180deg,rgba(255,255,255,.018),transparent);
+}
+.club-access-copy h2{
+  margin-bottom:22px;
+  font-size:clamp(48px,5.3vw,78px);
+  line-height:.96;
+  letter-spacing:-.058em;
+}
+.club-access-copy>p:last-child{
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.72;
+}
+.club-access-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+.club-access-grid article{
+  min-height:310px;
+  padding:32px;
+  display:flex;
+  flex-direction:column;
+  border:1px solid var(--line);
+  border-radius:28px;
+  background:
+    radial-gradient(circle at 90% 4%,rgba(255,122,26,.10),transparent 35%),
+    #111318;
+}
+.club-access-grid article.wide{
+  grid-column:1/-1;
+  min-height:245px;
+}
+.club-access-grid article>span{
+  color:var(--orange2);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.16em;
+}
+.club-access-grid h3{
+  margin:54px 0 14px;
+  font-size:28px;
+  letter-spacing:-.035em;
+}
+.club-access-grid .wide h3{margin-top:38px}
+.club-access-grid p{
+  color:var(--muted);
+  line-height:1.68;
+}
+.club-access-button{
+  min-height:52px;
+  margin-top:auto;
+  padding:0 22px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  font-weight:900;
+}
+.club-access-button.primary{
+  color:#111;
+  background:linear-gradient(135deg,var(--orange),var(--orange2));
+}
+.club-access-button.secondary{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.025);
+}
+@media(max-width:1050px){
+  .club-access-section{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .club-access-section{padding:78px 18px}
+  .club-access-grid{grid-template-columns:1fr}
+  .club-access-grid article.wide{grid-column:1}
+}

@@ -40,7 +40,7 @@
         ti fa salire di livello e ti regala
         <strong>100 crediti CarPractice</strong>.
       </p>
-      <a class="club-primary" href="#club-form">Presenta una carrozzeria</a>
+      <a class="club-primary" href="https://app.carpractice.it/club">Entra nel Club</a>
     </div>
 
     <div class="club-hero__visual" aria-hidden="true">
@@ -144,90 +144,45 @@
     </div>
   </section>
 
-
-  <section class="club-form-section" id="club-form">
-    <div class="club-form-copy">
-      <p class="club-eyebrow">PRESENTA UNA CARROZZERIA</p>
-      <h2>Segnalaci un nuovo contatto.</h2>
+  <section class="club-access-section" id="club-access">
+    <div class="club-access-copy">
+      <p class="club-eyebrow">AREA CLUB PERSONALE</p>
+      <h2>Il Club ora vive dentro CarPractice.</h2>
       <p>
-        Inserisci i tuoi dati e quelli della carrozzeria che vuoi presentare.
-        Ti ricontatteremo per verificare la segnalazione e seguire l’attivazione.
+        Accedi con il tuo account per creare il Pass personale, condividere link e QR code,
+        presentare una carrozzeria, seguire ogni stato e controllare i crediti maturati.
       </p>
-
-      <div class="club-form-note">
-        <strong>100 crediti CarPractice</strong>
-        <span>accreditati dopo l’attivazione della carrozzeria presentata.</span>
-      </div>
     </div>
 
-    <form class="club-referral-form"
-          action="https://formsubmit.co/info@carpractice.it"
-          method="POST">
+    <div class="club-access-grid">
+      <article>
+        <span>01</span>
+        <h3>Sei già registrato?</h3>
+        <p>Entra con le tue credenziali e accedi direttamente alla dashboard del Club.</p>
+        <a href="https://app.carpractice.it/club" class="club-access-button primary">Accedi al Club</a>
+      </article>
 
-      <input type="hidden" name="_subject" value="Nuova presentazione CarPractice Club">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://carpractice-website.vercel.app/grazie-club.html">
+      <article>
+        <span>02</span>
+        <h3>Non hai ancora un account?</h3>
+        <p>La registrazione minima ti permette di entrare nel Club e potrà essere usata anche per le 72 ore di prova.</p>
+        <a href="https://app.carpractice.it/club" class="club-access-button secondary">Registrati al Club</a>
+      </article>
 
-      <label>
-        Il tuo nome e cognome
-        <input type="text" name="Referente CarPractice Club" required placeholder="Mario Rossi">
-      </label>
-
-      <label>
-        La tua carrozzeria
-        <input type="text" name="Carrozzeria referente" required placeholder="Nome attività">
-      </label>
-
-      <label>
-        La tua email
-        <input type="email" name="Email referente" required placeholder="nome@carrozzeria.it">
-      </label>
-
-      <label>
-        Il tuo telefono
-        <input type="tel" name="Telefono referente" required placeholder="+39">
-      </label>
-
-      <label>
-        Carrozzeria presentata
-        <input type="text" name="Carrozzeria presentata" required placeholder="Nome della carrozzeria">
-      </label>
-
-      <label>
-        Persona da contattare
-        <input type="text" name="Contatto presentato" required placeholder="Nome e cognome">
-      </label>
-
-      <label>
-        Email del contatto
-        <input type="email" name="Email contatto presentato" placeholder="email@carrozzeria.it">
-      </label>
-
-      <label>
-        Telefono del contatto
-        <input type="tel" name="Telefono contatto presentato" required placeholder="+39">
-      </label>
-
-      <label class="full">
-        Note
-        <textarea name="Note" rows="5" placeholder="Aggiungi informazioni utili"></textarea>
-      </label>
-
-      <label class="privacy full">
-        <input type="checkbox" required>
-        <span>Confermo di avere l’autorizzazione a condividere questi dati per essere ricontattati da CarPractice.</span>
-      </label>
-
-      <button type="submit">Invia la presentazione</button>
-    </form>
+      <article class="wide">
+        <span>03</span>
+        <h3>Vuoi partecipare alla demo insieme?</h3>
+        <p>Scegli uno slot libero e invita direttamente la carrozzeria che hai presentato.</p>
+        <a href="https://app.carpractice.it/prenota-demo" class="club-access-button secondary">Prenota una demo congiunta</a>
+      </article>
+    </div>
   </section>
 
-  <section class="club-cta-section" id="presenta">
+<section class="club-cta-section" id="presenta">
     <p class="club-eyebrow">CARPRACTICE CLUB</p>
     <h2>Conosci una carrozzeria che potrebbe lavorare meglio?</h2>
     <p>Presentala a CarPractice e inizia il tuo percorso nel Club.</p>
-    <a class="club-primary" href="#club-form">Presenta una carrozzeria</a>
+    <a class="club-primary" href="https://app.carpractice.it/club">Entra nel Club</a>
   </section>
 </main>
 
