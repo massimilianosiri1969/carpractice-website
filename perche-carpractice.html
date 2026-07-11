@@ -3,22 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Perché CarPractice</title>
-<meta name="description" content="Scopri perché CarPractice aiuta la carrozzeria a ridurre tempi, errori e dispersione delle informazioni.">
+<meta name="theme-color" content="#090a0d">
+<title>Perché CarPractice — Più ordine, meno errori, più controllo</title>
+<meta name="description" content="Scopri perché CarPractice riduce la frammentazione del lavoro e collega targa, pratiche, fotografie, danni e documenti in un unico flusso.">
 <link rel="stylesheet" href="perche-carpractice.css">
+<script defer src="perche-carpractice.js"></script>
 </head>
 <body>
-<div class="noise"></div>
-<div class="ambient"></div>
+<div class="noise" aria-hidden="true"></div>
 
 <header class="nav">
-  <a class="brand" href="index.html"><img src="logo-carpractice.png" alt="CarPractice"></a>
-  <nav class="menu">
+  <a class="brand" href="index.html" aria-label="CarPractice Home">
+    <img src="logo-carpractice.png" alt="CarPractice">
+  </a>
+
+  <nav class="menu" aria-label="Navigazione principale">
     <a href="scopri-carpractice.html">Scopri CarPractice</a>
     <a class="active" href="perche-carpractice.html">Perché CarPractice</a>
-    <a href="index.html#prezzi">Prezzi</a>
+    <a href="richiedi-demo.html">Richiedi una demo</a>
+    <a href="club-carpractice.html">Club</a>
+    <a href="prezzi.html">Prezzi</a>
     <a href="index.html#contatti">Contatti</a>
   </nav>
+
   <div class="nav-actions">
     <a class="access" href="https://app.carpractice.it">Accedi</a>
     <a class="trial" href="https://app.carpractice.it">Prova gratuita</a>
@@ -26,210 +33,344 @@
 </header>
 
 <main>
-<section class="hero">
-  <p class="eyebrow">Perché CarPractice</p>
-  <h1>Ogni giorno una carrozzeria perde tempo. Non perché lavori lentamente.</h1>
-  <p class="hero-line">Perché gli strumenti non comunicano tra loro.</p>
-  <div class="hero-actions">
-    <a class="button primary" href="#problema">Guarda cosa cambia</a>
-    <a class="button secondary" href="https://app.carpractice.it">Prova CarPractice</a>
-  </div>
-</section>
-
-<section class="problem" id="problema">
-  <div class="section-heading">
-    <p class="eyebrow">Il problema di oggi</p>
-    <h2>Troppe informazioni. Troppi passaggi. Troppi strumenti separati.</h2>
-  </div>
-
-  <div class="chaos-map">
-    <div class="chaos-column">
-      <span>Telefono</span>
-      <span>WhatsApp</span>
-      <span>Fogli cartacei</span>
-      <span>Foto sparse</span>
-      <span>Excel</span>
-      <span>Gestionale</span>
-      <span>Email</span>
-      <span>Documenti</span>
-    </div>
-
-    <div class="chaos-center">
-      <div class="pulse"></div>
-      <strong>Informazioni scollegate</strong>
-      <p>Dati duplicati, errori, telefonate e tempo perso.</p>
-    </div>
-
-    <div class="chaos-result">
-      <span>Pratiche incomplete</span>
-      <span>Errori di inserimento</span>
-      <span>Ricerca continua dei documenti</span>
-      <span>Comunicazioni frammentate</span>
-    </div>
-  </div>
-</section>
-
-<section class="convergence">
-  <div class="convergence-copy">
-    <p class="eyebrow">Con CarPractice</p>
-    <h2>Tutto converge in un solo flusso.</h2>
-    <p>
-      Targa, veicolo, cliente, fotografie, danni e documenti entrano nella stessa pratica.
-      Ogni informazione viene inserita una volta sola e resta disponibile per tutta la lavorazione.
-    </p>
-  </div>
-  <div class="convergence-visual">
-    <div class="node small">Targa</div>
-    <div class="node small">Cliente</div>
-    <div class="node small">Foto</div>
-    <div class="node small">Danni</div>
-    <div class="node small">Documenti</div>
-    <div class="node core">CarPractice</div>
-  </div>
-</section>
-
-<section class="advantages">
-  <article class="advantage">
-    <div class="adv-copy">
-      <span class="number">01</span>
-      <p class="eyebrow">Meno tempo perso</p>
-      <h3>Ogni dato entra una volta sola.</h3>
-      <p>
-        La pratica si costruisce mentre il lavoro procede. Non serve ricopiare informazioni,
-        spostare fotografie o cercare allegati in cartelle diverse.
+  <section class="hero">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">PERCHÉ CARPRACTICE</p>
+      <h1>Il problema non è il lavoro.<br>È tutto ciò che gli gira <em>intorno.</em></h1>
+      <p class="hero-lead">
+        Telefonate, fotografie sparse, documenti da cercare, dati ricopiati e pratiche
+        difficili da ricostruire. CarPractice elimina la frammentazione e restituisce
+        controllo alla carrozzeria.
       </p>
-      <ul>
-        <li>Meno inserimenti manuali</li>
-        <li>Meno passaggi tra strumenti diversi</li>
-        <li>Più tempo per la lavorazione reale</li>
-      </ul>
-    </div>
-    <div class="metric-card">
-      <span>Tempo operativo</span>
-      <strong>Più rapido</strong>
-      <p>La pratica accompagna il lavoro, invece di rallentarlo.</p>
-    </div>
-  </article>
 
-  <article class="advantage reverse">
-    <div class="adv-copy">
-      <span class="number">02</span>
-      <p class="eyebrow">Meno errori</p>
-      <h3>Veicolo, cliente e pratica restano sempre collegati.</h3>
-      <p>
-        L’identificazione dalla targa e il flusso guidato riducono il rischio di associare
-        documenti, fotografie o informazioni al veicolo sbagliato.
-      </p>
-      <ul>
-        <li>Identificazione più precisa del mezzo</li>
-        <li>Dati coerenti lungo tutta la pratica</li>
-        <li>Controllo più semplice delle informazioni</li>
-      </ul>
-    </div>
-    <div class="media-card"><img src="screen-home.png" alt="Ricerca veicolo tramite targa"></div>
-  </article>
+      <div class="hero-actions">
+        <a class="button primary" href="#confronto">
+          Guarda cosa cambia
+          <span aria-hidden="true">↓</span>
+        </a>
+        <a class="button secondary" href="https://app.carpractice.it/prenota-demo">
+          Prenota una demo
+        </a>
+      </div>
 
-  <article class="advantage">
-    <div class="adv-copy">
-      <span class="number">03</span>
-      <p class="eyebrow">Più ordine</p>
-      <h3>Ogni documento sa già dove deve stare.</h3>
-      <p>
-        Libretto, polizza, CID, immagini e allegati rimangono dentro la pratica corretta.
-        Il personale non deve ricostruire ogni volta la storia della riparazione.
-      </p>
-      <ul>
-        <li>Documenti organizzati</li>
-        <li>Fotografie classificate per fase</li>
-        <li>Storico consultabile</li>
-      </ul>
+      <div class="hero-proof">
+        <div><strong>1</strong><span>pratica unica</span></div>
+        <div><strong>0</strong><span>dati da ricopiare inutilmente</span></div>
+        <div><strong>100%</strong><span>storia consultabile</span></div>
+      </div>
     </div>
-    <div class="media-card"><img src="screen-docs.png" alt="Documenti organizzati"></div>
-  </article>
 
-  <article class="advantage reverse">
-    <div class="adv-copy">
-      <span class="number">04</span>
-      <p class="eyebrow">Più controllo</p>
-      <h3>La pratica mostra sempre cosa è stato fatto e cosa manca.</h3>
-      <p>
-        Il flusso digitale rende leggibile lo stato della lavorazione e aiuta a ridurre
-        dimenticanze, ritardi e attività lasciate a metà.
-      </p>
-      <ul>
-        <li>Stato della pratica più chiaro</li>
-        <li>Fasi operative verificabili</li>
-        <li>Dossier pronto alla consegna</li>
-      </ul>
+    <div class="hero-visual reveal" data-delay="120" aria-label="Confronto tra flusso frammentato e CarPractice">
+      <div class="chaos-side">
+        <span class="visual-label">PRIMA</span>
+        <div class="chaos-chip chip-phone">Telefonate</div>
+        <div class="chaos-chip chip-wa">WhatsApp</div>
+        <div class="chaos-chip chip-photo">Foto sparse</div>
+        <div class="chaos-chip chip-excel">Excel</div>
+        <div class="chaos-chip chip-docs">Documenti</div>
+        <div class="chaos-chip chip-notes">Fogli cartacei</div>
+      </div>
+
+      <div class="flow-arrow" aria-hidden="true">
+        <span>→</span>
+      </div>
+
+      <div class="control-side">
+        <span class="visual-label">CON CARPRACTICE</span>
+        <div class="control-core">
+          <img src="logo-carpractice.png" alt="">
+        </div>
+        <div class="control-ring ring-1"></div>
+        <div class="control-ring ring-2"></div>
+        <span class="control-node node-client">Cliente</span>
+        <span class="control-node node-photo">Foto</span>
+        <span class="control-node node-docs">Documenti</span>
+        <span class="control-node node-damage">Danni</span>
+        <span class="control-node node-status">Stato pratica</span>
+      </div>
     </div>
-    <div class="control-card">
-      <div><span>Accettazione</span><strong>Completata</strong></div>
-      <div><span>Fotografie</span><strong>Organizzate</strong></div>
-      <div><span>Danni</span><strong>Rilevati</strong></div>
-      <div><span>Documenti</span><strong>Archiviati</strong></div>
+  </section>
+
+  <section class="problems">
+    <div class="section-heading reveal">
+      <p class="eyebrow">LA GIORNATA REALE</p>
+      <h2>Non perdi tempo in un solo punto.<br>Lo perdi in tanti piccoli passaggi.</h2>
     </div>
-  </article>
 
-  <article class="advantage">
-    <div class="adv-copy">
-      <span class="number">05</span>
-      <p class="eyebrow">Più professionalità</p>
-      <h3>Il lavoro della carrozzeria diventa visibile e documentabile.</h3>
-      <p>
-        Un dossier chiaro valorizza la riparazione davanti a clienti, periti e assicurazioni.
-        Ogni fase può essere dimostrata con dati, immagini e documenti.
-      </p>
-      <ul>
-        <li>Presentazione più professionale</li>
-        <li>Comunicazione più trasparente</li>
-        <li>Maggiore valore percepito del lavoro</li>
-      </ul>
+    <div class="problem-grid">
+      <article class="problem-card reveal">
+        <span>01</span>
+        <h3>Informazioni disperse</h3>
+        <p>Foto nel telefono, documenti nelle email, note su carta e dati in più programmi.</p>
+      </article>
+
+      <article class="problem-card reveal" data-delay="60">
+        <span>02</span>
+        <h3>Dati ripetuti</h3>
+        <p>Le stesse informazioni vengono riscritte più volte, aumentando tempi ed errori.</p>
+      </article>
+
+      <article class="problem-card reveal" data-delay="120">
+        <span>03</span>
+        <h3>Pratiche incomplete</h3>
+        <p>Quando manca un elemento, qualcuno deve interrompersi e ricostruire ciò che è successo.</p>
+      </article>
+
+      <article class="problem-card reveal" data-delay="180">
+        <span>04</span>
+        <h3>Nessuna visione d’insieme</h3>
+        <p>Capire cosa è pronto, cosa manca e chi deve intervenire richiede continue verifiche.</p>
+      </article>
     </div>
-    <div class="media-card"><img src="screen-photos.png" alt="Dossier fotografico"></div>
-  </article>
-</section>
+  </section>
 
-<section class="comparison">
-  <div class="section-heading">
-    <p class="eyebrow">Prima e dopo</p>
-    <h2>Lo stesso lavoro. Un modo completamente diverso di gestirlo.</h2>
-  </div>
+  <section class="comparison" id="confronto">
+    <div class="section-heading reveal">
+      <p class="eyebrow">PRIMA E DOPO</p>
+      <h2>Lo stesso lavoro.<br>Un modo completamente diverso di gestirlo.</h2>
+    </div>
 
-  <div class="comparison-grid">
-    <article class="before">
-      <span>Prima</span>
-      <h3>Informazioni frammentate</h3>
-      <ul>
-        <li>Foto nel telefono</li>
-        <li>Documenti in cartelle diverse</li>
-        <li>Dati ricopiati più volte</li>
-        <li>Pratiche difficili da ricostruire</li>
-        <li>Comunicazioni disperse</li>
-      </ul>
+    <div class="comparison-shell reveal">
+      <div class="comparison-tabs" role="tablist" aria-label="Confronto prima e dopo CarPractice">
+        <button class="active" type="button" role="tab" aria-selected="true" data-mode="before">
+          Prima
+        </button>
+        <button type="button" role="tab" aria-selected="false" data-mode="after">
+          Con CarPractice
+        </button>
+      </div>
+
+      <div class="comparison-stage" data-current="before">
+        <article class="comparison-panel before-panel">
+          <div class="panel-copy">
+            <p class="panel-kicker">FLUSSO FRAMMENTATO</p>
+            <h3>Ogni informazione vive in un posto diverso.</h3>
+            <ul>
+              <li>Foto nel telefono</li>
+              <li>Documenti in cartelle o email</li>
+              <li>Dati ricopiati più volte</li>
+              <li>Stato pratica ricostruito a voce</li>
+              <li>Tempo perso tra un passaggio e l’altro</li>
+            </ul>
+          </div>
+
+          <div class="panel-visual scattered">
+            <span class="float-card card-a">WhatsApp</span>
+            <span class="float-card card-b">Foto IMG_2948</span>
+            <span class="float-card card-c">Preventivo.xlsx</span>
+            <span class="float-card card-d">Libretto.pdf</span>
+            <span class="float-card card-e">Nota cartacea</span>
+          </div>
+        </article>
+
+        <article class="comparison-panel after-panel" hidden>
+          <div class="panel-copy">
+            <p class="panel-kicker">FLUSSO CARPRACTICE</p>
+            <h3>Tutto entra nella stessa pratica e resta collegato.</h3>
+            <ul>
+              <li>Dati veicolo riconosciuti dalla targa</li>
+              <li>Foto associate alla pratica corretta</li>
+              <li>Documenti sempre disponibili</li>
+              <li>Stato del lavoro chiaro e verificabile</li>
+              <li>Dossier completo fino alla consegna</li>
+            </ul>
+          </div>
+
+          <div class="panel-visual software">
+            <img src="screen-home.png" alt="Dashboard CarPractice">
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefit-story">
+    <article class="benefit-row reveal">
+      <div class="benefit-copy">
+        <span class="benefit-number">01</span>
+        <p class="eyebrow">MENO TEMPO PERSO</p>
+        <h2>Ogni dato entra una volta sola.</h2>
+        <p>
+          La pratica si costruisce mentre il lavoro procede. Non serve ricopiare
+          informazioni, spostare fotografie o cercare allegati in cartelle diverse.
+        </p>
+        <ul class="check-list">
+          <li>Meno inserimenti manuali</li>
+          <li>Meno passaggi tra strumenti diversi</li>
+          <li>Più tempo per il lavoro reale</li>
+        </ul>
+      </div>
+
+      <div class="benefit-media">
+        <img src="screen-vehicle.png" alt="Identificazione veicolo CarPractice">
+      </div>
     </article>
 
-    <article class="after">
-      <span>Dopo</span>
-      <h3>Un solo flusso CarPractice</h3>
-      <ul>
-        <li>Foto collegate alla pratica</li>
-        <li>Documenti nello stesso archivio</li>
-        <li>Dati inseriti una volta sola</li>
-        <li>Dossier completo e verificabile</li>
-        <li>Informazioni sempre disponibili</li>
-      </ul>
-    </article>
-  </div>
-</section>
+    <article class="benefit-row reverse reveal">
+      <div class="benefit-copy">
+        <span class="benefit-number">02</span>
+        <p class="eyebrow">MENO ERRORI</p>
+        <h2>Veicolo, cliente e pratica restano sempre collegati.</h2>
+        <p>
+          Il flusso guidato riduce il rischio di associare documenti, fotografie
+          o informazioni al veicolo sbagliato.
+        </p>
+        <ul class="check-list">
+          <li>Identificazione più precisa</li>
+          <li>Dati coerenti lungo tutta la pratica</li>
+          <li>Controlli più semplici</li>
+        </ul>
+      </div>
 
-<section class="statement">
-  <p class="eyebrow">Il vero vantaggio</p>
-  <h2>Non è soltanto un gestionale. È il nuovo modo di lavorare della tua carrozzeria.</h2>
-  <div class="statement-actions">
-    <a class="button primary" href="https://app.carpractice.it">Inizia la prova gratuita</a>
-    <a class="button secondary" href="scopri-carpractice.html">Scopri come funziona</a>
-  </div>
-</section>
+      <div class="benefit-media">
+        <img src="screen-client.png" alt="Scheda cliente CarPractice">
+      </div>
+    </article>
+
+    <article class="benefit-row reveal">
+      <div class="benefit-copy">
+        <span class="benefit-number">03</span>
+        <p class="eyebrow">PIÙ ORDINE</p>
+        <h2>Ogni documento sa già dove deve stare.</h2>
+        <p>
+          Libretto, polizza, CID, immagini e allegati rimangono dentro la pratica corretta.
+          La storia della riparazione non deve più essere ricostruita.
+        </p>
+        <ul class="check-list">
+          <li>Documenti organizzati</li>
+          <li>Fotografie classificate per fase</li>
+          <li>Storico consultabile</li>
+        </ul>
+      </div>
+
+      <div class="benefit-media">
+        <img src="screen-docs.png" alt="Documenti organizzati in CarPractice">
+      </div>
+    </article>
+
+    <article class="benefit-row reverse reveal">
+      <div class="benefit-copy">
+        <span class="benefit-number">04</span>
+        <p class="eyebrow">PIÙ CONTROLLO</p>
+        <h2>La pratica mostra cosa è stato fatto e cosa manca.</h2>
+        <p>
+          Il flusso digitale rende leggibile lo stato della lavorazione e riduce
+          dimenticanze, ritardi e attività lasciate a metà.
+        </p>
+        <ul class="check-list">
+          <li>Fasi operative verificabili</li>
+          <li>Danni e fotografie collegati</li>
+          <li>Dossier pronto alla consegna</li>
+        </ul>
+      </div>
+
+      <div class="benefit-media">
+        <img src="screen-damage.png" alt="Gestione dei danni CarPractice">
+      </div>
+    </article>
+  </section>
+
+  <section class="estimator">
+    <div class="estimator-copy reveal">
+      <p class="eyebrow">SIMULATORE INDICATIVO</p>
+      <h2>Quanto tempo si perde nei passaggi ripetitivi?</h2>
+      <p>
+        Inserisci una stima della tua operatività. Il calcolo non è una promessa commerciale:
+        serve a visualizzare quanto incidono, nel tempo, anche pochi minuti persi per pratica.
+      </p>
+
+      <div class="estimator-note">
+        <strong>Nota</strong>
+        <span>I risultati sono puramente indicativi e dipendono dall’organizzazione reale della carrozzeria.</span>
+      </div>
+    </div>
+
+    <div class="calculator reveal" data-delay="100">
+      <label>
+        Pratiche gestite ogni settimana
+        <div class="range-row">
+          <input id="jobsRange" type="range" min="5" max="100" step="5" value="30">
+          <output id="jobsOutput">30</output>
+        </div>
+      </label>
+
+      <label>
+        Minuti persi oggi per pratica
+        <div class="range-row">
+          <input id="minutesRange" type="range" min="2" max="30" step="1" value="10">
+          <output id="minutesOutput">10 min</output>
+        </div>
+      </label>
+
+      <label>
+        Riduzione ipotizzata dei passaggi ripetitivi
+        <div class="range-row">
+          <input id="savingRange" type="range" min="10" max="70" step="5" value="40">
+          <output id="savingOutput">40%</output>
+        </div>
+      </label>
+
+      <div class="calculator-results">
+        <article>
+          <span>Tempo potenzialmente recuperabile</span>
+          <strong id="weeklyHours">2,0 ore</strong>
+          <small>ogni settimana</small>
+        </article>
+
+        <article>
+          <span>Proiezione indicativa</span>
+          <strong id="annualHours">96 ore</strong>
+          <small>su 48 settimane operative</small>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="professional-value">
+    <div class="professional-copy reveal">
+      <p class="eyebrow">PIÙ PROFESSIONALITÀ</p>
+      <h2>Il lavoro svolto diventa visibile, ordinato e dimostrabile.</h2>
+      <p>
+        Un dossier chiaro valorizza la riparazione davanti a cliente, perito e assicurazione.
+        Ogni fase può essere documentata con immagini, dati e allegati.
+      </p>
+
+      <a class="text-link" href="scopri-carpractice.html">
+        Guarda CarPractice in azione
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="professional-visual reveal" data-delay="100">
+      <div class="photo-stack">
+        <img src="screen-photos.png" alt="Dossier fotografico CarPractice">
+        <span>Foto e dossier sempre collegati alla pratica</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta reveal">
+    <div class="final-grid" aria-hidden="true"></div>
+    <div class="final-glow" aria-hidden="true"></div>
+
+    <div class="final-content">
+      <p class="eyebrow">IL VERO VANTAGGIO</p>
+      <h2>Non è soltanto un gestionale.<br>È un modo migliore di lavorare.</h2>
+      <p>
+        Prova CarPractice su una pratica reale e valuta direttamente cosa cambia nella tua carrozzeria.
+      </p>
+
+      <div class="hero-actions centered">
+        <a class="button primary" href="https://app.carpractice.it/prenota-demo">
+          Prenota una demo gratuita
+          <span aria-hidden="true">→</span>
+        </a>
+        <a class="button secondary" href="https://app.carpractice.it">
+          Inizia la prova gratuita
+        </a>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer>
