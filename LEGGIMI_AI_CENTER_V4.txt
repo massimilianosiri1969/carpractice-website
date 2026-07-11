@@ -1,0 +1,24 @@
+CARPRACTICE AI CENTER V4
+
+Nuovi file:
+- ai-center.html
+- ai-center.css
+- ai-center.js
+
+Funzioni incluse:
+- chat interattiva
+- timeline AI
+- workflow dinamico
+- modello 3D sincronizzato
+- marker danni
+- ricambi
+- OCR
+- preventivo
+- PDF simulato
+- AI Confidence
+- modalità Presentazione automatica
+- collegamento nei menu principali
+
+Caricare l'intero contenuto su GitHub.
+Commit suggerito:
+CarPractice AI Center V4

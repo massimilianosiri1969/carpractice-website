@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07090c">
+<title>CarPractice AI Center</title>
+<meta name="description" content="Prova CarPractice AI Center: analisi danni, OCR, preventivi e automazioni in una demo interattiva.">
+<link rel="stylesheet" href="ai-center.css">
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script defer src="ai-center.js"></script>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img src="logo-carpractice.png" alt="CarPractice">
+  </a>
+
+  <div class="center-title">
+    <span class="live-dot"></span>
+    AI CENTER
+  </div>
+
+  <div class="top-actions">
+    <button id="presentationButton">▶ Modalità Presentazione</button>
+    <a href="workspace-demo.html">Workspace Demo</a>
+    <a class="primary-link" href="https://app.carpractice.it/prenota-demo">Prenota una demo</a>
+  </div>
+</header>
+
+<main class="ai-shell">
+  <aside class="context-panel">
+    <div class="section-label">CONTESTO ATTIVO</div>
+    <h2>Pratica CP-2026-0127</h2>
+
+    <div class="context-client">
+      <div class="avatar">MB</div>
+      <div>
+        <strong>Mario Bianchi</strong>
+        <span>Cliente privato</span>
+      </div>
+    </div>
+
+    <div class="vehicle-box">
+      <model-viewer
+        id="contextModel"
+        src="models/Fiat_Grande_Panda_2025.glb"
+        alt="Fiat Grande Panda"
+        camera-controls
+        interaction-prompt="none"
+        camera-orbit="-35deg 68deg 7.8m"
+        field-of-view="27deg"
+        environment-image="neutral"
+        shadow-intensity="1">
+      </model-viewer>
+      <div class="vehicle-meta">
+        <span>MS 010 MT</span>
+        <strong>Fiat Grande Panda</strong>
+      </div>
+    </div>
+
+    <div class="context-stats">
+      <div><span>12</span><strong>Fotografie</strong></div>
+      <div><span>8</span><strong>Documenti</strong></div>
+      <div><span id="damageCount">3</span><strong>Danni rilevati</strong></div>
+    </div>
+
+    <div class="context-docs">
+      <div class="mini-title">DOCUMENTI</div>
+      <button data-doc="Libretto di circolazione">
+        <span>PDF</span>
+        <div><strong>Libretto</strong><small>OCR completato</small></div>
+      </button>
+      <button data-doc="Polizza assicurativa">
+        <span>PDF</span>
+        <div><strong>Polizza</strong><small>OCR completato</small></div>
+      </button>
+      <button data-doc="CID">
+        <span>JPG</span>
+        <div><strong>CID</strong><small>Classificato</small></div>
+      </button>
+    </div>
+  </aside>
+
+  <section class="ai-main">
+    <header class="ai-header">
+      <div>
+        <p>INTELLIGENZA OPERATIVA</p>
+        <h1>CarPractice AI Assistant</h1>
+      </div>
+
+      <div class="confidence-card">
+        <div>
+          <span>AI Confidence</span>
+          <strong id="confidenceValue">97,4%</strong>
+        </div>
+        <div class="confidence-bar"><span id="confidenceBar" style="width:97.4%"></span></div>
+      </div>
+    </header>
+
+    <div class="ai-grid">
+      <section class="chat-panel panel">
+        <div class="chat-head">
+          <div>
+            <span class="ai-orb"></span>
+            <div><strong>CarPractice AI</strong><small id="aiStatus">Analisi completata</small></div>
+          </div>
+          <span class="online">ONLINE</span>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+          <div class="message assistant">
+            <p>Ho completato l’analisi della pratica.</p>
+            <div class="analysis-summary">
+              <div><span>Veicolo identificato</span><strong>✓</strong></div>
+              <div><span>Documenti OCR</span><strong>✓</strong></div>
+              <div><span>Danni rilevati</span><strong>3</strong></div>
+              <div><span>Ricambi compatibili</span><strong>4</strong></div>
+            </div>
+            <p>Posso preparare una prima stima, verificare i ricambi o creare il preventivo.</p>
+          </div>
+        </div>
+
+        <div class="suggestion-chips">
+          <button data-prompt="Analizza le foto">Analizza le foto</button>
+          <button data-prompt="Quali ricambi servono?">Ricambi necessari</button>
+          <button data-prompt="Prepara il preventivo">Prepara preventivo</button>
+          <button data-prompt="Il cliente vuole ritirare l'auto domani">Consegna domani</button>
+        </div>
+
+        <form class="chat-input" id="chatForm">
+          <input id="chatInput" placeholder="Chiedi qualsiasi cosa sulla pratica...">
+          <button>Invia</button>
+        </form>
+      </section>
+
+      <aside class="actions-panel panel">
+        <div class="panel-head">
+          <div>
+            <span>WORKFLOW AI</span>
+            <h2>Azioni automatiche</h2>
+          </div>
+        </div>
+
+        <div class="workflow" id="workflow">
+          <div class="workflow-step complete" data-step="practice">
+            <span>1</span><div><strong>Pratica</strong><small>Creata</small></div><b>✓</b>
+          </div>
+          <div class="workflow-step complete" data-step="vehicle">
+            <span>2</span><div><strong>Veicolo</strong><small>Identificato</small></div><b>✓</b>
+          </div>
+          <div class="workflow-step complete" data-step="photos">
+            <span>3</span><div><strong>Foto</strong><small>12 analizzate</small></div><b>✓</b>
+          </div>
+          <div class="workflow-step active" data-step="ai">
+            <span>4</span><div><strong>AI Analysis</strong><small>In corso</small></div><b>•••</b>
+          </div>
+          <div class="workflow-step" data-step="estimate">
+            <span>5</span><div><strong>Preventivo</strong><small>Da generare</small></div><b>—</b>
+          </div>
+          <div class="workflow-step" data-step="signature">
+            <span>6</span><div><strong>Firma</strong><small>In attesa</small></div><b>—</b>
+          </div>
+          <div class="workflow-step" data-step="invoice">
+            <span>7</span><div><strong>Fattura</strong><small>Non disponibile</small></div><b>—</b>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button data-action="estimate">Genera preventivo</button>
+          <button data-action="parts">Verifica ricambi</button>
+          <button data-action="pdf">Genera PDF</button>
+        </div>
+      </aside>
+
+      <section class="visual-panel panel">
+        <div class="panel-head">
+          <div>
+            <span>AI VISION</span>
+            <h2>Analisi visiva del danno</h2>
+          </div>
+          <span class="vision-status" id="visionStatus">3 anomalie rilevate</span>
+        </div>
+
+        <div class="vision-stage">
+          <model-viewer
+            id="visionModel"
+            src="models/Fiat_Grande_Panda_2025.glb"
+            alt="Analisi AI del veicolo"
+            camera-controls
+            interaction-prompt="none"
+            camera-orbit="-35deg 68deg 7.1m"
+            field-of-view="28deg"
+            environment-image="neutral"
+            shadow-intensity="1">
+          </model-viewer>
+
+          <button class="damage-marker active marker-a" data-damage="Parafango anteriore destro" data-confidence="91">1</button>
+          <button class="damage-marker marker-b" data-damage="Paraurti anteriore" data-confidence="96">2</button>
+          <button class="damage-marker marker-c" data-damage="Fanale anteriore destro" data-confidence="82">3</button>
+
+          <div class="scan-line" id="scanLine"></div>
+        </div>
+
+        <div class="damage-detail" id="damageDetail">
+          <div>
+            <span>DANNO SELEZIONATO</span>
+            <strong>Parafango anteriore destro</strong>
+          </div>
+          <div>
+            <span>CONFIDENCE</span>
+            <strong>91%</strong>
+          </div>
+          <div>
+            <span>INTERVENTO</span>
+            <strong>Riparazione media</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="output-panel panel">
+        <div class="output-tabs" role="tablist">
+          <button class="active" data-output="timeline">Timeline AI</button>
+          <button data-output="estimate">Preventivo</button>
+          <button data-output="parts">Ricambi</button>
+          <button data-output="ocr">OCR</button>
+        </div>
+
+        <div class="output-view active" id="output-timeline">
+          <div class="ai-log" id="aiLog">
+            <div><b>08:35</b><span></span><p><strong>AI Vision</strong><small>Veicolo riconosciuto</small></p><i>✓</i></div>
+            <div><b>08:36</b><span></span><p><strong>OCR Engine</strong><small>Libretto e polizza letti</small></p><i>✓</i></div>
+            <div><b>08:37</b><span></span><p><strong>Damage Detection</strong><small>3 danni individuati</small></p><i>✓</i></div>
+            <div><b>08:39</b><span></span><p><strong>Estimate Engine</strong><small>In attesa di conferma</small></p><i>•••</i></div>
+          </div>
+        </div>
+
+        <div class="output-view" id="output-estimate">
+          <div class="estimate-table">
+            <div class="estimate-head"><span>Voce</span><span>Ore</span><span>Importo</span></div>
+            <div><strong>Riparazione parafango</strong><span>3,2 h</span><b>€ 256</b></div>
+            <div><strong>Verniciatura</strong><span>3,4 h</span><b>€ 306</b></div>
+            <div><strong>Sostituzione fanale</strong><span>0,6 h</span><b>€ 148</b></div>
+            <div><strong>Materiali e consumo</strong><span>—</span><b>€ 185</b></div>
+          </div>
+          <div class="estimate-total"><span>Totale stimato</span><strong id="estimateTotal">€ 895</strong></div>
+          <button class="output-action">Genera PDF preventivo</button>
+        </div>
+
+        <div class="output-view" id="output-parts">
+          <div class="parts-list">
+            <div><span>01</span><div><strong>Fanale anteriore destro</strong><small>Compatibilità 98%</small></div><b>Disponibile</b></div>
+            <div><span>02</span><div><strong>Staffa paraurti</strong><small>Compatibilità 94%</small></div><b>2 giorni</b></div>
+            <div><span>03</span><div><strong>Modanatura parafango</strong><small>Compatibilità 91%</small></div><b>Disponibile</b></div>
+            <div><span>04</span><div><strong>Kit fissaggio</strong><small>Compatibilità 87%</small></div><b>Disponibile</b></div>
+          </div>
+        </div>
+
+        <div class="output-view" id="output-ocr">
+          <div class="ocr-grid">
+            <div><span>TARGA</span><strong>MS 010 MT</strong></div>
+            <div><span>TELAIO</span><strong>ZFA••••••••1842</strong></div>
+            <div><span>POLIZZA</span><strong>CP-8894217</strong></div>
+            <div><span>SCADENZA</span><strong>12/03/2027</strong></div>
+          </div>
+          <div class="ocr-text">
+            <span>ESTRAZIONE AUTOMATICA</span>
+            <p>Veicolo intestato a Mario Bianchi. Copertura RCA attiva. Nessuna anomalia documentale rilevata.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<div class="presentation-overlay" id="presentationOverlay" hidden>
+  <div class="presentation-frame">
+    <div class="presentation-top">
+      <span>CARPRACTICE AI CENTER</span>
+      <strong id="presentationStep">1 / 7</strong>
+    </div>
+    <div class="presentation-copy">
+      <p id="presentationEyebrow">FASE 01</p>
+      <h2 id="presentationTitle">Analisi delle fotografie</h2>
+      <p id="presentationText">L’AI elabora le immagini e identifica le aree danneggiate.</p>
+    </div>
+    <div class="presentation-progress"><span id="presentationProgress"></span></div>
+    <button id="presentationPause">Pausa</button>
+    <button id="presentationClose">Chiudi</button>
+  </div>
+</div>
+</body>
+</html>
