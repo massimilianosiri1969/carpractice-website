@@ -1,0 +1,25 @@
+CARPRACTICE LABS RELEASE V1
+
+Include:
+- labs-carpractice.html
+- labs-carpractice.css
+- labs-carpractice.js
+- integrazione voce Labs nei menu principali
+- specifica Base44 completa
+
+Funzioni frontend:
+- intro terminale
+- rete neurale canvas
+- contatori animati
+- progetti cliccabili
+- esperimenti
+- muro idee con reazioni demo
+- timeline interattiva
+- candidatura beta in stile terminale
+
+Nota:
+Le reazioni e la candidatura beta sono dimostrative finché Base44 non implementa gli endpoint descritti nella specifica.
+
+Caricare l'intero contenuto su GitHub.
+Commit consigliato:
+CarPractice Labs Release V1
