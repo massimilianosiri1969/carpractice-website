@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080a0d">
+<title>CarPractice Workspace Demo</title>
+<meta name="description" content="Prova una demo interattiva di CarPractice direttamente dal sito.">
+<link rel="stylesheet" href="workspace-demo.css">
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script defer src="workspace-demo.js"></script>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img src="logo-carpractice.png" alt="CarPractice">
+  </a>
+
+  <div class="demo-label">
+    <span class="live-dot"></span>
+    WORKSPACE DEMO
+  </div>
+
+  <div class="top-actions">
+    <a href="scopri-carpractice.html">Torna al sito</a>
+    <a class="primary-link" href="https://app.carpractice.it/prenota-demo">Prenota una demo</a>
+  </div>
+</header>
+
+<main class="app-shell">
+  <aside class="sidebar">
+    <div class="workspace-name">
+      <span>OFFICINA DEMO</span>
+      <strong>Carrozzeria Rossi</strong>
+    </div>
+
+    <nav class="side-nav" aria-label="Navigazione demo">
+      <button class="active" data-view="dashboard">
+        <span>⌂</span>
+        <b>Dashboard</b>
+      </button>
+      <button data-view="pratiche">
+        <span>▤</span>
+        <b>Pratiche</b>
+        <i>12</i>
+      </button>
+      <button data-view="clienti">
+        <span>◉</span>
+        <b>Clienti</b>
+      </button>
+      <button data-view="veicoli">
+        <span>◇</span>
+        <b>Veicoli</b>
+      </button>
+      <button data-view="danni">
+        <span>⬡</span>
+        <b>Danni 3D</b>
+      </button>
+      <button data-view="documenti">
+        <span>▧</span>
+        <b>Documenti</b>
+      </button>
+      <button data-view="ai">
+        <span>✦</span>
+        <b>AI Assistant</b>
+        <i class="ai-badge">AI</i>
+      </button>
+      <button data-view="bi">
+        <span>▥</span>
+        <b>Business Intelligence</b>
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="avatar">MR</div>
+      <div>
+        <strong>Mario Rossi</strong>
+        <span>Amministratore</span>
+      </div>
+    </div>
+  </aside>
+
+  <section class="workspace">
+    <header class="workspace-header">
+      <div>
+        <p id="viewEyebrow">PANORAMICA</p>
+        <h1 id="viewTitle">Buongiorno, Mario.</h1>
+      </div>
+
+      <div class="workspace-actions">
+        <button id="demoTourButton">▶ Giornata tipo</button>
+        <button>⌕</button>
+        <button>🔔<i>4</i></button>
+      </div>
+    </header>
+
+    <div class="view active" id="view-dashboard">
+      <section class="kpi-grid">
+        <article class="kpi-card">
+          <span>Pratiche aperte</span>
+          <strong data-count="127">0</strong>
+          <small>▲ 12% rispetto al mese scorso</small>
+        </article>
+        <article class="kpi-card">
+          <span>Veicoli in lavorazione</span>
+          <strong data-count="18">0</strong>
+          <small>6 in consegna oggi</small>
+        </article>
+        <article class="kpi-card">
+          <span>Tempo medio pratica</span>
+          <strong>4,8 <em>giorni</em></strong>
+          <small>▼ 0,7 giorni</small>
+        </article>
+        <article class="kpi-card">
+          <span>Marginalità media</span>
+          <strong>31,4%</strong>
+          <small>▲ 3,2%</small>
+        </article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel current-job">
+          <div class="panel-head">
+            <div>
+              <span>VEICOLO IN LAVORAZIONE</span>
+              <h2>Fiat Grande Panda</h2>
+            </div>
+            <span class="status working">In lavorazione</span>
+          </div>
+
+          <div class="vehicle-layout">
+            <div class="vehicle-preview">
+              <model-viewer
+                src="models/Fiat_Grande_Panda_2025.glb"
+                alt="Fiat Grande Panda"
+                camera-controls
+                disable-zoom
+                interaction-prompt="none"
+                auto-rotate
+                rotation-per-second="5deg"
+                camera-orbit="-35deg 68deg 7.2m"
+                field-of-view="28deg"
+                shadow-intensity="1"
+                environment-image="neutral">
+              </model-viewer>
+            </div>
+
+            <div class="job-details">
+              <div><span>Targa</span><strong>MS 010 MT</strong></div>
+              <div><span>Cliente</span><strong>Mario Bianchi</strong></div>
+              <div><span>Ingresso</span><strong>10 luglio 2026</strong></div>
+              <div><span>Consegna prevista</span><strong>14 luglio 2026</strong></div>
+            </div>
+          </div>
+
+          <div class="job-progress">
+            <div class="progress-head"><span>Avanzamento pratica</span><strong>68%</strong></div>
+            <div class="progress-bar"><span style="width:68%"></span></div>
+          </div>
+        </article>
+
+        <article class="panel activity-feed">
+          <div class="panel-head">
+            <div>
+              <span>ATTIVITÀ RECENTI</span>
+              <h2>Timeline pratica</h2>
+            </div>
+          </div>
+
+          <div class="activity-list">
+            <div class="activity">
+              <b>08:35</b>
+              <span></span>
+              <div><strong>Nuova pratica creata</strong><small>Identificazione veicolo completata</small></div>
+            </div>
+            <div class="activity">
+              <b>08:37</b>
+              <span></span>
+              <div><strong>Cliente registrato</strong><small>Firma accettazione acquisita</small></div>
+            </div>
+            <div class="activity">
+              <b>08:41</b>
+              <span></span>
+              <div><strong>Foto caricate</strong><small>12 immagini associate alla pratica</small></div>
+            </div>
+            <div class="activity">
+              <b>08:43</b>
+              <span></span>
+              <div><strong>AI Analysis</strong><small>3 aree danneggiate individuate</small></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel ai-mini">
+          <div class="panel-head">
+            <div>
+              <span>AI ASSISTANT</span>
+              <h2>Due elementi richiedono attenzione.</h2>
+            </div>
+          </div>
+          <div class="ai-alert">
+            <span>01</span>
+            <div><strong>Fanale anteriore</strong><small>Possibile sostituzione</small></div>
+            <b>96%</b>
+          </div>
+          <div class="ai-alert">
+            <span>02</span>
+            <div><strong>Parafango destro</strong><small>Riparazione media</small></div>
+            <b>91%</b>
+          </div>
+          <button data-jump="ai">Apri AI Assistant →</button>
+        </article>
+
+        <article class="panel chart-panel">
+          <div class="panel-head">
+            <div>
+              <span>PERFORMANCE</span>
+              <h2>Pratiche completate</h2>
+            </div>
+            <strong>+18%</strong>
+          </div>
+
+          <div class="mini-chart">
+            <svg viewBox="0 0 700 230" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#ff7a1a" stop-opacity=".35"/>
+                  <stop offset="100%" stop-color="#ff7a1a" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path class="area" d="M0,190 C70,180 90,120 150,135 C230,155 260,70 330,95 C400,120 430,45 500,65 C570,85 610,20 700,40 L700,230 L0,230 Z"/>
+              <path class="line" d="M0,190 C70,180 90,120 150,135 C230,155 260,70 330,95 C400,120 430,45 500,65 C570,85 610,20 700,40"/>
+            </svg>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <div class="view" id="view-pratiche">
+      <div class="list-toolbar">
+        <div class="search-box">⌕ <input placeholder="Cerca pratica, cliente o targa"></div>
+        <button>+ Nuova pratica</button>
+      </div>
+
+      <div class="table-card">
+        <div class="table-row table-head">
+          <span>Pratica</span><span>Cliente</span><span>Veicolo</span><span>Stato</span><span>Consegna</span>
+        </div>
+        <button class="table-row">
+          <strong>CP-2026-0127</strong><span>Mario Bianchi</span><span>Fiat Grande Panda</span><i class="status working">In lavorazione</i><span>14 lug</span>
+        </button>
+        <button class="table-row">
+          <strong>CP-2026-0126</strong><span>Laura Conti</span><span>Audi A3</span><i class="status waiting">Attesa ricambi</i><span>15 lug</span>
+        </button>
+        <button class="table-row">
+          <strong>CP-2026-0125</strong><span>Andrea Ferri</span><span>Peugeot 208</span><i class="status ready">Pronta</i><span>Oggi</span>
+        </button>
+        <button class="table-row">
+          <strong>CP-2026-0124</strong><span>Elena Riva</span><span>Toyota Yaris</span><i class="status check">Controllo finale</i><span>13 lug</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="view" id="view-clienti">
+      <div class="split-layout">
+        <div class="customer-list panel">
+          <div class="panel-head"><div><span>CLIENTI</span><h2>Ultimi aggiornati</h2></div></div>
+          <button class="customer active" data-customer="mario"><span>MB</span><div><strong>Mario Bianchi</strong><small>3 pratiche · 2 veicoli</small></div></button>
+          <button class="customer" data-customer="laura"><span>LC</span><div><strong>Laura Conti</strong><small>1 pratica · 1 veicolo</small></div></button>
+          <button class="customer" data-customer="andrea"><span>AF</span><div><strong>Andrea Ferri</strong><small>5 pratiche · 3 veicoli</small></div></button>
+        </div>
+
+        <div class="customer-detail panel">
+          <div class="customer-header">
+            <div class="large-avatar" id="customerAvatar">MB</div>
+            <div><span>CLIENTE</span><h2 id="customerName">Mario Bianchi</h2><p id="customerMeta">Cliente dal 2023 · Privato</p></div>
+          </div>
+          <div class="detail-grid">
+            <div><span>Email</span><strong id="customerEmail">mario.bianchi@email.it</strong></div>
+            <div><span>Telefono</span><strong id="customerPhone">+39 333 456 7890</strong></div>
+            <div><span>Veicoli</span><strong id="customerVehicles">2</strong></div>
+            <div><span>Pratiche</span><strong id="customerJobs">3</strong></div>
+          </div>
+          <div class="history">
+            <h3>Storico recente</h3>
+            <div><span>10 lug 2026</span><strong>Fiat Grande Panda</strong><small>Pratica CP-2026-0127</small></div>
+            <div><span>18 gen 2025</span><strong>Fiat 500</strong><small>Riparazione paraurti posteriore</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="view" id="view-veicoli">
+      <div class="vehicle-cards">
+        <article class="vehicle-card selected">
+          <div class="vehicle-card-visual">
+            <model-viewer src="models/Fiat_Grande_Panda_2025.glb" alt="Fiat Grande Panda" camera-orbit="-35deg 70deg 8m" field-of-view="28deg" interaction-prompt="none" auto-rotate rotation-per-second="4deg"></model-viewer>
+          </div>
+          <span>MS 010 MT</span>
+          <h3>Fiat Grande Panda</h3>
+          <small>Mario Bianchi · In lavorazione</small>
+        </article>
+
+        <article class="vehicle-card">
+          <div class="placeholder-car">AUDI A3</div>
+          <span>GE 482 ZX</span>
+          <h3>Audi A3 Sportback</h3>
+          <small>Laura Conti · Attesa ricambi</small>
+        </article>
+
+        <article class="vehicle-card">
+          <div class="placeholder-car">PEUGEOT 208</div>
+          <span>AB 219 KL</span>
+          <h3>Peugeot 208</h3>
+          <small>Andrea Ferri · Pronta</small>
+        </article>
+      </div>
+    </div>
+
+    <div class="view" id="view-danni">
+      <div class="damage-layout">
+        <div class="damage-viewer panel">
+          <div class="panel-head"><div><span>DANNI 3D</span><h2>Seleziona una zona del veicolo</h2></div></div>
+          <div class="damage-stage">
+            <model-viewer
+              src="models/Fiat_Grande_Panda_2025.glb"
+              alt="Veicolo per selezione danni"
+              camera-controls
+              interaction-prompt="none"
+              camera-orbit="-35deg 68deg 7.1m"
+              field-of-view="28deg"
+              shadow-intensity="1"
+              environment-image="neutral">
+            </model-viewer>
+            <button class="damage-marker marker-one active" data-part="Parafango anteriore destro" data-level="Medio">1</button>
+            <button class="damage-marker marker-two" data-part="Paraurti anteriore" data-level="Lieve">2</button>
+            <button class="damage-marker marker-three" data-part="Fanale anteriore destro" data-level="Sostituzione">3</button>
+          </div>
+        </div>
+
+        <div class="damage-panel panel">
+          <span class="panel-label">DETTAGLIO DANNO</span>
+          <h2 id="damagePart">Parafango anteriore destro</h2>
+
+          <div class="damage-form">
+            <label>Tipo intervento
+              <select id="damageType">
+                <option>Riparazione</option>
+                <option>Sostituzione</option>
+                <option>Verniciatura</option>
+              </select>
+            </label>
+
+            <label>Gravità
+              <div class="severity-buttons">
+                <button>Lieve</button>
+                <button class="active">Medio</button>
+                <button>Grave</button>
+                <button>Sostituzione</button>
+              </div>
+            </label>
+
+            <label>Superficie stimata
+              <input type="range" min="5" max="100" value="42">
+            </label>
+
+            <label>Note
+              <textarea rows="4">Ammaccatura con lieve deformazione del bordo.</textarea>
+            </label>
+          </div>
+
+          <button class="save-damage">Salva valutazione</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="view" id="view-documenti">
+      <div class="document-layout">
+        <div class="upload-zone panel">
+          <div class="upload-icon">⇧</div>
+          <h2>Trascina qui i documenti</h2>
+          <p>Libretto, polizza, CID, preventivi e allegati</p>
+          <button>Seleziona file</button>
+        </div>
+
+        <div class="document-list panel">
+          <div class="panel-head"><div><span>DOCUMENTI PRATICA</span><h2>8 file disponibili</h2></div></div>
+          <button class="document-row"><span>PDF</span><div><strong>Libretto_Circolazione.pdf</strong><small>2,4 MB · Oggi 08:39</small></div><b>OCR completato</b></button>
+          <button class="document-row"><span>PDF</span><div><strong>Polizza_Assicurativa.pdf</strong><small>1,1 MB · Oggi 08:40</small></div><b>OCR completato</b></button>
+          <button class="document-row"><span>JPG</span><div><strong>CID_fronte.jpg</strong><small>840 KB · Oggi 08:40</small></div><b>Classificato</b></button>
+          <button class="document-row"><span>PDF</span><div><strong>Preventivo_0127.pdf</strong><small>520 KB · Oggi 09:02</small></div><b>Generato</b></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="view" id="view-ai">
+      <div class="ai-layout">
+        <div class="ai-context panel">
+          <div class="panel-head"><div><span>CONTESTO ATTIVO</span><h2>Pratica CP-2026-0127</h2></div></div>
+          <div class="context-car">
+            <model-viewer src="models/Fiat_Grande_Panda_2025.glb" alt="Veicolo pratica AI" camera-orbit="-35deg 68deg 8m" field-of-view="27deg" interaction-prompt="none"></model-viewer>
+          </div>
+          <div class="context-list">
+            <div><span>12</span><strong>Fotografie</strong></div>
+            <div><span>8</span><strong>Documenti</strong></div>
+            <div><span>3</span><strong>Danni rilevati</strong></div>
+          </div>
+        </div>
+
+        <div class="ai-chat panel">
+          <div class="chat-head">
+            <div><span class="ai-orb"></span><div><strong>CarPractice AI</strong><small>Assistente operativo</small></div></div>
+            <span class="online">Online</span>
+          </div>
+
+          <div class="chat-messages" id="chatMessages">
+            <div class="message assistant">
+              <p>Ho analizzato le fotografie della pratica.</p>
+              <div class="ai-result">
+                <span>Parafango destro</span><strong>91%</strong>
+                <span>Paraurti anteriore</span><strong>96%</strong>
+                <span>Fanale destro</span><strong>82%</strong>
+              </div>
+              <p>Vuoi che prepari una prima stima delle lavorazioni?</p>
+            </div>
+          </div>
+
+          <div class="suggestion-chips">
+            <button data-prompt="Prepara una prima stima">Prepara una prima stima</button>
+            <button data-prompt="Quali ricambi potrebbero servire?">Ricambi necessari</button>
+            <button data-prompt="Riepiloga la pratica">Riepiloga pratica</button>
+          </div>
+
+          <form class="chat-input" id="chatForm">
+            <input id="chatInput" placeholder="Scrivi una richiesta...">
+            <button>Invia</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="view" id="view-bi">
+      <section class="kpi-grid">
+        <article class="kpi-card"><span>Fatturato mese</span><strong>€ 84.260</strong><small>▲ 14,8%</small></article>
+        <article class="kpi-card"><span>Margine lordo</span><strong>€ 26.458</strong><small>31,4%</small></article>
+        <article class="kpi-card"><span>Ore produttive</span><strong>1.248</strong><small>86% saturazione</small></article>
+        <article class="kpi-card"><span>Ticket medio</span><strong>€ 1.486</strong><small>▲ € 94</small></article>
+      </section>
+
+      <div class="bi-grid">
+        <article class="panel bi-chart">
+          <div class="panel-head"><div><span>ANDAMENTO</span><h2>Fatturato ultimi 6 mesi</h2></div></div>
+          <div class="bar-chart">
+            <div><span style="height:48%"></span><small>Feb</small></div>
+            <div><span style="height:62%"></span><small>Mar</small></div>
+            <div><span style="height:55%"></span><small>Apr</small></div>
+            <div><span style="height:78%"></span><small>Mag</small></div>
+            <div><span style="height:72%"></span><small>Giu</small></div>
+            <div><span style="height:92%"></span><small>Lug</small></div>
+          </div>
+        </article>
+
+        <article class="panel operator-panel">
+          <div class="panel-head"><div><span>OPERATORI</span><h2>Performance mensile</h2></div></div>
+          <div class="operator-row"><span>Marco R.</span><div><i style="width:92%"></i></div><strong>92%</strong></div>
+          <div class="operator-row"><span>Luca P.</span><div><i style="width:84%"></i></div><strong>84%</strong></div>
+          <div class="operator-row"><span>Stefano C.</span><div><i style="width:78%"></i></div><strong>78%</strong></div>
+          <div class="operator-row"><span>Paolo M.</span><div><i style="width:71%"></i></div><strong>71%</strong></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="tour-overlay" id="tourOverlay" hidden>
+      <div class="tour-card">
+        <span id="tourStep">1 / 5</span>
+        <h2 id="tourTitle">Arriva il cliente</h2>
+        <p id="tourText">La targa identifica il veicolo e crea automaticamente la pratica.</p>
+        <div class="tour-progress"><span id="tourProgress"></span></div>
+        <button id="tourNext">Continua</button>
+        <button id="tourClose">Chiudi</button>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,24 @@
+CARPRACTICE WORKSPACE DEMO V1
+
+Nuovi file:
+- workspace-demo.html
+- workspace-demo.css
+- workspace-demo.js
+
+La demo include:
+- Dashboard
+- Pratiche
+- Clienti
+- Veicoli
+- Danni 3D
+- Documenti
+- AI Assistant
+- Business Intelligence
+- Giornata tipo guidata
+- Modello GLB reale
+
+La voce "Demo interattiva" è stata aggiunta ai menu principali.
+
+Caricare l'intero contenuto su GitHub.
+Commit suggerito:
+CarPractice Workspace Demo V1
