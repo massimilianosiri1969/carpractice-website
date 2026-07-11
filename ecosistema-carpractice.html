@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090a0d">
+<title>Ecosistema CarPractice — Moduli, roadmap e innovazione</title>
+<meta name="description" content="Scopri i moduli disponibili, quelli in sviluppo e la roadmap futura di CarPractice.">
+<link rel="stylesheet" href="ecosistema-carpractice.css">
+<script defer src="ecosistema-carpractice.js"></script>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="CarPractice Home">
+    <img src="logo-carpractice.png" alt="CarPractice">
+  </a>
+
+  <nav class="menu" aria-label="Navigazione principale">
+    <a href="scopri-carpractice.html">Scopri CarPractice</a>
+    <a href="perche-carpractice.html">Perché CarPractice</a>
+    <a href="ecosistema-carpractice.html" class="active">Ecosistema</a>
+    <a href="richiedi-demo.html">Richiedi una demo</a>
+    <a href="club-carpractice.html">Club</a>
+    <a href="prezzi.html">Prezzi</a>
+  </nav>
+
+  <div class="nav-actions">
+    <a class="access" href="https://app.carpractice.it">Accedi</a>
+    <a class="trial" href="https://app.carpractice.it">Prova gratuita</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">ECOSISTEMA CARPRACTICE</p>
+      <h1>Un software oggi.<br>Una piattaforma che cresce <em>domani.</em></h1>
+      <p class="lead">
+        CarPractice evolve continuamente. Alcuni moduli sono già operativi,
+        altri sono in sviluppo, altri ancora nascono dall’ascolto diretto delle carrozzerie.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button primary" href="#mappa">
+          Esplora l’ecosistema
+          <span aria-hidden="true">↓</span>
+        </a>
+        <a class="button secondary" href="#roadmap">
+          Guarda la roadmap
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div><strong>9</strong><span>moduli disponibili</span></div>
+        <div><strong>6</strong><span>moduli in sviluppo</span></div>
+        <div><strong>1</strong><span>visione integrata</span></div>
+      </div>
+    </div>
+
+    <div class="hero-map reveal" data-delay="120">
+      <div class="map-orbit orbit-a"></div>
+      <div class="map-orbit orbit-b"></div>
+      <div class="map-orbit orbit-c"></div>
+
+      <div class="core">
+        <img src="logo-carpractice.png" alt="">
+        <span>PLATFORM CORE</span>
+      </div>
+
+      <button class="orbit-node available node-plate" data-module="ricerca-targa">
+        <span>Disponibile</span>
+        Ricerca Targa
+      </button>
+      <button class="orbit-node available node-practice" data-module="pratiche">
+        <span>Disponibile</span>
+        Pratiche
+      </button>
+      <button class="orbit-node available node-damage" data-module="danni-3d">
+        <span>Disponibile</span>
+        Danni 3D
+      </button>
+      <button class="orbit-node developing node-ai" data-module="ai-assistant">
+        <span>In sviluppo</span>
+        AI Assistant
+      </button>
+      <button class="orbit-node developing node-bi" data-module="business-intelligence">
+        <span>In sviluppo</span>
+        Business Intelligence
+      </button>
+      <button class="orbit-node roadmap node-mobile" data-module="app-mobile">
+        <span>Roadmap</span>
+        App Mobile
+      </button>
+      <button class="orbit-node roadmap node-call" data-module="centralino-ai">
+        <span>Roadmap</span>
+        Centralino AI
+      </button>
+
+      <div class="map-legend">
+        <span><i class="dot available"></i> Disponibile</span>
+        <span><i class="dot developing"></i> In sviluppo</span>
+        <span><i class="dot roadmap"></i> Roadmap</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="ecosystem" id="mappa">
+    <div class="section-heading reveal">
+      <p class="eyebrow">TUTTO COLLEGATO</p>
+      <h2>Non moduli isolati.<br>Un unico sistema operativo.</h2>
+      <p>
+        Ogni modulo condivide dati, clienti, veicoli e pratiche con il resto della piattaforma.
+      </p>
+    </div>
+
+    <div class="filters reveal" role="tablist" aria-label="Filtra moduli per stato">
+      <button class="active" type="button" data-filter="all" aria-selected="true">Tutti</button>
+      <button type="button" data-filter="available" aria-selected="false">Disponibili</button>
+      <button type="button" data-filter="developing" aria-selected="false">In sviluppo</button>
+      <button type="button" data-filter="roadmap" aria-selected="false">Roadmap</button>
+    </div>
+
+    <div class="module-grid">
+      <article class="module-card reveal" data-status="available">
+        <div class="module-head">
+          <span class="status available">Disponibile</span>
+          <b>01</b>
+        </div>
+        <h3>Ricerca Targa</h3>
+        <p>Identifica il veicolo e avvia la pratica partendo dalla targa.</p>
+        <div class="module-tags"><span>Veicolo</span><span>Dati tecnici</span></div>
+        <button class="module-open" data-module="ricerca-targa">Scopri il modulo →</button>
+      </article>
+
+      <article class="module-card reveal" data-delay="40" data-status="available">
+        <div class="module-head">
+          <span class="status available">Disponibile</span>
+          <b>02</b>
+        </div>
+        <h3>Gestione Pratiche</h3>
+        <p>Cliente, veicolo, foto, documenti e lavorazione in un unico dossier.</p>
+        <div class="module-tags"><span>Workflow</span><span>Dossier</span></div>
+        <button class="module-open" data-module="pratiche">Scopri il modulo →</button>
+      </article>
+
+      <article class="module-card reveal" data-delay="80" data-status="available">
+        <div class="module-head">
+          <span class="status available">Disponibile</span>
+          <b>03</b>
+        </div>
+        <h3>Danni 3D</h3>
+        <p>Seleziona le parti danneggiate e assegna livello e intervento.</p>
+        <div class="module-tags"><span>GLB</span><span>Valutazione</span></div>
+        <button class="module-open" data-module="danni-3d">Scopri il modulo →</button>
+      </article>
+
+      <article class="module-card reveal" data-delay="120" data-status="available">
+        <div class="module-head">
+          <span class="status available">Disponibile</span>
+          <b>04</b>
+        </div>
+        <h3>Foto e Documenti</h3>
+        <p>Archivia immagini, libretto, polizza e CID nella pratica corretta.</p>
+        <div class="module-tags"><span>OCR</span><span>Archivio</span></div>
+        <button class="module-open" data-module="foto-documenti">Scopri il modulo →</button>
+      </article>
+
+      <article class="module-card reveal" data-status="available">
+        <div class="module-head">
+          <span class="status available">Disponibile</span>
+          <b>05</b>
+        </div>
+        <h3>CarPractice Club</h3>
+        <p>Presenta nuove carrozzerie, segui gli inviti e ottieni crediti.</p>
+        <div class="module-tags"><span>Referral</span><span>Crediti</span></div>
+        <button class="module-open" data-module="club">Scopri il modulo →</button>
+      </article>
+
+      <article class="module-card reveal" data-delay="40" data-status="developing">
+        <div class="module-head">
+          <span class="status developing">In sviluppo</span>
+          <b>06</b>
+        </div>
+        <h3>AI Assistant</h3>
+        <p>Assistente operativo per pratiche, informazioni e suggerimenti.</p>
+        <div class="progress"><span style="width:65%"></span></div>
+        <small>Avanzamento indicativo 65%</small>
+        <button class="module-open" data-module="ai-assistant">Scopri il modulo →</button>
+      </article>
+
+      <article class="module-card reveal" data-delay="80" data-status="developing">
+        <div class="module-head">
+          <span class="status developing">In sviluppo</span>
+          <b>07</b>
+        </div>
+        <h3>Business Intelligence</h3>
+        <p>Analisi di fatturato, produttività, tempi e marginalità.</p>
+        <div class="progress"><span style="width:45%"></span></div>
+        <small>Avanzamento indicativo 45%</small>
+        <button class="module-open" data-module="business-intelligence">Scopri il modulo →</button>
+      </article>
+
+      <article class="module-card reveal" data-delay="120" data-status="developing">
+        <div class="module-head">
+          <span class="status developing">In sviluppo</span>
+          <b>08</b>
+        </div>
+        <h3>Magazzino</h3>
+        <p>Ricambi, materiali, soglie e riordini dentro il flusso di lavoro.</p>
+        <div class="progress"><span style="width:28%"></span></div>
+        <small>Avanzamento indicativo 28%</small>
+        <button class="module-open" data-module="magazzino">Scopri il modulo →</button>
+      </article>
+
+      <article class="module-card reveal" data-status="roadmap">
+        <div class="module-head">
+          <span class="status roadmap">Roadmap</span>
+          <b>09</b>
+        </div>
+        <h3>App Mobile</h3>
+        <p>Gestione rapida da smartphone per foto, aggiornamenti e notifiche.</p>
+        <div class="module-tags"><span>iOS</span><span>Android</span></div>
+        <button class="module-open" data-module="app-mobile">Scopri il modulo →</button>
+      </article>
+
+      <article class="module-card reveal" data-delay="40" data-status="roadmap">
+        <div class="module-head">
+          <span class="status roadmap">Roadmap</span>
+          <b>10</b>
+        </div>
+        <h3>Centralino AI</h3>
+        <p>Risponde alle chiamate, interpreta richieste e aggiorna le attività.</p>
+        <div class="module-tags"><span>Voce</span><span>Automazioni</span></div>
+        <button class="module-open" data-module="centralino-ai">Scopri il modulo →</button>
+      </article>
+
+      <article class="module-card reveal" data-delay="80" data-status="roadmap">
+        <div class="module-head">
+          <span class="status roadmap">Roadmap</span>
+          <b>11</b>
+        </div>
+        <h3>Preventivatore AI</h3>
+        <p>Supporto alla creazione del preventivo partendo da foto e danni.</p>
+        <div class="module-tags"><span>AI</span><span>Preventivi</span></div>
+        <button class="module-open" data-module="preventivatore-ai">Scopri il modulo →</button>
+      </article>
+
+      <article class="module-card reveal" data-delay="120" data-status="roadmap">
+        <div class="module-head">
+          <span class="status roadmap">Roadmap</span>
+          <b>12</b>
+        </div>
+        <h3>CRM Evoluto</h3>
+        <p>Comunicazioni, follow-up e relazione cliente dopo la consegna.</p>
+        <div class="module-tags"><span>Clienti</span><span>Marketing</span></div>
+        <button class="module-open" data-module="crm-evoluto">Scopri il modulo →</button>
+      </article>
+    </div>
+  </section>
+
+  <section class="roadmap-section" id="roadmap">
+    <div class="section-heading reveal">
+      <p class="eyebrow">ROADMAP LIVE</p>
+      <h2>Una direzione chiara.<br>Un prodotto sempre più completo.</h2>
+      <p>
+        Le date sono indicative e possono cambiare in base a test, priorità tecniche e feedback degli utenti.
+      </p>
+    </div>
+
+    <div class="roadmap-line reveal">
+      <article class="roadmap-stop completed">
+        <span class="roadmap-dot"></span>
+        <div>
+          <small>OGGI</small>
+          <h3>Fondamenta operative</h3>
+          <p>Ricerca targa, pratiche, clienti, veicoli, foto, documenti e danni 3D.</p>
+        </div>
+      </article>
+
+      <article class="roadmap-stop active">
+        <span class="roadmap-dot"></span>
+        <div>
+          <small>IN SVILUPPO</small>
+          <h3>Intelligenza e controllo</h3>
+          <p>AI Assistant, Business Intelligence, magazzino e report evoluti.</p>
+        </div>
+      </article>
+
+      <article class="roadmap-stop">
+        <span class="roadmap-dot"></span>
+        <div>
+          <small>PROSSIMA FASE</small>
+          <h3>Mobilità e automazione</h3>
+          <p>App mobile, centralino AI, notifiche e automazioni operative.</p>
+        </div>
+      </article>
+
+      <article class="roadmap-stop">
+        <span class="roadmap-dot"></span>
+        <div>
+          <small>VISIONE</small>
+          <h3>Piattaforma predittiva</h3>
+          <p>Preventivi assistiti, CRM evoluto e suggerimenti basati sui dati.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="vote-section">
+    <div class="vote-copy reveal">
+      <p class="eyebrow">ROADMAP PARTECIPATA</p>
+      <h2>Quale modulo aspetti di più?</h2>
+      <p>
+        Esprimi il tuo interesse. Nella versione collegata all’app il voto verrà registrato
+        e contribuirà a definire le priorità di sviluppo.
+      </p>
+      <div class="vote-note">
+        <strong>Nota</strong>
+        <span>I conteggi mostrati qui sono dimostrativi finché il sito non viene collegato al database Base44.</span>
+      </div>
+    </div>
+
+    <div class="vote-list reveal" data-delay="100">
+      <article class="vote-row" data-vote-id="ai-assistant">
+        <div>
+          <span>01</span>
+          <strong>AI Assistant</strong>
+        </div>
+        <div class="vote-meter"><span style="width:82%"></span></div>
+        <b class="vote-count">143</b>
+        <button type="button">Mi interessa</button>
+      </article>
+
+      <article class="vote-row" data-vote-id="centralino-ai">
+        <div>
+          <span>02</span>
+          <strong>Centralino AI</strong>
+        </div>
+        <div class="vote-meter"><span style="width:61%"></span></div>
+        <b class="vote-count">81</b>
+        <button type="button">Mi interessa</button>
+      </article>
+
+      <article class="vote-row" data-vote-id="business-intelligence">
+        <div>
+          <span>03</span>
+          <strong>Business Intelligence</strong>
+        </div>
+        <div class="vote-meter"><span style="width:48%"></span></div>
+        <b class="vote-count">62</b>
+        <button type="button">Mi interessa</button>
+      </article>
+
+      <article class="vote-row" data-vote-id="app-mobile">
+        <div>
+          <span>04</span>
+          <strong>App Mobile</strong>
+        </div>
+        <div class="vote-meter"><span style="width:43%"></span></div>
+        <b class="vote-count">57</b>
+        <button type="button">Mi interessa</button>
+      </article>
+    </div>
+  </section>
+
+  <section class="idea-section">
+    <div class="idea-card reveal">
+      <div>
+        <p class="eyebrow">HAI UN’IDEA?</p>
+        <h2>Raccontaci quale funzione vorresti vedere in CarPractice.</h2>
+        <p>
+          Le idee migliori possono entrare nella roadmap e diventare parte dell’ecosistema.
+        </p>
+      </div>
+
+      <div class="idea-actions">
+        <a class="button primary" href="https://app.carpractice.it">
+          Invia un suggerimento
+          <span aria-hidden="true">→</span>
+        </a>
+        <a class="button secondary" href="richiedi-demo.html">
+          Parliamone durante una demo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta reveal">
+    <div class="final-grid" aria-hidden="true"></div>
+    <div class="final-glow" aria-hidden="true"></div>
+
+    <div class="final-content">
+      <p class="eyebrow">NON SOLO UN GESTIONALE</p>
+      <h2>Un ecosistema costruito<br>attorno alla carrozzeria.</h2>
+      <p>
+        Parti dai moduli disponibili oggi e cresci con tutte le evoluzioni future della piattaforma.
+      </p>
+
+      <div class="hero-actions centered">
+        <a class="button primary" href="https://app.carpractice.it/prenota-demo">
+          Prenota una demo
+          <span aria-hidden="true">→</span>
+        </a>
+        <a class="button secondary" href="scopri-carpractice.html">
+          Scopri CarPractice
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="module-modal" id="moduleModal" hidden>
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" type="button" data-close-modal aria-label="Chiudi">×</button>
+    <span class="modal-status" id="modalStatus"></span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+    <ul id="modalFeatures"></ul>
+    <a id="modalAction" class="button primary" href="https://app.carpractice.it">Apri CarPractice</a>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html"><img src="logo-carpractice.png" alt="CarPractice"></a>
+  <p>Digital Repair Platform per carrozzerie.</p>
+  <span>© 2026 CarPractice</span>
+</footer>
+</body>
+</html>
