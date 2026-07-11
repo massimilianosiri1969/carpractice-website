@@ -3,194 +3,354 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Club CarPractice</title>
-<meta name="description" content="Presenta nuove carrozzerie, accumula crediti e sali di livello nel Club CarPractice.">
+<meta name="theme-color" content="#090a0d">
+<title>CarPractice Club — Presenta, condividi, cresci</title>
+<meta name="description" content="Entra nel CarPractice Club, presenta nuove carrozzerie e ottieni 100 crediti per ogni nuova attivazione.">
 <link rel="stylesheet" href="club-carpractice.css">
+<script defer src="club-carpractice.js"></script>
 </head>
 <body>
+<div class="noise" aria-hidden="true"></div>
 
-<header class="cp-nav">
-  <a class="cp-brand" href="index.html">
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="CarPractice Home">
     <img src="logo-carpractice.png" alt="CarPractice">
   </a>
 
-  <nav class="cp-menu">
+  <nav class="menu" aria-label="Navigazione principale">
     <a href="scopri-carpractice.html">Scopri CarPractice</a>
     <a href="perche-carpractice.html">Perché CarPractice</a>
     <a href="richiedi-demo.html">Richiedi una demo</a>
     <a class="active" href="club-carpractice.html">Club</a>
-    <a href="index.html#workflow">Come funziona</a>
-    <a href="index.html#prezzi">Prezzi</a>
+    <a href="prezzi.html">Prezzi</a>
     <a href="index.html#contatti">Contatti</a>
   </nav>
 
-  <div class="cp-actions">
-    <a class="cp-access" href="https://app.carpractice.it">Accedi</a>
-    <a class="cp-trial" href="https://app.carpractice.it">Prova gratuita</a>
+  <div class="nav-actions">
+    <a class="access" href="https://app.carpractice.it">Accedi</a>
+    <a class="trial" href="https://app.carpractice.it">Prova gratuita</a>
   </div>
 </header>
 
 <main>
-  <section class="club-hero">
-    <div class="club-hero__copy">
-      <p class="club-eyebrow">CARPRACTICE CLUB</p>
-      <h1>Presenta nuove carrozzerie.<br>Entra nel Club CarPractice.</h1>
-      <p class="club-lead">
+  <section class="hero">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">CARPRACTICE CLUB</p>
+      <h1>Presenta.<br>Condividi.<br><em>Cresci.</em></h1>
+      <p class="hero-lead">
         Ogni carrozzeria che attiva CarPractice tramite la tua presentazione
         ti fa salire di livello e ti regala
         <strong>100 crediti CarPractice</strong>.
       </p>
-      <a class="club-primary" href="https://app.carpractice.it/club">Entra nel Club</a>
+
+      <div class="hero-actions">
+        <a class="button primary" href="https://app.carpractice.it/club">
+          Entra nel Club
+          <span aria-hidden="true">→</span>
+        </a>
+        <a class="button secondary" href="#come-funziona">
+          Scopri come funziona
+        </a>
+      </div>
+
+      <div class="hero-benefits">
+        <div><strong>100</strong><span>crediti per ogni attivazione</span></div>
+        <div><strong>4</strong><span>livelli da raggiungere</span></div>
+        <div><strong>1</strong><span>Pass personale da condividere</span></div>
+      </div>
     </div>
 
-    <div class="club-hero__visual" aria-hidden="true">
-      <div class="club-orbit orbit-one"></div>
-      <div class="club-orbit orbit-two"></div>
-      <div class="club-emblem">
-        <span>CP</span>
-        <strong>CLUB</strong>
+    <div class="hero-card reveal" data-delay="120">
+      <div class="member-card">
+        <div class="member-card-top">
+          <img src="logo-carpractice.png" alt="">
+          <span>MEMBER PASS</span>
+        </div>
+
+        <div class="member-data">
+          <p>Carrozzeria Rossi</p>
+          <strong>CP-A7F39K</strong>
+          <small>Livello Silver</small>
+        </div>
+
+        <div class="member-progress">
+          <div class="member-progress-head">
+            <span>3 attivazioni</span>
+            <span>Gold a 5</span>
+          </div>
+          <div class="progress-bar"><span></span></div>
+        </div>
+
+        <div class="member-card-footer">
+          <span>300 crediti ottenuti</span>
+          <span>Club attivo</span>
+        </div>
       </div>
+
+      <div class="floating-badge badge-one">+100 crediti</div>
+      <div class="floating-badge badge-two">Nuova attivazione</div>
+      <div class="floating-badge badge-three">Livello Silver</div>
     </div>
   </section>
 
-  <section class="club-levels-section">
-    <div class="section-heading">
-      <p class="club-eyebrow">I LIVELLI DEL CLUB</p>
-      <h2>Più carrozzerie presenti, più valore ottieni.</h2>
+  <section class="how" id="come-funziona">
+    <div class="section-heading reveal">
+      <p class="eyebrow">COME FUNZIONA</p>
+      <h2>Un invito semplice.<br>Un vantaggio che cresce.</h2>
     </div>
 
-    <div class="club-levels">
-      <article class="club-level">
-        <span class="club-level__icon">🥉</span>
-        <p class="club-level__name">Bronze</p>
+    <div class="steps">
+      <article class="step reveal">
+        <span>01</span>
+        <h3>Accedi al Club</h3>
+        <p>Usa il tuo account CarPractice oppure completa una registrazione minima.</p>
+      </article>
+
+      <article class="step reveal" data-delay="60">
+        <span>02</span>
+        <h3>Crea il tuo Pass</h3>
+        <p>Ottieni un link personale, un QR code e i pulsanti di condivisione.</p>
+      </article>
+
+      <article class="step reveal" data-delay="120">
+        <span>03</span>
+        <h3>Presenta una carrozzeria</h3>
+        <p>Condividi il Pass, invia un contatto o prenota una demo insieme.</p>
+      </article>
+
+      <article class="step reveal" data-delay="180">
+        <span>04</span>
+        <h3>Ricevi 100 crediti</h3>
+        <p>Il premio viene assegnato quando la carrozzeria acquista e attiva la licenza.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="levels-section">
+    <div class="section-heading reveal">
+      <p class="eyebrow">I LIVELLI DEL CLUB</p>
+      <h2>Ogni nuova attivazione<br>ti porta più avanti.</h2>
+    </div>
+
+    <div class="levels-grid">
+      <article class="level-card reveal" data-level="bronze">
+        <div class="level-icon">B</div>
+        <p class="level-name">Bronze</p>
         <h3>1 carrozzeria</h3>
         <strong>100 crediti</strong>
+        <span class="level-status">Primo traguardo</span>
       </article>
 
-      <article class="club-level">
-        <span class="club-level__icon">🥈</span>
-        <p class="club-level__name">Silver</p>
+      <article class="level-card reveal" data-delay="60" data-level="silver">
+        <div class="level-icon">S</div>
+        <p class="level-name">Silver</p>
         <h3>3 carrozzerie</h3>
         <strong>300 crediti</strong>
+        <span class="level-status">Livello attuale</span>
       </article>
 
-      <article class="club-level featured">
-        <span class="club-badge">Livello obiettivo</span>
-        <span class="club-level__icon">🥇</span>
-        <p class="club-level__name">Gold</p>
+      <article class="level-card featured reveal" data-delay="120" data-level="gold">
+        <span class="featured-label">Prossimo obiettivo</span>
+        <div class="level-icon">G</div>
+        <p class="level-name">Gold</p>
         <h3>5 carrozzerie</h3>
         <strong>500 crediti</strong>
+        <span class="level-status">Ancora 2 attivazioni</span>
       </article>
 
-      <article class="club-level">
-        <span class="club-level__icon">💎</span>
-        <p class="club-level__name">Platinum</p>
-        <h3>10+ carrozzerie</h3>
-        <strong>1.000+ crediti</strong>
-      </article>
-    </div>
-  </section>
-
-  <section class="club-progress-section">
-    <div class="club-progress-card">
-      <div class="club-progress-copy">
-        <p class="club-eyebrow">IL TUO PERCORSO</p>
-        <h2>Hai presentato 3 carrozzerie.</h2>
-        <p>
-          Hai già raggiunto il livello Silver.
-          Ti mancano soltanto <strong>2 carrozzerie</strong>
-          per arrivare al livello Gold.
-        </p>
-      </div>
-
-      <div class="club-progress-box">
-        <div class="club-progress-head">
-          <span>Silver</span>
-          <span>Gold</span>
-        </div>
-        <div class="club-progress">
-          <span></span>
-        </div>
-        <div class="club-progress-values">
-          <strong>3 presentate</strong>
-          <strong>5 richieste</strong>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="club-benefits">
-    <div class="section-heading">
-      <p class="club-eyebrow">PERCHÉ PARTECIPARE</p>
-      <h2>Non uno sconto. Un vantaggio che cresce con te.</h2>
-    </div>
-
-    <div class="club-benefit-grid">
-      <article>
-        <span>01</span>
-        <h3>100 crediti per ogni attivazione</h3>
-        <p>Ogni nuova carrozzeria cliente genera crediti utilizzabili per le ricerche targa.</p>
-      </article>
-      <article>
-        <span>02</span>
-        <h3>Nessun limite di presentazioni</h3>
-        <p>Puoi continuare a salire di livello e accumulare nuovi crediti.</p>
-      </article>
-      <article>
-        <span>03</span>
-        <h3>Premio automatico</h3>
-        <p>I crediti vengono assegnati dopo l’attivazione della carrozzeria presentata.</p>
+      <article class="level-card reveal" data-delay="180" data-level="platinum">
+        <div class="level-icon">P</div>
+        <p class="level-name">Platinum</p>
+        <h3>10 carrozzerie</h3>
+        <strong>1.000 crediti</strong>
+        <span class="level-status">Massimo livello</span>
       </article>
     </div>
   </section>
 
-  <section class="club-access-section" id="club-access">
-    <div class="club-access-copy">
-      <p class="club-eyebrow">AREA CLUB PERSONALE</p>
-      <h2>Il Club ora vive dentro CarPractice.</h2>
+  <section class="pass-section">
+    <div class="pass-copy reveal">
+      <p class="eyebrow">IL TUO PASS PERSONALE</p>
+      <h2>Un invito professionale.<br>Pronto da condividere.</h2>
       <p>
-        Accedi con il tuo account per creare il Pass personale, condividere link e QR code,
-        presentare una carrozzeria, seguire ogni stato e controllare i crediti maturati.
+        Dal tuo account puoi generare un Pass personale collegato al tuo codice referral.
+        Ogni registrazione e ogni prenotazione vengono attribuite automaticamente.
       </p>
+
+      <ul class="check-list">
+        <li>Link personale tracciato</li>
+        <li>QR code generato nell’app</li>
+        <li>Condivisione WhatsApp ed email</li>
+        <li>Stato di ogni presentazione</li>
+      </ul>
     </div>
 
-    <div class="club-access-grid">
-      <article>
-        <span>01</span>
-        <h3>Sei già registrato?</h3>
-        <p>Entra con le tue credenziali e accedi direttamente alla dashboard del Club.</p>
-        <a href="https://app.carpractice.it/club" class="club-access-button primary">Accedi al Club</a>
-      </article>
+    <div class="pass-demo reveal" data-delay="100">
+      <div class="share-tabs" role="tablist" aria-label="Modalità di condivisione">
+        <button class="active" type="button" role="tab" aria-selected="true" data-share="link">Link</button>
+        <button type="button" role="tab" aria-selected="false" data-share="whatsapp">WhatsApp</button>
+        <button type="button" role="tab" aria-selected="false" data-share="email">Email</button>
+        <button type="button" role="tab" aria-selected="false" data-share="qr">QR code</button>
+      </div>
 
-      <article>
-        <span>02</span>
-        <h3>Non hai ancora un account?</h3>
-        <p>La registrazione minima ti permette di entrare nel Club e potrà essere usata anche per le 72 ore di prova.</p>
-        <a href="https://app.carpractice.it/club" class="club-access-button secondary">Registrati al Club</a>
-      </article>
+      <div class="share-preview">
+        <article class="share-panel active" data-panel="link">
+          <span class="share-kicker">LINK PERSONALE</span>
+          <h3>Invita con un solo clic.</h3>
+          <div class="fake-link">
+            <span>app.carpractice.it/register?ref=</span>
+            <strong>CP-A7F39K</strong>
+          </div>
+          <button type="button" class="copy-demo" data-copy="CP-A7F39K">
+            Copia il codice
+          </button>
+          <p class="copy-feedback" aria-live="polite"></p>
+        </article>
 
-      <article class="wide">
-        <span>03</span>
-        <h3>Vuoi partecipare alla demo insieme?</h3>
-        <p>Scegli uno slot libero e invita direttamente la carrozzeria che hai presentato.</p>
-        <a href="https://app.carpractice.it/prenota-demo" class="club-access-button secondary">Prenota una demo congiunta</a>
-      </article>
+        <article class="share-panel" data-panel="whatsapp" hidden>
+          <span class="share-kicker">WHATSAPP</span>
+          <h3>Condividi un invito già pronto.</h3>
+          <div class="message-preview">
+            <p>
+              Carrozzeria Rossi ti invita a scoprire CarPractice,
+              la piattaforma digitale per gestire l’intera pratica.
+            </p>
+          </div>
+          <a class="share-action" href="https://app.carpractice.it/club">Apri il Club</a>
+        </article>
+
+        <article class="share-panel" data-panel="email" hidden>
+          <span class="share-kicker">EMAIL</span>
+          <h3>Un invito professionale, firmato da te.</h3>
+          <div class="email-preview">
+            <span>Oggetto</span>
+            <strong>Scopri CarPractice con il mio invito</strong>
+            <p>Logo, messaggio personalizzato e pulsante di registrazione.</p>
+          </div>
+          <a class="share-action" href="https://app.carpractice.it/club">Crea l’invito</a>
+        </article>
+
+        <article class="share-panel" data-panel="qr" hidden>
+          <span class="share-kicker">QR CODE</span>
+          <h3>Mostralo. Inquadralo. Registrati.</h3>
+          <div class="qr-demo" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+          </div>
+          <a class="share-action" href="https://app.carpractice.it/club">Genera il QR reale</a>
+        </article>
+      </div>
     </div>
   </section>
 
-<section class="club-cta-section" id="presenta">
-    <p class="club-eyebrow">CARPRACTICE CLUB</p>
-    <h2>Conosci una carrozzeria che potrebbe lavorare meglio?</h2>
-    <p>Presentala a CarPractice e inizia il tuo percorso nel Club.</p>
-    <a class="club-primary" href="https://app.carpractice.it/club">Entra nel Club</a>
+  <section class="dashboard-section">
+    <div class="dashboard-copy reveal">
+      <p class="eyebrow">TUTTO SOTTO CONTROLLO</p>
+      <h2>Segui ogni presentazione,<br>dal primo invito all’attivazione.</h2>
+      <p>
+        La dashboard Club mostra chi hai presentato, lo stato aggiornato
+        e quando maturano i crediti.
+      </p>
+
+      <a class="text-link" href="https://app.carpractice.it/club">
+        Apri la dashboard Club
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="referral-board reveal" data-delay="100">
+      <div class="board-head">
+        <span>Carrozzeria</span>
+        <span>Stato</span>
+        <span>Premio</span>
+      </div>
+
+      <div class="board-row">
+        <strong>Autocar Rossi</strong>
+        <span class="status success">Cliente attivato</span>
+        <b>100 crediti</b>
+      </div>
+
+      <div class="board-row">
+        <strong>Carrozzeria Europa</strong>
+        <span class="status booked">Demo prenotata</span>
+        <b>In attesa</b>
+      </div>
+
+      <div class="board-row">
+        <strong>New Car Service</strong>
+        <span class="status pending">Invito aperto</span>
+        <b>In attesa</b>
+      </div>
+
+      <div class="board-row">
+        <strong>Auto Color Lab</strong>
+        <span class="status trial">Prova attiva</span>
+        <b>In attesa</b>
+      </div>
+    </div>
+  </section>
+
+  <section class="joint-demo">
+    <div class="joint-demo-card reveal">
+      <div class="joint-copy">
+        <p class="eyebrow">DEMO CONGIUNTA</p>
+        <h2>Partecipa alla demo<br>con la carrozzeria che hai invitato.</h2>
+        <p>
+          Scegli uno slot disponibile, invita il nuovo contatto e segui insieme
+          una dimostrazione costruita su un caso reale.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="https://app.carpractice.it/prenota-demo">
+            Prenota una demo congiunta
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="joint-visual" aria-hidden="true">
+        <div class="calendar-card">
+          <span>LUN 14</span>
+          <strong>15:00</strong>
+          <small>Demo CarPractice</small>
+        </div>
+        <div class="participant participant-a">Carrozzeria Rossi</div>
+        <div class="participant participant-b">Autocar Europa</div>
+        <div class="meet-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta reveal">
+    <div class="final-grid" aria-hidden="true"></div>
+    <div class="final-glow" aria-hidden="true"></div>
+
+    <div class="final-content">
+      <p class="eyebrow">CARPRACTICE CLUB</p>
+      <h2>Il prossimo livello<br>inizia da un invito.</h2>
+      <p>
+        Accedi al Club, crea il tuo Pass personale e presenta la prima carrozzeria.
+      </p>
+
+      <div class="hero-actions centered">
+        <a class="button primary" href="https://app.carpractice.it/club">
+          Entra nel Club
+          <span aria-hidden="true">→</span>
+        </a>
+        <a class="button secondary" href="https://app.carpractice.it">
+          Registrati
+        </a>
+      </div>
+    </div>
   </section>
 </main>
 
-<footer class="cp-footer">
+<footer>
   <a href="index.html"><img src="logo-carpractice.png" alt="CarPractice"></a>
   <p>Digital Repair Platform per carrozzerie.</p>
   <span>© 2026 CarPractice</span>
 </footer>
-
 </body>
 </html>
