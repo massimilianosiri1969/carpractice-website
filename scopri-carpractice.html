@@ -177,18 +177,85 @@
 
     <div class="device-stage reveal" data-delay="120">
       <div class="device-glow" aria-hidden="true"></div>
-      <div class="device-frame">
-        <div class="device-camera"></div>
-        <img id="deviceScreen" src="screen-home.png" alt="Interfaccia CarPractice">
+
+      <div class="device-interactive">
+        <div class="device-frame" id="softwarePreview">
+          <div class="device-camera" aria-hidden="true"></div>
+          <img
+            id="deviceScreen"
+            src="screen-home.png"
+            alt="Anteprima Dashboard CarPractice">
+          <div class="device-loading" id="deviceLoading" aria-hidden="true">
+            <span></span>
+          </div>
+        </div>
+
+        <div
+          class="screen-picker"
+          role="tablist"
+          aria-label="Seleziona una schermata CarPractice">
+
+          <button
+            type="button"
+            class="active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="softwarePreview"
+            data-screen="screen-home.png"
+            data-alt="Anteprima Dashboard CarPractice">
+            <span>01</span>
+            Dashboard
+          </button>
+
+          <button
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="softwarePreview"
+            data-screen="screen-client.png"
+            data-alt="Anteprima scheda Cliente CarPractice">
+            <span>02</span>
+            Cliente
+          </button>
+
+          <button
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="softwarePreview"
+            data-screen="screen-damage.png"
+            data-alt="Anteprima gestione Danni 3D CarPractice">
+            <span>03</span>
+            Danni 3D
+          </button>
+
+          <button
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="softwarePreview"
+            data-screen="screen-photos.png"
+            data-alt="Anteprima gestione Foto CarPractice">
+            <span>04</span>
+            Foto
+          </button>
+
+          <button
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="softwarePreview"
+            data-screen="screen-docs.png"
+            data-alt="Anteprima gestione Documenti CarPractice">
+            <span>05</span>
+            Documenti
+          </button>
+        </div>
       </div>
 
-      <div class="screen-picker" role="tablist" aria-label="Schermate CarPractice">
-        <button class="active" data-screen="screen-home.png">Dashboard</button>
-        <button data-screen="screen-client.png">Cliente</button>
-        <button data-screen="screen-damage.png">Danni 3D</button>
-        <button data-screen="screen-photos.png">Foto</button>
-        <button data-screen="screen-docs.png">Documenti</button>
-      </div>
+      <p class="screen-help">
+        Seleziona una voce per vedere la relativa schermata.
+      </p>
     </div>
   </section>
 
@@ -283,21 +350,27 @@
   </section>
 
   <section class="final-cta reveal">
-    <div class="final-shade" aria-hidden="true"></div>
-    <p class="eyebrow">PRONTO PER LA PROSSIMA RIPARAZIONE</p>
-    <h2>Provalo sulla tua <em>prossima riparazione.</em></h2>
-    <p>
-      Scopri come CarPractice può semplificare il lavoro della tua carrozzeria fin da subito.
-    </p>
+    <div class="final-grid" aria-hidden="true"></div>
+    <div class="final-orbit orbit-one" aria-hidden="true"></div>
+    <div class="final-orbit orbit-two" aria-hidden="true"></div>
+    <div class="final-glow" aria-hidden="true"></div>
 
-    <div class="hero-actions centered">
-      <a class="button primary" href="https://app.carpractice.it/prenota-demo">
-        Prenota una demo gratuita
-        <span aria-hidden="true">→</span>
-      </a>
-      <a class="button secondary" href="club-carpractice.html">
-        Scopri il Club
-      </a>
+    <div class="final-content">
+      <p class="eyebrow">PRONTO PER LA PROSSIMA RIPARAZIONE</p>
+      <h2>Provalo sulla tua <em>prossima riparazione.</em></h2>
+      <p>
+        Scopri come CarPractice può semplificare il lavoro della tua carrozzeria fin da subito.
+      </p>
+
+      <div class="hero-actions centered">
+        <a class="button primary" href="https://app.carpractice.it/prenota-demo">
+          Prenota una demo gratuita
+          <span aria-hidden="true">→</span>
+        </a>
+        <a class="button secondary" href="club-carpractice.html">
+          Scopri il Club
+        </a>
+      </div>
     </div>
   </section>
 </main>

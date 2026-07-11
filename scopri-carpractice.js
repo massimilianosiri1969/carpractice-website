@@ -28,43 +28,71 @@
   }
 
   const screenImage = document.getElementById("deviceScreen");
-  const screenButtons = [...document.querySelectorAll(".screen-picker button")];
+  const screenLoading = document.getElementById("deviceLoading");
+  const screenButtons = [...document.querySelectorAll(".screen-picker [role='tab']")];
 
-  function selectScreen(button) {
+  function activateScreen(button, moveFocus = false) {
     if (!screenImage || !button) return;
-    const next = button.dataset.screen;
-    if (!next || screenImage.getAttribute("src") === next) return;
 
-    screenButtons.forEach((item) => item.classList.toggle("active", item === button));
+    const nextSource = button.dataset.screen;
+    const nextAlt = button.dataset.alt || "Anteprima CarPractice";
+    if (!nextSource) return;
+
+    screenButtons.forEach((item) => {
+      const selected = item === button;
+      item.classList.toggle("active", selected);
+      item.setAttribute("aria-selected", selected ? "true" : "false");
+      item.tabIndex = selected ? 0 : -1;
+    });
+
+    if (moveFocus) button.focus();
+
+    if (screenImage.getAttribute("src") === nextSource) {
+      screenImage.alt = nextAlt;
+      return;
+    }
+
     screenImage.classList.add("switching");
+    screenLoading?.classList.add("visible");
 
-    window.setTimeout(() => {
-      screenImage.src = next;
-      screenImage.onload = () => screenImage.classList.remove("switching");
-    }, 180);
+    const preload = new Image();
+    preload.onload = () => {
+      screenImage.src = nextSource;
+      screenImage.alt = nextAlt;
+      requestAnimationFrame(() => {
+        screenImage.classList.remove("switching");
+        screenLoading?.classList.remove("visible");
+      });
+    };
+    preload.onerror = () => {
+      screenImage.classList.remove("switching");
+      screenLoading?.classList.remove("visible");
+      console.error(`Impossibile caricare la schermata: ${nextSource}`);
+    };
+    preload.src = nextSource;
   }
 
-  screenButtons.forEach((button) => {
-    button.addEventListener("click", () => selectScreen(button));
+  screenButtons.forEach((button, index) => {
+    button.addEventListener("click", () => activateScreen(button));
+
+    button.addEventListener("keydown", (event) => {
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      event.preventDefault();
+
+      let nextIndex = index;
+      if (event.key === "ArrowRight") nextIndex = (index + 1) % screenButtons.length;
+      if (event.key === "ArrowLeft") nextIndex = (index - 1 + screenButtons.length) % screenButtons.length;
+      if (event.key === "Home") nextIndex = 0;
+      if (event.key === "End") nextIndex = screenButtons.length - 1;
+
+      activateScreen(screenButtons[nextIndex], true);
+    });
   });
 
-  let autoIndex = 0;
-  let autoTimer = null;
-
-  function startAutoScreens() {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    window.clearInterval(autoTimer);
-    autoTimer = window.setInterval(() => {
-      autoIndex = (autoIndex + 1) % screenButtons.length;
-      selectScreen(screenButtons[autoIndex]);
-    }, 4200);
-  }
-
   if (screenButtons.length) {
-    startAutoScreens();
-    document.querySelector(".device-stage")?.addEventListener("mouseenter", () => clearInterval(autoTimer));
-    document.querySelector(".device-stage")?.addEventListener("mouseleave", startAutoScreens);
+    activateScreen(screenButtons.find((button) => button.classList.contains("active")) || screenButtons[0]);
   }
+
 
   const heroModel = document.querySelector(".hero-car");
   if (heroModel) {
