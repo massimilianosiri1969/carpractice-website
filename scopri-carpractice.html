@@ -3,14 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Scopri CarPractice</title>
-<meta name="description" content="Scopri come CarPractice accompagna ogni fase della riparazione, dalla targa alla consegna del veicolo.">
+<meta name="theme-color" content="#090a0d">
+<title>Scopri CarPractice — Il sistema operativo della carrozzeria</title>
+<meta name="description" content="Scopri come CarPractice collega targa, pratica, fotografie, danni, documenti e attività in un unico flusso operativo.">
 <link rel="stylesheet" href="scopri-carpractice.css">
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script defer src="scopri-carpractice.js"></script>
 </head>
 <body>
+<div class="page-noise" aria-hidden="true"></div>
+
 <header class="nav">
-  <a class="brand" href="index.html"><img src="logo-carpractice.png" alt="CarPractice"></a>
-  <nav class="menu">
+  <a class="brand" href="index.html" aria-label="CarPractice Home">
+    <img src="logo-carpractice.png" alt="CarPractice">
+  </a>
+
+  <nav class="menu" aria-label="Navigazione principale">
     <a class="active" href="scopri-carpractice.html">Scopri CarPractice</a>
     <a href="perche-carpractice.html">Perché CarPractice</a>
     <a href="richiedi-demo.html">Richiedi una demo</a>
@@ -18,6 +26,7 @@
     <a href="prezzi.html">Prezzi</a>
     <a href="index.html#contatti">Contatti</a>
   </nav>
+
   <div class="nav-actions">
     <a class="access" href="https://app.carpractice.it">Accedi</a>
     <a class="trial" href="https://app.carpractice.it">Prova gratuita</a>
@@ -25,157 +34,272 @@
 </header>
 
 <main>
-<section class="hero">
-  <div>
-    <p class="eyebrow">Scopri CarPractice</p>
-    <h1>Non un semplice gestionale. Un nuovo modo di lavorare.</h1>
-    <p class="lead">CarPractice accompagna ogni riparazione dall’ingresso del veicolo alla consegna, collegando dati, immagini, documenti e attività in un unico flusso operativo.</p>
-    <div class="actions">
-      <a class="button primary" href="#percorso">Inizia il percorso</a>
-      <a class="button secondary" href="https://app.carpractice.it">Prova CarPractice</a>
+  <section class="hero" id="top">
+    <div class="hero-copy reveal">
+      <p class="eyebrow">IL SISTEMA OPERATIVO DELLA CARROZZERIA</p>
+      <h1>Ogni riparazione<br>racconta una <em>storia.</em></h1>
+      <p class="lead">
+        Dalla targa alla consegna. CarPractice collega dati, fotografie,
+        danni, documenti e attività in un unico flusso operativo.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button primary" href="https://app.carpractice.it/prenota-demo">
+          Prenota una demo
+          <span aria-hidden="true">→</span>
+        </a>
+        <a class="button secondary" href="#flusso">
+          Scopri come funziona
+          <span class="play" aria-hidden="true">▶</span>
+        </a>
+      </div>
+
+      <div class="hero-points" aria-label="Benefici principali">
+        <div><span class="metric-icon">↯</span><strong>Più velocità</strong><small>nelle pratiche</small></div>
+        <div><span class="metric-icon">◇</span><strong>Meno errori</strong><small>più precisione</small></div>
+        <div><span class="metric-icon">▥</span><strong>Più controllo</strong><small>più redditività</small></div>
+      </div>
     </div>
-  </div>
 
-  <div class="hero-visual">
-    <div class="orb orb-one"></div>
-    <div class="orb orb-two"></div>
-    <div class="hero-card">
-      <span>Una sola pratica</span>
-      <strong>Targa.<br>Cliente.<br>Danni.<br>Documenti.<br>Dossier.</strong>
+    <div class="hero-visual reveal" data-delay="120">
+      <div class="lidar-grid" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="scan-ring ring-a" aria-hidden="true"></div>
+      <div class="scan-ring ring-b" aria-hidden="true"></div>
+      <div class="scan-ring ring-c" aria-hidden="true"></div>
+
+      <model-viewer
+        class="hero-car"
+        src="models/Fiat_Grande_Panda_2025.glb"
+        alt="Fiat Grande Panda 3D in CarPractice"
+        camera-controls
+        disable-zoom
+        interaction-prompt="none"
+        shadow-intensity="1.15"
+        shadow-softness="0.85"
+        exposure="1.05"
+        environment-image="neutral"
+        camera-orbit="-35deg 68deg 7.4m"
+        field-of-view="27deg"
+        min-camera-orbit="auto 48deg auto"
+        max-camera-orbit="auto 82deg auto"
+        loading="eager">
+      </model-viewer>
+
+      <div class="data-node node-client">
+        <span>CLIENTE</span>
+        <strong>Mario Rossi</strong>
+      </div>
+      <div class="data-node node-status">
+        <span>STATO PRATICA</span>
+        <strong>In lavorazione</strong>
+      </div>
+      <div class="data-node node-deadline">
+        <span>SCADENZA</span>
+        <strong>12 luglio</strong>
+      </div>
+      <div class="data-node node-damage">
+        <span>DANNO</span>
+        <strong>Paraurti anteriore</strong>
+      </div>
+      <div class="data-node node-parts">
+        <span>RICAMBI</span>
+        <strong>2 articoli</strong>
+      </div>
+      <div class="data-node node-docs">
+        <span>DOCUMENTI</span>
+        <strong>8 file</strong>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="journey" id="percorso">
-  <div class="section-heading">
-    <p class="eyebrow">Il percorso della riparazione</p>
-    <h2>Ogni fase segue la precedente. Nessun dato si perde.</h2>
-  </div>
+  <section class="workflow" id="flusso">
+    <div class="section-heading reveal">
+      <p class="eyebrow">IL FLUSSO COMPLETO</p>
+      <h2>Un flusso <em>unico.</em> Tutto collegato. Tutto sotto controllo.</h2>
+    </div>
 
-  <article class="story">
-    <div class="copy">
-      <span class="chapter">01</span>
-      <p class="eyebrow">La pratica comincia dalla targa</p>
-      <h3>Il veicolo viene riconosciuto prima ancora di compilare la scheda.</h3>
-      <p>L’operatore inserisce o acquisisce la targa. CarPractice identifica il veicolo e prepara il punto di partenza della lavorazione, riducendo errori e tempi inutili.</p>
-      <ul>
-        <li>Identificazione immediata del mezzo</li>
-        <li>Dati tecnici collegati alla pratica</li>
-        <li>Meno inserimenti manuali</li>
+    <div class="workflow-track reveal" data-delay="100">
+      <div class="workflow-line" aria-hidden="true"><span></span></div>
+
+      <article class="workflow-step active">
+        <b>1</b><div class="step-icon">◉</div><h3>Il cliente arriva</h3>
+      </article>
+      <article class="workflow-step">
+        <b>2</b><div class="step-icon">▣</div><h3>Scansione targa</h3>
+      </article>
+      <article class="workflow-step">
+        <b>3</b><div class="step-icon">▤</div><h3>Creazione pratica</h3>
+      </article>
+      <article class="workflow-step">
+        <b>4</b><div class="step-icon">◉</div><h3>Foto e documenti</h3>
+      </article>
+      <article class="workflow-step">
+        <b>5</b><div class="step-icon">◇</div><h3>Valutazione danno</h3>
+      </article>
+      <article class="workflow-step">
+        <b>6</b><div class="step-icon">▧</div><h3>Preventivo</h3>
+      </article>
+      <article class="workflow-step">
+        <b>7</b><div class="step-icon">⬡</div><h3>Ordine ricambi</h3>
+      </article>
+      <article class="workflow-step">
+        <b>8</b><div class="step-icon">⌁</div><h3>Lavorazione</h3>
+      </article>
+      <article class="workflow-step">
+        <b>9</b><div class="step-icon">✓</div><h3>Consegna</h3>
+      </article>
+    </div>
+
+    <p class="workflow-caption reveal">
+      Ogni fase è <em>connessa.</em> Ogni informazione è sempre <em>disponibile.</em>
+    </p>
+  </section>
+
+  <section class="product-stage">
+    <div class="product-copy reveal">
+      <p class="eyebrow">CARPRACTICE IN AZIONE</p>
+      <h2>Tutte le informazioni<br>al <em>posto giusto.</em></h2>
+      <p>
+        Dalla pratica ai documenti, dai danni ai ricambi:
+        tutto è organizzato in un’unica interfaccia semplice e sempre aggiornata.
+      </p>
+
+      <ul class="check-list">
+        <li>Dashboard completa e personalizzabile</li>
+        <li>Accesso rapido a tutte le pratiche</li>
+        <li>Foto, documenti e note sempre disponibili</li>
+        <li>Aggiornamenti in tempo reale</li>
+        <li>Sicuro, veloce, sempre con te</li>
       </ul>
     </div>
-    <div class="media"><img src="screen-home.png" alt="Ricerca tramite targa"></div>
-  </article>
 
-  <article class="story reverse">
-    <div class="copy">
-      <span class="chapter">02</span>
-      <p class="eyebrow">Cliente e veicolo finalmente insieme</p>
-      <h3>Una sola anagrafica. Tutta la storia della relazione.</h3>
-      <p>Dati del cliente, veicoli associati, pratiche e consensi restano collegati. Ogni informazione è disponibile quando serve.</p>
-      <ul>
-        <li>Cliente, veicolo e pratica collegati</li>
-        <li>Storico facilmente consultabile</li>
-        <li>Privacy e consensi ordinati</li>
-      </ul>
+    <div class="device-stage reveal" data-delay="120">
+      <div class="device-glow" aria-hidden="true"></div>
+      <div class="device-frame">
+        <div class="device-camera"></div>
+        <img id="deviceScreen" src="screen-home.png" alt="Interfaccia CarPractice">
+      </div>
+
+      <div class="screen-picker" role="tablist" aria-label="Schermate CarPractice">
+        <button class="active" data-screen="screen-home.png">Dashboard</button>
+        <button data-screen="screen-client.png">Cliente</button>
+        <button data-screen="screen-damage.png">Danni 3D</button>
+        <button data-screen="screen-photos.png">Foto</button>
+        <button data-screen="screen-docs.png">Documenti</button>
+      </div>
     </div>
-    <div class="media"><img src="screen-client.png" alt="Anagrafica cliente"></div>
-  </article>
+  </section>
 
-  <article class="story">
-    <div class="copy">
-      <span class="chapter">03</span>
-      <p class="eyebrow">Il danno diventa visibile</p>
-      <h3>La carrozzeria non si descrive soltanto. Si esplora.</h3>
-      <p>Il modello 3D permette di individuare le parti interessate e costruire una mappa visiva della riparazione.</p>
-      <ul>
-        <li>Parti della carrozzeria selezionabili</li>
-        <li>Classificazione del danno</li>
-        <li>Rappresentazione tecnica immediata</li>
-      </ul>
+  <section class="control-section">
+    <div class="comparison reveal">
+      <p class="eyebrow">DA CAOS E FRAMMENTAZIONE</p>
+      <h2>A <em>controllo totale.</em></h2>
+
+      <div class="comparison-grid">
+        <article class="before">
+          <span>PRIMA</span>
+          <ul>
+            <li>WhatsApp e telefonate</li>
+            <li>Excel e fogli sparsi</li>
+            <li>Foto non organizzate</li>
+            <li>Documenti difficili da trovare</li>
+            <li>Nessuna visione d’insieme</li>
+          </ul>
+          <strong>Tempo perso. Errori. Stress.</strong>
+        </article>
+
+        <div class="compare-arrow" aria-hidden="true">→</div>
+
+        <article class="after">
+          <span>DOPO CON CARPRACTICE</span>
+          <ul>
+            <li>Tutto in un’unica piattaforma</li>
+            <li>Dati sempre aggiornati</li>
+            <li>Foto e documenti organizzati</li>
+            <li>Controllo totale delle pratiche</li>
+            <li>Più tempo per ciò che conta</li>
+          </ul>
+          <strong>Più efficienza. Più clienti. Più crescita.</strong>
+        </article>
+      </div>
     </div>
-    <div class="media dark"><img src="screen-damage.png" alt="Danni sul modello 3D"></div>
-  </article>
 
-  <article class="story reverse">
-    <div class="copy">
-      <span class="chapter">04</span>
-      <p class="eyebrow">Ogni immagine racconta una fase</p>
-      <h3>Il dossier fotografico segue davvero la lavorazione.</h3>
-      <p>Le fotografie vengono organizzate per fase: veicolo danneggiato, lavorazione, ultimato e consegna.</p>
-      <ul>
-        <li>Foto ordinate per momento operativo</li>
-        <li>Prova visiva della lavorazione</li>
-        <li>Materiale pronto per clienti e assicurazioni</li>
-      </ul>
+    <div class="orbit-system reveal" data-delay="100">
+      <div class="orbit-title">
+        <p class="eyebrow">OGNI INFORMAZIONE</p>
+        <h2>Al <em>posto giusto.</em></h2>
+      </div>
+
+      <div class="orbit-map" aria-label="Informazioni collegate alla pratica">
+        <div class="orbit-loop loop-a"></div>
+        <div class="orbit-loop loop-b"></div>
+        <div class="orbit-car">
+          <model-viewer
+            src="models/Fiat_Grande_Panda_2025.glb"
+            alt="Vista dall'alto del veicolo"
+            camera-orbit="0deg 12deg 8.8m"
+            field-of-view="24deg"
+            interaction-prompt="none"
+            shadow-intensity="0"
+            environment-image="neutral">
+          </model-viewer>
+        </div>
+
+        <span class="satellite sat-client">Cliente</span>
+        <span class="satellite sat-photo">Foto e danni</span>
+        <span class="satellite sat-quote">Preventivo</span>
+        <span class="satellite sat-parts">Ricambi</span>
+        <span class="satellite sat-docs">Documenti</span>
+        <span class="satellite sat-team">Operatori</span>
+        <span class="satellite sat-deadline">Scadenze</span>
+        <span class="satellite sat-delivery">Consegna</span>
+      </div>
     </div>
-    <div class="media"><img src="screen-photos.png" alt="Dossier fotografico"></div>
-  </article>
+  </section>
 
-  <article class="story">
-    <div class="copy">
-      <span class="chapter">05</span>
-      <p class="eyebrow">I documenti entrano nel flusso</p>
-      <h3>Niente allegati sparsi. Ogni documento resta nella pratica giusta.</h3>
-      <p>Libretto, polizza, CID e altri documenti possono essere caricati, archiviati e letti tramite OCR.</p>
-      <ul>
-        <li>Acquisizione documentale</li>
-        <li>Lettura OCR</li>
-        <li>Allegati ordinati e disponibili</li>
-      </ul>
+  <section class="inside-section">
+    <div class="inside-visual reveal">
+      <div class="technical-lines" aria-hidden="true"></div>
+      <img src="screen-damage.png" alt="Analisi tecnica dei danni in CarPractice">
     </div>
-    <div class="media"><img src="screen-docs.png" alt="Documenti e OCR"></div>
-  </article>
-</section>
 
-<section class="result">
-  <div>
-    <p class="eyebrow">Il risultato finale</p>
-    <h2>Una pratica che racconta tutto ciò che è stato fatto.</h2>
-    <p>Cliente, veicolo, fotografie, danni, documenti e firme confluiscono in un dossier digitale ordinato. Non è soltanto un archivio: è la prova professionale della riparazione.</p>
-  </div>
-  <div class="result-card">
-    <span>Dossier digitale</span>
-    <p>01 — Dati cliente</p>
-    <p>02 — Identificazione veicolo</p>
-    <p>03 — Danni rilevati</p>
-    <p>04 — Fotografie per fase</p>
-    <p>05 — Documenti e allegati</p>
-    <p>06 — Privacy e firma</p>
-  </div>
-</section>
+    <div class="inside-copy reveal" data-delay="100">
+      <p class="eyebrow">DENTRO CARPRACTICE</p>
+      <h2>Ogni pratica.<br>Ogni dettaglio.<br><em>Sotto controllo.</em></h2>
+      <p>
+        Approfondisci ogni aspetto della riparazione con pochi clic.
+        Nulla è isolato dal resto della pratica.
+      </p>
 
-<section class="benefits">
-  <div class="section-heading">
-    <p class="eyebrow">Cosa cambia davvero</p>
-    <h2>La tecnologia conta solo quando migliora il lavoro.</h2>
-  </div>
-  <div class="benefit-grid">
-    <article><span>01</span><h3>Meno tempo perso</h3><p>Le informazioni vengono inserite una volta e accompagnano tutta la pratica.</p></article>
-    <article><span>02</span><h3>Meno errori</h3><p>Veicolo, cliente, documenti e immagini restano collegati nello stesso flusso.</p></article>
-    <article><span>03</span><h3>Più professionalità</h3><p>Ogni lavorazione può essere documentata in modo chiaro e presentabile.</p></article>
-    <article><span>04</span><h3>Più controllo</h3><p>Lo stato della pratica è leggibile, dall’accettazione alla consegna.</p></article>
-  </div>
-</section>
+      <div class="feature-list">
+        <article><span>01</span><div><h3>Foto e documenti</h3><p>Tutte le immagini e i file sempre organizzati.</p></div></article>
+        <article><span>02</span><div><h3>Valutazione danni</h3><p>Seleziona, misura e valuta con precisione.</p></div></article>
+        <article><span>03</span><div><h3>Ricambi e costi</h3><p>Trova i ricambi giusti e organizza le necessità.</p></div></article>
+        <article><span>04</span><div><h3>Storico e note</h3><p>Cronologia completa e informazioni sempre disponibili.</p></div></article>
+      </div>
+    </div>
+  </section>
 
-<section class="evolution">
-  <div>
-    <p class="eyebrow">Una piattaforma che cresce</p>
-    <h2>Costruisci il tuo CarPractice. Un modulo alla volta.</h2>
-  </div>
-  <p>Magazzino, fatturazione, consuntivo, AI Assistant, Business Intelligence e integrazioni ampliano la piattaforma senza cambiare il modo di lavorare.</p>
-  <a class="button primary" href="index.html#prezzi">Scopri i moduli</a>
-</section>
+  <section class="final-cta reveal">
+    <div class="final-shade" aria-hidden="true"></div>
+    <p class="eyebrow">PRONTO PER LA PROSSIMA RIPARAZIONE</p>
+    <h2>Provalo sulla tua <em>prossima riparazione.</em></h2>
+    <p>
+      Scopri come CarPractice può semplificare il lavoro della tua carrozzeria fin da subito.
+    </p>
 
-<section class="final-cta">
-  <p class="eyebrow">Vedi CarPractice in azione</p>
-  <h2>Ogni riparazione può diventare più semplice da gestire.</h2>
-  <p>Registrati e prova l’intero flusso operativo direttamente nella piattaforma.</p>
-  <div class="actions centered">
-    <a class="button primary" href="https://app.carpractice.it">Inizia la prova gratuita</a>
-    <a class="button secondary" href="index.html#contatti">Contatti</a>
-  </div>
-</section>
+    <div class="hero-actions centered">
+      <a class="button primary" href="https://app.carpractice.it/prenota-demo">
+        Prenota una demo gratuita
+        <span aria-hidden="true">→</span>
+      </a>
+      <a class="button secondary" href="club-carpractice.html">
+        Scopri il Club
+      </a>
+    </div>
+  </section>
 </main>
 
 <footer>
