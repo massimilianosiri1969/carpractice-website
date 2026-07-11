@@ -1,0 +1,25 @@
+CARPRACTICE — ECOSISTEMA INTEGRATO
+
+Il pacchetto include:
+- base V9 stabile;
+- Scopri CarPractice aggiornato;
+- Perché CarPractice V2;
+- Club CarPractice V3;
+- nuova pagina Ecosistema CarPractice;
+- collegamento Ecosistema nei menu principali.
+
+CARICAMENTO
+Carica tutto il contenuto su GitHub, inclusa la cartella models.
+
+Commit suggerito:
+CarPractice - Ecosistema integrato
+
+TEST
+1. Homepage, intro e GLB.
+2. Voce Ecosistema nei menu.
+3. Filtri e finestre di dettaglio Ecosistema.
+4. Pagine Scopri, Perché e Club.
+5. Link Base44 per Club e Demo.
+6. Visualizzazione mobile.
+
+I voti della roadmap restano dimostrativi fino al collegamento con Base44.
