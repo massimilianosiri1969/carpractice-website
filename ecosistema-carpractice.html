@@ -122,8 +122,10 @@
       <button type="button" data-filter="roadmap" aria-selected="false">Roadmap</button>
     </div>
 
+    <p class="api-status" id="roadmapStatus" aria-live="polite"></p>
+
     <div class="module-grid">
-      <article class="module-card reveal" data-status="available">
+      <article class="module-card reveal" data-status="available" data-slug="ricerca-targa">
         <div class="module-head">
           <span class="status available">Disponibile</span>
           <b>01</b>
@@ -134,7 +136,7 @@
         <button class="module-open" data-module="ricerca-targa">Scopri il modulo →</button>
       </article>
 
-      <article class="module-card reveal" data-delay="40" data-status="available">
+      <article class="module-card reveal" data-delay="40" data-status="available" data-slug="pratiche">
         <div class="module-head">
           <span class="status available">Disponibile</span>
           <b>02</b>
@@ -145,7 +147,7 @@
         <button class="module-open" data-module="pratiche">Scopri il modulo →</button>
       </article>
 
-      <article class="module-card reveal" data-delay="80" data-status="available">
+      <article class="module-card reveal" data-delay="80" data-status="available" data-slug="danni-3d">
         <div class="module-head">
           <span class="status available">Disponibile</span>
           <b>03</b>
@@ -156,7 +158,7 @@
         <button class="module-open" data-module="danni-3d">Scopri il modulo →</button>
       </article>
 
-      <article class="module-card reveal" data-delay="120" data-status="available">
+      <article class="module-card reveal" data-delay="120" data-status="available" data-slug="foto-documenti">
         <div class="module-head">
           <span class="status available">Disponibile</span>
           <b>04</b>
@@ -167,7 +169,7 @@
         <button class="module-open" data-module="foto-documenti">Scopri il modulo →</button>
       </article>
 
-      <article class="module-card reveal" data-status="available">
+      <article class="module-card reveal" data-status="available" data-slug="club">
         <div class="module-head">
           <span class="status available">Disponibile</span>
           <b>05</b>
@@ -178,7 +180,7 @@
         <button class="module-open" data-module="club">Scopri il modulo →</button>
       </article>
 
-      <article class="module-card reveal" data-delay="40" data-status="developing">
+      <article class="module-card reveal" data-delay="40" data-status="developing" data-slug="ai-assistant">
         <div class="module-head">
           <span class="status developing">In sviluppo</span>
           <b>06</b>
@@ -190,7 +192,7 @@
         <button class="module-open" data-module="ai-assistant">Scopri il modulo →</button>
       </article>
 
-      <article class="module-card reveal" data-delay="80" data-status="developing">
+      <article class="module-card reveal" data-delay="80" data-status="developing" data-slug="business-intelligence">
         <div class="module-head">
           <span class="status developing">In sviluppo</span>
           <b>07</b>
@@ -202,7 +204,7 @@
         <button class="module-open" data-module="business-intelligence">Scopri il modulo →</button>
       </article>
 
-      <article class="module-card reveal" data-delay="120" data-status="developing">
+      <article class="module-card reveal" data-delay="120" data-status="developing" data-slug="magazzino">
         <div class="module-head">
           <span class="status developing">In sviluppo</span>
           <b>08</b>
@@ -214,7 +216,7 @@
         <button class="module-open" data-module="magazzino">Scopri il modulo →</button>
       </article>
 
-      <article class="module-card reveal" data-status="roadmap">
+      <article class="module-card reveal" data-status="roadmap" data-slug="app-mobile">
         <div class="module-head">
           <span class="status roadmap">Roadmap</span>
           <b>09</b>
@@ -225,7 +227,7 @@
         <button class="module-open" data-module="app-mobile">Scopri il modulo →</button>
       </article>
 
-      <article class="module-card reveal" data-delay="40" data-status="roadmap">
+      <article class="module-card reveal" data-delay="40" data-status="roadmap" data-slug="centralino-ai">
         <div class="module-head">
           <span class="status roadmap">Roadmap</span>
           <b>10</b>
@@ -236,7 +238,7 @@
         <button class="module-open" data-module="centralino-ai">Scopri il modulo →</button>
       </article>
 
-      <article class="module-card reveal" data-delay="80" data-status="roadmap">
+      <article class="module-card reveal" data-delay="80" data-status="roadmap" data-slug="preventivatore-ai">
         <div class="module-head">
           <span class="status roadmap">Roadmap</span>
           <b>11</b>
@@ -247,7 +249,7 @@
         <button class="module-open" data-module="preventivatore-ai">Scopri il modulo →</button>
       </article>
 
-      <article class="module-card reveal" data-delay="120" data-status="roadmap">
+      <article class="module-card reveal" data-delay="120" data-status="roadmap" data-slug="crm-evoluto">
         <div class="module-head">
           <span class="status roadmap">Roadmap</span>
           <b>12</b>
@@ -313,77 +315,91 @@
       <p class="eyebrow">ROADMAP PARTECIPATA</p>
       <h2>Quale modulo aspetti di più?</h2>
       <p>
-        Esprimi il tuo interesse. Nella versione collegata all’app il voto verrà registrato
-        e contribuirà a definire le priorità di sviluppo.
+        Esprimi il tuo interesse. Il voto viene registrato nella roadmap CarPractice
+        e contribuisce a definire le priorità di sviluppo.
       </p>
       <div class="vote-note">
-        <strong>Nota</strong>
-        <span>I conteggi mostrati qui sono dimostrativi finché il sito non viene collegato al database Base44.</span>
+        <strong>Un voto per modulo</strong>
+        <span>Il browser ricorda i moduli già votati e Base44 impedisce i duplicati.</span>
       </div>
     </div>
 
-    <div class="vote-list reveal" data-delay="100">
-      <article class="vote-row" data-vote-id="ai-assistant">
-        <div>
-          <span>01</span>
-          <strong>AI Assistant</strong>
-        </div>
-        <div class="vote-meter"><span style="width:82%"></span></div>
-        <b class="vote-count">143</b>
-        <button type="button">Mi interessa</button>
-      </article>
-
-      <article class="vote-row" data-vote-id="centralino-ai">
-        <div>
-          <span>02</span>
-          <strong>Centralino AI</strong>
-        </div>
-        <div class="vote-meter"><span style="width:61%"></span></div>
-        <b class="vote-count">81</b>
-        <button type="button">Mi interessa</button>
-      </article>
-
-      <article class="vote-row" data-vote-id="business-intelligence">
-        <div>
-          <span>03</span>
-          <strong>Business Intelligence</strong>
-        </div>
-        <div class="vote-meter"><span style="width:48%"></span></div>
-        <b class="vote-count">62</b>
-        <button type="button">Mi interessa</button>
-      </article>
-
-      <article class="vote-row" data-vote-id="app-mobile">
-        <div>
-          <span>04</span>
-          <strong>App Mobile</strong>
-        </div>
-        <div class="vote-meter"><span style="width:43%"></span></div>
-        <b class="vote-count">57</b>
-        <button type="button">Mi interessa</button>
-      </article>
+    <div class="vote-list reveal" data-delay="100" id="dynamicVoteList">
+      <div class="api-loading">
+        <span></span>
+        Caricamento priorità roadmap…
+      </div>
     </div>
   </section>
 
   <section class="idea-section">
     <div class="idea-card reveal">
-      <div>
+      <div class="idea-copy">
         <p class="eyebrow">HAI UN’IDEA?</p>
         <h2>Raccontaci quale funzione vorresti vedere in CarPractice.</h2>
         <p>
-          Le idee migliori possono entrare nella roadmap e diventare parte dell’ecosistema.
+          Le idee più utili possono entrare nella roadmap e diventare parte dell’ecosistema.
         </p>
       </div>
 
-      <div class="idea-actions">
-        <a class="button primary" href="https://app.carpractice.it">
-          Invia un suggerimento
+      <form class="idea-form" id="featureSuggestionForm">
+        <div class="form-grid">
+          <label>
+            Nome e cognome
+            <input type="text" name="nome" required maxlength="100" placeholder="Mario Rossi">
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" required maxlength="160" placeholder="mario@carrozzeria.it">
+          </label>
+
+          <label>
+            Azienda
+            <input type="text" name="azienda" maxlength="160" placeholder="Carrozzeria Rossi">
+          </label>
+
+          <label>
+            Categoria
+            <select name="categoria" required>
+              <option value="">Seleziona</option>
+              <option value="workflow">Workflow</option>
+              <option value="ai">Intelligenza artificiale</option>
+              <option value="mobile">Mobile</option>
+              <option value="documents">Documenti</option>
+              <option value="warehouse">Magazzino</option>
+              <option value="customers">Clienti</option>
+              <option value="reporting">Report e statistiche</option>
+              <option value="integration">Integrazione</option>
+              <option value="other">Altro</option>
+            </select>
+          </label>
+
+          <label class="full">
+            Titolo dell’idea
+            <input type="text" name="titolo" required maxlength="140" placeholder="Firma digitale del cliente">
+          </label>
+
+          <label class="full">
+            Descrizione
+            <textarea name="descrizione" required maxlength="2000" rows="6" placeholder="Descrivi il problema e come immagini la funzione…"></textarea>
+          </label>
+
+          <label class="website-field" aria-hidden="true">
+            Sito web
+            <input type="text" name="website" tabindex="-1" autocomplete="off">
+          </label>
+        </div>
+
+        <input type="hidden" name="origine" value="ecosistema">
+
+        <button class="button primary submit-idea" type="submit">
+          Invia il suggerimento
           <span aria-hidden="true">→</span>
-        </a>
-        <a class="button secondary" href="richiedi-demo.html">
-          Parliamone durante una demo
-        </a>
-      </div>
+        </button>
+
+        <p class="form-feedback" id="suggestionFeedback" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 

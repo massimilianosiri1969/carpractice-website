@@ -320,3 +320,151 @@ footer span{margin-left:auto}
   *{scroll-behavior:auto!important;animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
 }
+
+
+/* =========================================================
+   V3 — INTEGRAZIONE BASE44
+   ========================================================= */
+.api-status{
+  min-height:22px;
+  margin:-18px auto 28px;
+  color:#89847d;
+  font-size:12px;
+  text-align:center;
+}
+.api-status.error{color:#ff9a94}
+.api-status.success{color:var(--green)}
+
+.api-loading{
+  min-height:170px;
+  display:flex;
+  gap:14px;
+  align-items:center;
+  justify-content:center;
+  color:#8e8981;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:#111318;
+}
+.api-loading span{
+  width:26px;
+  height:26px;
+  border:2px solid rgba(255,255,255,.14);
+  border-top-color:var(--orange);
+  border-radius:50%;
+  animation:apiSpin .75s linear infinite;
+}
+@keyframes apiSpin{to{transform:rotate(360deg)}}
+
+.vote-row{
+  grid-template-columns:1.05fr 1fr 55px auto;
+}
+.vote-row .vote-module-status{
+  display:block;
+  margin-top:4px;
+  color:#77736d;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.vote-row button.voted{
+  color:#a9a39a;
+  background:#262a31;
+}
+.vote-error{
+  padding:20px;
+  color:#ff9a94;
+  border:1px solid rgba(255,98,92,.20);
+  border-radius:16px;
+  background:rgba(255,98,92,.04);
+}
+
+.idea-card{
+  grid-template-columns:.72fr 1.28fr;
+  align-items:start;
+}
+.idea-copy>p:not(.eyebrow){
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.72;
+}
+.idea-form{
+  padding:30px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:28px;
+  background:#0d1015;
+}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:17px;
+}
+.idea-form label{
+  display:grid;
+  gap:9px;
+  color:#d5cfc6;
+  font-size:12px;
+  font-weight:750;
+}
+.idea-form label.full{grid-column:1/-1}
+.idea-form input,
+.idea-form select,
+.idea-form textarea{
+  width:100%;
+  padding:15px 16px;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:13px;
+  outline:none;
+  background:#090b0e;
+}
+.idea-form select{appearance:auto}
+.idea-form input:focus,
+.idea-form select:focus,
+.idea-form textarea:focus{
+  border-color:rgba(255,122,26,.60);
+  box-shadow:0 0 0 3px rgba(255,122,26,.07);
+}
+.website-field{
+  position:absolute!important;
+  left:-9999px!important;
+  width:1px!important;
+  height:1px!important;
+  overflow:hidden!important;
+}
+.submit-idea{
+  width:100%;
+  margin-top:20px;
+  border:0;
+  cursor:pointer;
+}
+.submit-idea:disabled{
+  opacity:.55;
+  cursor:wait;
+}
+.form-feedback{
+  min-height:22px;
+  margin:14px 0 0;
+  color:#8f8a82;
+  font-size:12px;
+  text-align:center;
+}
+.form-feedback.success{color:var(--green)}
+.form-feedback.error{color:#ff9a94}
+
+.module-card[data-api-updated="true"]{
+  border-color:rgba(255,122,26,.18);
+}
+
+@media(max-width:920px){
+  .idea-card{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .form-grid{grid-template-columns:1fr}
+  .idea-form label.full{grid-column:1}
+  .idea-form{padding:24px 20px}
+  .vote-row{
+    grid-template-columns:1fr 48px auto;
+  }
+}
