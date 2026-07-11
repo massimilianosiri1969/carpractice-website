@@ -17,6 +17,7 @@
     <a href="scopri-carpractice.html">Scopri CarPractice</a>
     <a href="perche-carpractice.html">Perché CarPractice</a>
     <a class="active" href="richiedi-demo.html">Richiedi una demo</a>
+    <a href="prezzi.html">Prezzi</a>
     <a href="index.html#contatti">Contatti</a>
   </nav>
   <div class="nav-actions">
@@ -302,13 +303,7 @@
     </p>
   </div>
 
-  <form class="booking-form"
-        action="https://formsubmit.co/info@carpractice.it"
-        method="POST">
-    <input type="hidden" name="_subject" value="Nuova richiesta demo CarPractice">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://carpractice-website.vercel.app/grazie-demo.html">
+  <form class="booking-form" action="mailto:info@carpractice.it" method="post" enctype="text/plain">
     <label>
       Nome e cognome
       <input type="text" name="Nome" required placeholder="Mario Rossi">

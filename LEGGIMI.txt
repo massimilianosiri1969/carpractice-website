@@ -1,10 +1,2 @@
-RIPRISTINO HOME V7.7 - CACHE BYPASS
-
-Carica/sostituisci SOLO:
-- index.html
-- styles-v77-final.css
-
-Non eliminare per ora styles.css: semplicemente non verrà più usato dalla homepage.
-Non caricare club.css e non modificare altre pagine in questo passaggio.
-
-La homepage usa ora un nome CSS nuovo, quindi browser e Vercel non possono servire la vecchia versione dalla cache.
+CarPractice Home V3 completa
+Carica index.html, styles.css e gli asset PNG su GitHub.
