@@ -19,7 +19,7 @@ TEST
 2. Voce Ecosistema nei menu.
 3. Filtri e finestre di dettaglio Ecosistema.
 4. Pagine Scopri, Perché e Club.
-5. Link Base44 per Club e Demo.
+5. Link CarPractice per Club e Demo.
 6. Visualizzazione mobile.
 
-I voti della roadmap restano dimostrativi fino al collegamento con Base44.
+I voti della roadmap restano dimostrativi fino al collegamento con CarPractice.

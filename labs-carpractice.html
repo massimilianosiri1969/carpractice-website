@@ -4,15 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#050608">
-<title>CarPractice // Labs — Dove costruiamo il futuro delle carrozzerie</title>
-<meta name="description" content="CarPractice Labs: progetti sperimentali, AI, beta program, idee e roadmap dell'innovazione per le carrozzerie.">
+<title>CarPractice // Labs — Il futuro delle carrozzerie</title>
+<meta name="description" content="Scopri i progetti sperimentali, le tecnologie in test e il programma beta di CarPractice Labs.">
 <link rel="stylesheet" href="labs-carpractice.css">
 <script defer src="labs-carpractice.js"></script>
 </head>
 <body>
-<div class="boot-screen" id="bootScreen">
-  <div class="boot-line"></div>
-  <div class="boot-terminal">
+<div class="boot-screen" id="bootScreen" aria-hidden="true">
+  <div class="boot-grid"></div>
+  <div class="boot-scan"></div>
+  <div class="boot-console">
+    <img src="logo-carpractice.png" alt="">
     <span>CARPRACTICE // LABS</span>
     <strong id="bootText">INITIALIZING LAB...</strong>
   </div>
@@ -24,15 +26,17 @@
   <a class="brand" href="index.html" aria-label="CarPractice Home">
     <img src="logo-carpractice.png" alt="CarPractice">
   </a>
+
   <nav class="menu" aria-label="Navigazione principale">
     <a href="scopri-carpractice.html">Scopri CarPractice</a>
     <a href="perche-carpractice.html">Perché CarPractice</a>
     <a href="ecosistema-carpractice.html">Ecosistema</a>
-    <a class="active" href="labs-carpractice.html">Labs</a>
+    <a href="labs-carpractice.html" class="active">Labs</a>
     <a href="club-carpractice.html">Club</a>
     <a href="richiedi-demo.html">Demo</a>
     <a href="prezzi.html">Prezzi</a>
   </nav>
+
   <div class="nav-actions">
     <a class="access" href="https://app.carpractice.it">Accedi</a>
     <a class="trial" href="#beta">Diventa beta tester</a>
@@ -42,22 +46,40 @@
 <main>
   <section class="hero">
     <canvas id="networkCanvas" aria-hidden="true"></canvas>
-    <div class="hero-overlay"></div>
+    <div class="hero-vignette"></div>
+    <div class="hero-grid"></div>
+
     <div class="hero-content reveal">
       <p class="eyebrow">CARPRACTICE // LABS</p>
-      <h1>Dove costruiamo<br>il futuro delle <em>carrozzerie.</em></h1>
+      <h1>Non inseguiamo il futuro.<br><em>Lo costruiamo.</em></h1>
       <p class="lead">
-        Alcune idee diventeranno funzioni. Altre cambieranno completamente
-        il modo di lavorare. Qui puoi vedere ciò che stiamo sperimentando.
+        Qui nascono le tecnologie che cambieranno il modo di lavorare in carrozzeria:
+        intelligenza artificiale, automazioni, visione artificiale e nuovi strumenti operativi.
       </p>
+
       <div class="hero-actions">
-        <a class="button primary" href="#projects">Entra nel laboratorio <span>↓</span></a>
+        <a class="button primary" href="#projects">Esplora i progetti <span>↓</span></a>
         <a class="button secondary" href="#beta">Partecipa ai test</a>
       </div>
-      <div class="lab-stats">
-        <div><strong data-counter="12">0</strong><span>progetti attivi</span></div>
-        <div><strong data-counter="4">0</strong><span>beta aperte</span></div>
-        <div><strong data-counter="324">0</strong><span>idee ricevute</span></div>
+
+      <div class="lab-status">
+        <div>
+          <span class="pulse"></span>
+          <strong>LAB ONLINE</strong>
+          <small>Sperimentazione attiva</small>
+        </div>
+        <div>
+          <b data-counter="12">0</b>
+          <small>progetti attivi</small>
+        </div>
+        <div>
+          <b data-counter="4">0</b>
+          <small>beta aperte</small>
+        </div>
+        <div>
+          <b data-counter="324">0</b>
+          <small>idee ricevute</small>
+        </div>
       </div>
     </div>
   </section>
@@ -65,57 +87,83 @@
   <section class="projects" id="projects">
     <div class="section-heading reveal">
       <p class="eyebrow">IN SPERIMENTAZIONE</p>
-      <h2>Progetti vivi.<br>Dati, test e build in evoluzione.</h2>
-      <p>Le metriche mostrate sono dimostrative finché non verranno collegate a Base44.</p>
+      <h2>Progetti che stanno prendendo vita.</h2>
+      <p>
+        Ogni progetto attraversa ricerca, prototipo, test interni e beta prima di diventare parte di CarPractice.
+      </p>
     </div>
 
     <div class="project-grid">
-      <article class="project-card reveal" data-project="ai-damage">
+      <article class="project-card featured reveal" data-project="ai-damage">
+        <div class="card-glow"></div>
         <div class="project-top">
           <span class="badge prototype">Prototype</span>
           <span class="build">BUILD 0.8.4</span>
         </div>
+        <div class="project-visual vision">
+          <div class="vision-frame">
+            <span class="corner c1"></span><span class="corner c2"></span>
+            <span class="corner c3"></span><span class="corner c4"></span>
+            <div class="car-outline"></div>
+            <div class="damage-point d1"></div>
+            <div class="damage-point d2"></div>
+            <div class="scan-line"></div>
+          </div>
+        </div>
         <h3>AI Damage Detection</h3>
-        <p>Riconoscimento automatico delle aree danneggiate da fotografie e video.</p>
-        <div class="metric"><span>Avanzamento</span><strong>82%</strong></div>
-        <div class="progress"><span style="width:82%"></span></div>
-        <div class="project-data">
+        <p>Visione artificiale per individuare e classificare automaticamente i danni.</p>
+        <div class="metric-row">
+          <div><span>Avanzamento</span><strong>82%</strong></div>
           <div><span>Dataset</span><strong>120k immagini</strong></div>
-          <div><span>Ultima build</span><strong>3 giorni fa</strong></div>
         </div>
-        <button class="project-open" type="button">Apri progetto →</button>
+        <div class="progress"><span style="width:82%"></span></div>
+        <button class="project-open" type="button">Apri progetto <span>→</span></button>
       </article>
 
-      <article class="project-card reveal" data-delay="60" data-project="estimator-ai">
-        <div class="project-top">
-          <span class="badge research">Research</span>
-          <span class="build">MODEL R-12</span>
-        </div>
-        <h3>Preventivatore AI</h3>
-        <p>Generazione assistita del preventivo partendo da immagini, danni e tempi.</p>
-        <div class="metric"><span>Avanzamento</span><strong>38%</strong></div>
-        <div class="progress"><span style="width:38%"></span></div>
-        <div class="project-data">
-          <div><span>Obiettivo</span><strong>Preventivo guidato</strong></div>
-          <div><span>Stato</span><strong>Dataset training</strong></div>
-        </div>
-        <button class="project-open" type="button">Apri progetto →</button>
-      </article>
-
-      <article class="project-card reveal" data-delay="120" data-project="voice-ai">
+      <article class="project-card reveal" data-delay="60" data-project="voice-ai">
+        <div class="card-glow"></div>
         <div class="project-top">
           <span class="badge alpha">Alpha</span>
           <span class="build">VOICE 0.4</span>
         </div>
-        <h3>Centralino AI</h3>
-        <p>Risponde, comprende le richieste e aggiorna automaticamente le attività.</p>
-        <div class="metric"><span>Avanzamento</span><strong>46%</strong></div>
-        <div class="progress"><span style="width:46%"></span></div>
-        <div class="project-data">
-          <div><span>Lingue</span><strong>IT + EN</strong></div>
-          <div><span>Canale</span><strong>Telefono</strong></div>
+        <div class="project-visual voice">
+          <div class="wave">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
         </div>
-        <button class="project-open" type="button">Apri progetto →</button>
+        <h3>Centralino AI</h3>
+        <p>Comprende le chiamate e trasforma le richieste in attività operative.</p>
+        <div class="metric-row">
+          <div><span>Avanzamento</span><strong>46%</strong></div>
+          <div><span>Lingue</span><strong>IT + EN</strong></div>
+        </div>
+        <div class="progress"><span style="width:46%"></span></div>
+        <button class="project-open" type="button">Apri progetto <span>→</span></button>
+      </article>
+
+      <article class="project-card reveal" data-delay="120" data-project="estimator-ai">
+        <div class="card-glow"></div>
+        <div class="project-top">
+          <span class="badge research">Research</span>
+          <span class="build">MODEL R-12</span>
+        </div>
+        <div class="project-visual estimate">
+          <div class="estimate-lines">
+            <span style="--w:72%"></span>
+            <span style="--w:54%"></span>
+            <span style="--w:83%"></span>
+            <span style="--w:41%"></span>
+          </div>
+          <div class="estimate-total">€ 1.840</div>
+        </div>
+        <h3>Preventivatore AI</h3>
+        <p>Supporto alla stima di tempi, lavorazioni e costi partendo dal danno.</p>
+        <div class="metric-row">
+          <div><span>Avanzamento</span><strong>38%</strong></div>
+          <div><span>Modello</span><strong>R-12</strong></div>
+        </div>
+        <div class="progress"><span style="width:38%"></span></div>
+        <button class="project-open" type="button">Apri progetto <span>→</span></button>
       </article>
     </div>
   </section>
@@ -123,32 +171,64 @@
   <section class="experiments">
     <div class="section-heading reveal">
       <p class="eyebrow">LIVE EXPERIMENTS</p>
-      <h2>Esperimenti che potrebbero<br>diventare il prossimo standard.</h2>
+      <h2>Otto idee.<br>Otto possibili salti in avanti.</h2>
     </div>
 
-    <div class="experiment-grid">
-      <button class="experiment reveal"><span>Concept</span><strong>Scanner 3D da smartphone</strong><small>Rilievo rapido delle superfici</small></button>
-      <button class="experiment reveal" data-delay="40"><span>Research</span><strong>Realtà aumentata</strong><small>Sovrapposizione danni e ricambi</small></button>
-      <button class="experiment reveal" data-delay="80"><span>Internal</span><strong>Assistente vocale</strong><small>Controllo pratiche senza tastiera</small></button>
-      <button class="experiment reveal" data-delay="120"><span>Prototype</span><strong>Smart Glasses</strong><small>Istruzioni visive in lavorazione</small></button>
-      <button class="experiment reveal"><span>Research</span><strong>Stima tempi AI</strong><small>Previsione durata e carico officina</small></button>
-      <button class="experiment reveal" data-delay="40"><span>Beta</span><strong>Firma digitale</strong><small>Accettazione da tablet o telefono</small></button>
-      <button class="experiment reveal" data-delay="80"><span>Concept</span><strong>Ricambi automatici</strong><small>Ordini suggeriti dalla pratica</small></button>
-      <button class="experiment reveal" data-delay="120"><span>Internal</span><strong>API pubbliche</strong><small>Integrazioni con partner e gestionali</small></button>
+    <div class="experiment-stage reveal">
+      <div class="experiment-menu" role="tablist">
+        <button class="active" data-exp="scanner"><span>01</span>Scanner 3D</button>
+        <button data-exp="ar"><span>02</span>Realtà aumentata</button>
+        <button data-exp="voice"><span>03</span>Assistente vocale</button>
+        <button data-exp="glasses"><span>04</span>Smart Glasses</button>
+        <button data-exp="times"><span>05</span>Stima tempi AI</button>
+        <button data-exp="signature"><span>06</span>Firma digitale</button>
+        <button data-exp="parts"><span>07</span>Ricambi automatici</button>
+        <button data-exp="api"><span>08</span>API pubbliche</button>
+      </div>
+
+      <div class="experiment-preview">
+        <div class="experiment-orbit orbit-one"></div>
+        <div class="experiment-orbit orbit-two"></div>
+        <div class="experiment-core">
+          <span id="experimentState">CONCEPT</span>
+          <h3 id="experimentTitle">Scanner 3D da smartphone</h3>
+          <p id="experimentText">Rilievo rapido delle superfici attraverso fotocamera e sensori del telefono.</p>
+          <div class="experiment-meta">
+            <div><small>Stadio</small><strong id="experimentPhase">Concept</strong></div>
+            <div><small>Focus</small><strong id="experimentFocus">Acquisizione 3D</strong></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="idea-wall">
     <div class="section-heading reveal">
       <p class="eyebrow">IL MURO DELLE IDEE</p>
-      <h2>Le intuizioni migliori<br>arrivano da chi lavora ogni giorno.</h2>
+      <h2>Le intuizioni migliori arrivano da chi lavora ogni giorno.</h2>
     </div>
 
-    <div class="wall reveal" id="ideaWall">
-      <article class="idea-note" style="--r:-3deg"><span>💡</span><p>Riconoscere automaticamente il tipo di danno.</p><div><button>👍 42</button><button>🚀 18</button></div></article>
-      <article class="idea-note" style="--r:2deg"><span>💡</span><p>Inviare il preventivo via WhatsApp.</p><div><button>❤️ 37</button><button>🔥 21</button></div></article>
-      <article class="idea-note" style="--r:-1deg"><span>💡</span><p>Firma direttamente sul telefono.</p><div><button>👍 55</button><button>🚀 29</button></div></article>
-      <article class="idea-note" style="--r:4deg"><span>💡</span><p>Controllo vocale durante l'accettazione.</p><div><button>🔥 31</button><button>❤️ 16</button></div></article>
+    <div class="wall reveal">
+      <article class="idea-note" style="--r:-3deg">
+        <div class="idea-icon">01</div>
+        <p>Riconoscere automaticamente il tipo di danno.</p>
+        <div class="reactions"><button>👍 <b>42</b></button><button>🚀 <b>18</b></button></div>
+      </article>
+      <article class="idea-note" style="--r:2deg">
+        <div class="idea-icon">02</div>
+        <p>Inviare il preventivo via WhatsApp.</p>
+        <div class="reactions"><button>❤️ <b>37</b></button><button>🔥 <b>21</b></button></div>
+      </article>
+      <article class="idea-note" style="--r:-1deg">
+        <div class="idea-icon">03</div>
+        <p>Firma direttamente sul telefono.</p>
+        <div class="reactions"><button>👍 <b>55</b></button><button>🚀 <b>29</b></button></div>
+      </article>
+      <article class="idea-note" style="--r:4deg">
+        <div class="idea-icon">04</div>
+        <p>Controllo vocale durante l'accettazione.</p>
+        <div class="reactions"><button>🔥 <b>31</b></button><button>❤️ <b>16</b></button></div>
+      </article>
     </div>
 
     <div class="wall-stats reveal">
@@ -163,12 +243,26 @@
       <p class="eyebrow">LAB TIMELINE</p>
       <h2>Dal concept alla release.</h2>
     </div>
+
     <div class="timeline reveal">
-      <button class="time-node active" data-time="q3"><span>Q3 2026</span><strong>AI Assistant</strong></button>
-      <button class="time-node" data-time="q4"><span>Q4 2026</span><strong>Business Intelligence</strong></button>
-      <button class="time-node" data-time="q1"><span>Q1 2027</span><strong>Centralino AI</strong></button>
-      <button class="time-node" data-time="q2"><span>Q2 2027</span><strong>Preventivatore AI</strong></button>
-      <button class="time-node" data-time="q3-27"><span>Q3 2027</span><strong>App Mobile</strong></button>
+      <div class="timeline-track"><span id="timelineProgress"></span></div>
+
+      <button class="time-node active" data-time="q3">
+        <i></i><span>Q3 2026</span><strong>AI Assistant</strong>
+      </button>
+      <button class="time-node" data-time="q4">
+        <i></i><span>Q4 2026</span><strong>Business Intelligence</strong>
+      </button>
+      <button class="time-node" data-time="q1">
+        <i></i><span>Q1 2027</span><strong>Centralino AI</strong>
+      </button>
+      <button class="time-node" data-time="q2">
+        <i></i><span>Q2 2027</span><strong>Preventivatore AI</strong>
+      </button>
+      <button class="time-node" data-time="q3-27">
+        <i></i><span>Q3 2027</span><strong>App Mobile</strong>
+      </button>
+
       <div class="timeline-detail" id="timelineDetail">
         <small>Q3 2026</small>
         <h3>AI Assistant</h3>
@@ -182,20 +276,28 @@
       <div class="beta-copy">
         <p class="eyebrow">JOIN THE LAB</p>
         <h2>Diventa Beta Tester.</h2>
-        <p>Accedi in anticipo alle nuove funzioni e aiutaci a costruirle meglio.</p>
-        <ul>
-          <li>Accesso anticipato alle beta</li>
-          <li>Canale diretto con il team</li>
-          <li>Possibilità di influenzare la roadmap</li>
-        </ul>
+        <p>
+          Accedi in anticipo alle nuove funzioni e aiutaci a trasformarle
+          in strumenti realmente utili per la carrozzeria.
+        </p>
+
+        <div class="beta-points">
+          <div><span>01</span><strong>Accesso anticipato</strong></div>
+          <div><span>02</span><strong>Canale diretto con il team</strong></div>
+          <div><span>03</span><strong>Influenza sulla roadmap</strong></div>
+        </div>
       </div>
 
       <div class="terminal">
-        <div class="terminal-bar"><span></span><span></span><span></span><b>beta-enrollment.sh</b></div>
+        <div class="terminal-bar">
+          <span></span><span></span><span></span>
+          <b>beta-enrollment.sh</b>
+        </div>
+
         <div class="terminal-body" id="terminalBody">
           <p>&gt; INITIALIZING...</p>
           <p>&gt; CHECKING WORKSHOP PROFILE...</p>
-          <p>&gt; READY.</p>
+          <p>&gt; ACCESS AVAILABLE.</p>
           <button type="button" id="openBetaForm">AVVIA CANDIDATURA</button>
         </div>
 
@@ -224,6 +326,7 @@
   </section>
 
   <section class="final-cta reveal">
+    <div class="final-grid"></div>
     <p class="eyebrow">CARPRACTICE // LABS</p>
     <h2>Il futuro delle carrozzerie<br>non si aspetta. <em>Si costruisce.</em></h2>
     <div class="hero-actions centered">
@@ -235,8 +338,8 @@
 
 <div class="project-modal" id="projectModal" hidden>
   <div class="modal-backdrop" data-close></div>
-  <div class="modal-card">
-    <button class="modal-close" data-close>×</button>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" data-close aria-label="Chiudi">×</button>
     <span id="modalBadge"></span>
     <h2 id="modalTitle"></h2>
     <p id="modalText"></p>

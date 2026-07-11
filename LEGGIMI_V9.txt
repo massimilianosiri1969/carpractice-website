@@ -1,4 +1,4 @@
-CARPRACTICE WEBSITE V9.0 — INTEGRAZIONE BASE44
+CARPRACTICE WEBSITE V9.0 — INTEGRAZIONE CarPractice
 
 BASE
 - Creata esclusivamente dallo ZIP stabile carpractice-website-main.zip fornito dall'utente.
@@ -26,7 +26,7 @@ MODIFICHE
 UPLOAD GITHUB
 Caricare l'intero contenuto della cartella, inclusa la cartella models.
 Messaggio commit suggerito:
-CarPractice Website V9.0 - Base44 integration
+CarPractice Website V9.0 - CarPractice integration
 
 TEST DOPO IL DEPLOY
 - Home e intro
@@ -37,6 +37,6 @@ TEST DOPO IL DEPLOY
 - Navigazione tra tutte le pagine
 
 NOTA
-Le route Base44 usate sono:
+Le route CarPractice usate sono:
 - https://app.carpractice.it/club
 - https://app.carpractice.it/prenota-demo

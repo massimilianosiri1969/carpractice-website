@@ -1,0 +1,17 @@
+CARPRACTICE LABS RELEASE V2
+
+Questa release contiene l'intero sito aggiornato e la nuova pagina Labs.
+
+Miglioramenti principali:
+- nuova hero cinematografica;
+- rete neurale animata;
+- progetti con visualizzazioni dedicate;
+- sezione esperimenti interattiva;
+- muro idee;
+- timeline animata;
+- beta tester in stile terminale;
+- nessun riferimento pubblico a strumenti di sviluppo.
+
+Caricare tutto il contenuto su GitHub.
+Commit suggerito:
+CarPractice Labs Release V2
