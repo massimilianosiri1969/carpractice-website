@@ -315,3 +315,98 @@ h1,h2,h3,p{margin-top:0}
   .cp-footer{flex-direction:column;text-align:center}
   .cp-footer span{margin-left:0}
 }
+
+
+.club-form-section{
+  padding:125px 6vw;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:70px;
+  align-items:start;
+  background:linear-gradient(180deg,rgba(255,255,255,.018),transparent);
+}
+.club-form-copy>p:last-of-type{
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.72;
+}
+.club-form-copy h2{
+  margin-bottom:22px;
+  font-size:clamp(48px,5.3vw,78px);
+  line-height:.96;
+  letter-spacing:-.058em;
+}
+.club-form-note{
+  margin-top:36px;
+  padding:26px;
+  border:1px solid rgba(255,122,26,.24);
+  border-radius:22px;
+  background:rgba(255,122,26,.07);
+}
+.club-form-note strong{
+  display:block;
+  color:var(--orange2);
+  font-size:28px;
+}
+.club-form-note span{
+  display:block;
+  margin-top:8px;
+  color:var(--muted);
+  line-height:1.55;
+}
+.club-referral-form{
+  padding:32px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  border:1px solid var(--line);
+  border-radius:30px;
+  background:#111318;
+}
+.club-referral-form label{
+  display:grid;
+  gap:9px;
+  color:#d4cec4;
+  font-size:13px;
+  font-weight:750;
+}
+.club-referral-form .full{grid-column:1/-1}
+.club-referral-form input,
+.club-referral-form textarea{
+  width:100%;
+  padding:16px 17px;
+  color:#fff;
+  background:#0d0f13;
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:14px;
+  outline:none;
+}
+.club-referral-form input:focus,
+.club-referral-form textarea:focus{
+  border-color:rgba(255,122,26,.55);
+}
+.club-referral-form .privacy{
+  display:flex;
+  grid-template-columns:20px 1fr;
+  align-items:center;
+}
+.club-referral-form .privacy input{width:16px}
+.club-referral-form button{
+  grid-column:1/-1;
+  min-height:56px;
+  border:0;
+  border-radius:999px;
+  cursor:pointer;
+  color:#111;
+  background:linear-gradient(135deg,var(--orange),var(--orange2));
+  font-weight:900;
+}
+@media(max-width:1050px){
+  .club-form-section{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .club-form-section{padding:78px 18px}
+  .club-referral-form{grid-template-columns:1fr;padding:24px}
+  .club-referral-form .full,
+  .club-referral-form button{grid-column:1}
+}

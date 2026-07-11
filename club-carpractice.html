@@ -40,7 +40,7 @@
         ti fa salire di livello e ti regala
         <strong>100 crediti CarPractice</strong>.
       </p>
-      <a class="club-primary" href="#presenta">Presenta una carrozzeria</a>
+      <a class="club-primary" href="#club-form">Presenta una carrozzeria</a>
     </div>
 
     <div class="club-hero__visual" aria-hidden="true">
@@ -144,11 +144,90 @@
     </div>
   </section>
 
+
+  <section class="club-form-section" id="club-form">
+    <div class="club-form-copy">
+      <p class="club-eyebrow">PRESENTA UNA CARROZZERIA</p>
+      <h2>Segnalaci un nuovo contatto.</h2>
+      <p>
+        Inserisci i tuoi dati e quelli della carrozzeria che vuoi presentare.
+        Ti ricontatteremo per verificare la segnalazione e seguire l’attivazione.
+      </p>
+
+      <div class="club-form-note">
+        <strong>100 crediti CarPractice</strong>
+        <span>accreditati dopo l’attivazione della carrozzeria presentata.</span>
+      </div>
+    </div>
+
+    <form class="club-referral-form"
+          action="https://formsubmit.co/info@carpractice.it"
+          method="POST">
+
+      <input type="hidden" name="_subject" value="Nuova presentazione CarPractice Club">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://carpractice-website.vercel.app/grazie-club.html">
+
+      <label>
+        Il tuo nome e cognome
+        <input type="text" name="Referente CarPractice Club" required placeholder="Mario Rossi">
+      </label>
+
+      <label>
+        La tua carrozzeria
+        <input type="text" name="Carrozzeria referente" required placeholder="Nome attività">
+      </label>
+
+      <label>
+        La tua email
+        <input type="email" name="Email referente" required placeholder="nome@carrozzeria.it">
+      </label>
+
+      <label>
+        Il tuo telefono
+        <input type="tel" name="Telefono referente" required placeholder="+39">
+      </label>
+
+      <label>
+        Carrozzeria presentata
+        <input type="text" name="Carrozzeria presentata" required placeholder="Nome della carrozzeria">
+      </label>
+
+      <label>
+        Persona da contattare
+        <input type="text" name="Contatto presentato" required placeholder="Nome e cognome">
+      </label>
+
+      <label>
+        Email del contatto
+        <input type="email" name="Email contatto presentato" placeholder="email@carrozzeria.it">
+      </label>
+
+      <label>
+        Telefono del contatto
+        <input type="tel" name="Telefono contatto presentato" required placeholder="+39">
+      </label>
+
+      <label class="full">
+        Note
+        <textarea name="Note" rows="5" placeholder="Aggiungi informazioni utili"></textarea>
+      </label>
+
+      <label class="privacy full">
+        <input type="checkbox" required>
+        <span>Confermo di avere l’autorizzazione a condividere questi dati per essere ricontattati da CarPractice.</span>
+      </label>
+
+      <button type="submit">Invia la presentazione</button>
+    </form>
+  </section>
+
   <section class="club-cta-section" id="presenta">
     <p class="club-eyebrow">CARPRACTICE CLUB</p>
     <h2>Conosci una carrozzeria che potrebbe lavorare meglio?</h2>
     <p>Presentala a CarPractice e inizia il tuo percorso nel Club.</p>
-    <a class="club-primary" href="index.html#contatti">Presenta una carrozzeria</a>
+    <a class="club-primary" href="#club-form">Presenta una carrozzeria</a>
   </section>
 </main>
 
