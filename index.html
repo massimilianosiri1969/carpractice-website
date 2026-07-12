@@ -1,366 +1,221 @@
 <!doctype html>
 <html lang="it">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CarPractice — Ogni riparazione inizia con una targa</title>
-<link rel="stylesheet" href="styles.css">
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AESTRA — Il sistema operativo intelligente per i centri estetici</title>
+  <meta name="description" content="AESTRA coordina agenda, clienti, marketing, magazzino, team e dati. Daphne DAS, Digital AESTRA Specialist by AESTRA Technologies, trasforma ciò che accade nel centro in decisioni concrete.">
+  <meta name="theme-color" content="#fff9f6">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
-
-<div id="siteIntro" class="site-intro" aria-hidden="true">
-  <div class="site-intro__particles" aria-hidden="true"></div>
-  <div class="site-intro__flare" aria-hidden="true"></div>
-  <div class="site-intro__logo-wrap">
-    <div class="site-intro__scan" aria-hidden="true"></div>
-    <img src="logo-carpractice.png" alt="CarPractice">
-  </div>
-  <p>L'intelligenza operativa per la tua carrozzeria</p>
-</div>
-
-<div class="noise"></div>
-<div class="orange-glow"></div>
-
-<header class="nav">
-  <a class="brand" href="#"><img src="logo-carpractice.png" alt="CarPractice"></a>
-  <nav class="menu">
-    <a href="scopri-carpractice.html">Scopri CarPractice</a>
-    <a href="workspace-demo.html">Demo interattiva</a>
-    <a href="ai-center.html">AI Center</a>
-      <a href="perche-carpractice.html">Perché CarPractice</a>
-    <a href="ecosistema-carpractice.html">Ecosistema</a>
-    <a href="labs-carpractice.html">Labs</a>
-      <a href="richiedi-demo.html">Richiedi una demo</a>
-      <a href="club-carpractice.html">Club</a>
-    <a href="#workflow">Come funziona</a>
-    <a href="#prezzi">Prezzi</a>
-    <a href="#contatti">Contatti</a>
-  </nav>
-  <div class="nav-actions">
-    <a class="access" href="https://app.carpractice.it" aria-label="Accedi a CarPractice">Accedi</a>
-    <a class="trial" href="https://app.carpractice.it" aria-label="Registrati e attiva la prova gratuita di CarPractice">Prova gratuita</a>
+<header class="site-header">
+  <a class="brand" href="#home"><img src="assets/icons/logo.svg" alt="AESTRA"></a>
+  <nav id="nav">
+<a href="index.html">Home</a><a href="pages/piattaforma.html">Piattaforma</a><a href="pages/daphne.html">Daphne DAS</a><a href="pages/perche-aestra.html">Perché AESTRA</a><a href="pages/prezzi.html">Prezzi</a></nav>
+  <div class="header-actions">
+    <a class="login" href="https://app.aestra.it">Accedi</a>
+    <a class="button button-sm" href="pages/demo.html">Prenota una demo</a>
+    <button id="menu" class="menu" aria-label="Apri menu"><span></span><span></span></button>
   </div>
 </header>
 
 <main>
-<section class="hero">
-  <div class="hero-copy">
-    <p class="eyebrow">Digital Repair Platform</p>
-    <h1>Ogni riparazione inizia con una targa. Tutto il resto è automatico.</h1>
-    <p class="lead">
-      CarPractice riconosce il veicolo dalla targa, organizza la pratica,
-      crea il dossier fotografico, gestisce danni, documenti e workflow
-      in un'unica piattaforma operativa per carrozzerie.
-    </p>
-    <div class="actions">
-      <a class="button primary" href="https://app.carpractice.it">Inizia la prova gratuita</a>
-      <a class="button secondary" href="#workflow">Guarda il flusso di lavoro</a>
+<section class="hero section-pad" id="home">
+  <div class="hero-grid"></div><img class="hero-mesh" src="assets/images/hero-mesh.svg" alt="" aria-hidden="true">
+  <div class="hero-copy reveal">
+    <div class="eyebrow"><i></i> IL SISTEMA OPERATIVO DELLA BELLEZZA</div>
+    <h1>Dirigi il tuo centro.<em>AESTRA pensa al resto.</em></h1>
+    <p>AESTRA coordina agenda, clienti, team, marketing e numeri. Daphne DAS osserva, interpreta e ti suggerisce ogni giorno dove intervenire per far crescere il centro.</p>
+    <div class="hero-cta">
+      <a class="button" href="pages/demo.html">Prenota una demo <span>→</span></a>
+      <a class="ghost" href="#piattaforma"><b>▶</b> Guarda AESTRA in azione</a>
     </div>
-    <p class="microcopy">72 ore gratuite dopo la validazione dell'account. Nessuna carta richiesta.</p>
-    <div class="badges">
-      <span>Ricerca veicolo dalla targa</span>
-      <span>Dossier fotografico intelligente</span>
-      <span>Modello 3D dei danni</span>
-      <span>OCR documentale</span>
+    <div class="trust-row"><span>Agenda</span><span>CRM</span><span>Marketing</span><span>BI</span><span>Daphne DAS</span></div><div class="proof">
+      <div class="faces"><span>F</span><span>M</span><span>V</span><span>A</span></div>
+      <div><strong>Progettato con chi lavora nel beauty</strong><small>Non un software generico adattato al settore.</small></div>
     </div>
   </div>
+  <div class="hero-visual reveal delay-1">
+    <div class="halo"></div>
+    <div class="hero-daphne">
+      <div class="portrait-glow"></div>
+      <img class="daphne-hero-img" src="assets/images/daphne-hero.webp" alt="Daphne DAS, Digital AESTRA Specialist">
+      <div class="daphne-badge signature-card">
+        <span>✦</span>
+        <div>
+          <small>DAPHNE DAS</small>
+          <strong>Digital AESTRA Specialist</strong>
+          <em>Powered by AESTRA Technologies</em>
+          <b><i></i> Online · analisi in tempo reale</b>
+        </div>
+      </div>
+    </div>
+    <div class="float-chip chip-a">↗ +18% fatturato mensile</div>
+    <div class="float-chip chip-b">✦ Daphne DAS ha trovato 3 opportunità</div>
+    <img class="dashboard-img" src="assets/images/dashboard.svg" alt="Dashboard AESTRA">
+    <img class="phone-img" src="assets/images/phone.svg" alt="App clienti AESTRA">
+  </div>
+</section>
 
-  <div class="hero-visual">
-    <div class="scan scan-a"></div>
-    <div class="scan scan-b"></div>
-    <div class="car-shell">
-      <model-viewer
-        id="heroModel"
-        src="models/Fiat_Grande_Panda_2025.glb"
-        camera-controls
-        disable-pan
-        auto-rotate
-        interaction-prompt="none"
-        loading="eager"
-        reveal="auto"
-        rotation-per-second="3deg"
-        camera-orbit="35deg 72deg 8m"
-        field-of-view="28deg"
-        exposure="1.12"
-        shadow-intensity="1"
-        environment-image="neutral"
-        alt="Modello 3D CarPractice">
-      </model-viewer>
-      <div class="car-shadow"></div>
+<section class="marquee" aria-label="AESTRA highlights">
+      <div class="marquee-track">
+        <span>AGENDA INTELLIGENTE</span><i>✦</i><span>BEAUTY JOURNEY</span><i>✦</i><span>DAPHNE DAS</span><i>✦</i><span>MARKETING AUTOMATICO</span><i>✦</i><span>BUSINESS INTELLIGENCE</span><i>✦</i>
+        <span>AGENDA INTELLIGENTE</span><i>✦</i><span>BEAUTY JOURNEY</span><i>✦</i><span>DAPHNE DAS</span><i>✦</i><span>MARKETING AUTOMATICO</span><i>✦</i><span>BUSINESS INTELLIGENCE</span><i>✦</i>
+      </div>
+    </section>
+    <section class="manifesto reveal">
+  <span class="label">NON UN ALTRO GESTIONALE</span>
+  <h2>Un solo sistema.<br><em>Una visione completa.</em></h2>
+  <p>AESTRA collega ogni area del centro e la rende leggibile, coordinata e finalmente semplice da dirigere.</p>
+  <div class="line"></div>
+</section>
+
+<section class="platform section-pad" id="piattaforma">
+  <div class="section-head reveal">
+    <div><span class="label">LA PIATTAFORMA</span><h2>Tutto ciò che serve.<br><em>Senza frammentazioni.</em></h2></div>
+    <p>Le funzioni dialogano tra loro, condividono dati e costruiscono un ecosistema coerente.</p>
+  </div>
+  <div class="feature-grid">
+    <article class="feature reveal"><span>01</span><b>◫</b><h3>Agenda intelligente</h3><p>Appuntamenti, cabine, risorse e operatori sempre sincronizzati.</p><a href="pages/demo.html">Scopri di più →</a></article>
+    <article class="feature reveal delay-1"><span>02</span><b>◎</b><h3>CRM e Beauty Journey</h3><p>Ogni cliente ha una storia, un valore e un percorso da far crescere.</p><a href="pages/demo.html">Scopri di più →</a></article>
+    <article class="feature reveal delay-2"><span>03</span><b>✦</b><h3>Marketing automatico</h3><p>Campagne costruite sui comportamenti reali, non sulle intuizioni.</p><a href="pages/demo.html">Scopri di più →</a></article>
+    <article class="feature reveal"><span>04</span><b>◇</b><h3>Magazzino smart</h3><p>Scorte, lotti, scadenze e riordini in un flusso semplice e leggibile.</p><a href="pages/demo.html">Scopri di più →</a></article>
+    <article class="feature reveal delay-1"><span>05</span><b>↗</b><h3>Business Intelligence</h3><p>Marginalità, performance e previsioni trasformate in decisioni.</p><a href="pages/demo.html">Scopri di più →</a></article>
+    <article class="feature reveal delay-2"><span>06</span><b>▯</b><h3>App clienti</h3><p>Prenotazioni, wallet, pacchetti, gift card e comunicazioni.</p><a href="pages/demo.html">Scopri di più →</a></article>
+  </div>
+</section>
+
+
+<section class="intelligence section-pad">
+  <div class="intelligence-visual reveal">
+    <img src="assets/images/beauty-intelligence.svg" alt="Beauty Intelligence AESTRA">
+  </div>
+  <div class="intelligence-copy reveal delay-1">
+    <span class="label">BEAUTY INTELLIGENCE</span>
+    <h2>I dati smettono di essere numeri.<br><em>Diventano direzione.</em></h2>
+    <p>AESTRA trasforma ciò che accade nel centro in indicazioni chiare: clienti da recuperare, spazi da riempire, servizi da rilanciare e margini da proteggere.</p>
+    <div class="intelligence-list">
+      <span><b>01</b> Opportunità ordinate per priorità</span>
+      <span><b>02</b> Azioni suggerite e immediatamente eseguibili</span>
+      <span><b>03</b> Analisi quotidiana senza fogli di calcolo</span>
     </div>
   </div>
 </section>
 
-<section class="workflow-section" id="workflow">
-  <div class="section-kicker">Come funziona</div>
-  <h2>Una riparazione. Un unico flusso di lavoro.</h2>
-  <p class="section-lead">
-    Dal momento in cui il cliente arriva in carrozzeria fino alla consegna del veicolo,
-    CarPractice accompagna ogni fase della lavorazione senza disperdere dati, foto o documenti.
-  </p>
-
-  <div class="workflow-map">
-    <span class="active">Targa</span>
-    <i></i>
-    <span>Veicolo</span>
-    <i></i>
-    <span>Cliente</span>
-    <i></i>
-    <span>Foto</span>
-    <i></i>
-    <span>Danni 3D</span>
-    <i></i>
-    <span>Documenti</span>
-    <i></i>
-    <span>Dossier</span>
+<section class="daphne section-pad" id="daphne">
+  <div class="daphne-copy reveal">
+    <span class="label light">DAPHNE DAS</span><div class="daphne-signature">Digital AESTRA Specialist · Powered by AESTRA Technologies</div>
+    <h2>La specialista digitale<br><em>che conosce il tuo centro.</em></h2>
+    <p>Daphne DAS non aspetta una domanda. Conosce il ritmo del centro, individua anomalie e opportunità e ti propone il passo successivo con il tono di una consulente fidata.</p>
+    <div class="checks"><span>✓ Analisi continua del centro</span><span>✓ Suggerimenti basati sui dati reali</span><span>✓ Azioni pronte da eseguire</span></div>
+    <a class="button light-button" href="pages/demo.html">Scopri Daphne DAS →</a>
   </div>
-
-  <div class="workflow-grid">
-    <article class="step-card featured">
-      <div class="step-copy">
-        <em>01</em>
-        <h3>Scansiona o inserisci la targa.</h3>
-        <p>La pratica parte dal dato più semplice. Il tecnico non deve scegliere manualmente marca, modello, versione o allestimento.</p>
+  <div class="daphne-stage reveal delay-1">
+    <div class="daphne-portrait-wrap">
+      <img class="daphne-portrait-img" src="assets/images/daphne-portrait.webp" alt="Daphne DAS">
+      <div class="portrait-ring"></div>
+      <div class="portrait-spark spark-1">✦</div>
+      <div class="portrait-spark spark-2">✦</div>
+    </div>
+    <div class="ai-card">
+      <div class="ai-top"><strong>✦ Daphne DAS</strong><small>online</small></div>
+      <p>Ciao Francesca! Sono Daphne DAS, la tua Digital AESTRA Specialist. Ho analizzato il centro e trovato una nuova opportunità.</p>
+      <div class="ai-insight" id="ai-insight">
+        <small id="ai-label">CLIENTE DA RECUPERARE</small>
+        <strong id="ai-text">Giulia Rossi non torna da 73 giorni.</strong>
+        <button id="ai-action">Prepara messaggio</button>
       </div>
-      <div class="step-screen"><img src="screen-home.png" alt="Scansione targa CarPractice"></div>
-    </article>
-
-    <article class="step-card">
-      <div class="step-copy">
-        <em>02</em>
-        <h3>Il veicolo viene riconosciuto.</h3>
-        <p>CarPractice recupera i dati tecnici e riduce il rischio di errori nella scelta del veicolo e dei ricambi.</p>
-      </div>
-      <div class="step-screen"><img src="screen-vehicle.png" alt="Dati veicolo automatici"></div>
-    </article>
-
-    <article class="step-card">
-      <div class="step-copy">
-        <em>03</em>
-        <h3>Collega cliente e pratica.</h3>
-        <p>I dati del cliente vengono inseriti o richiamati dall'archivio. Tutto rimane collegato alla riparazione.</p>
-      </div>
-      <div class="step-screen"><img src="screen-client.png" alt="Dati cliente CarPractice"></div>
-    </article>
-
-    <article class="step-card wide">
-      <div class="step-copy">
-        <em>04</em>
-        <h3>Costruisci il fascicolo fotografico.</h3>
-        <p>Ogni fotografia può essere classificata come veicolo danneggiato, in lavorazione o ultimato. Il risultato è un dossier ordinato per clienti, periti e assicurazioni.</p>
-      </div>
-      <div class="step-screen"><img src="screen-photos.png" alt="Fascicolo fotografico CarPractice"></div>
-    </article>
-
-    <article class="step-card dark">
-      <div class="step-copy">
-        <em>05</em>
-        <h3>Indica i danni direttamente sul modello 3D.</h3>
-        <p>Il tecnico seleziona il livello del danno e clicca sul particolare dell'auto. Il veicolo diventa una mappa tecnica della riparazione.</p>
-      </div>
-      <div class="step-screen"><img src="screen-damage.png" alt="Analisi danni 3D CarPractice"></div>
-    </article>
-
-    <article class="step-card">
-      <div class="step-copy">
-        <em>06</em>
-        <h3>Digitalizza i documenti.</h3>
-        <p>Libretto, polizza, CID e altri documenti possono essere caricati, scansionati e letti tramite OCR.</p>
-      </div>
-      <div class="step-screen"><img src="screen-docs.png" alt="Documenti OCR CarPractice"></div>
-    </article>
-  </div>
-</section>
-
-<section class="benefits" id="funzionalita">
-  <p class="section-kicker">Perché CarPractice</p>
-  <h2>Meno errori. Più controllo. Una pratica sempre pronta.</h2>
-  <div class="benefit-grid">
-    <article>
-      <span>01</span>
-      <h3>Identificazione più precisa</h3>
-      <p>La ricerca dalla targa riduce gli errori nella scelta di marca, modello, versione e allestimento.</p>
-    </article>
-    <article>
-      <span>02</span>
-      <h3>Documentazione ordinata</h3>
-      <p>Foto, documenti, danni e dati del cliente restano collegati alla stessa pratica.</p>
-    </article>
-    <article>
-      <span>03</span>
-      <h3>Immagine professionale</h3>
-      <p>Il dossier digitale rende più chiara la comunicazione con clienti, periti e assicurazioni.</p>
-    </article>
-  </div>
-</section>
-
-<section class="dossier-section">
-  <div class="dossier-copy">
-    <p class="section-kicker left">Output finale</p>
-    <h2>Dossier Digitale della Riparazione.</h2>
-    <p>
-      Non un semplice modulo. Una pratica completa che raccoglie veicolo, cliente,
-      fotografie, analisi danni, documenti, privacy, firma e allegati.
-    </p>
-  </div>
-  <div class="dossier-card">
-    <h3>Dossier riparazione</h3>
-    <ul>
-      <li>Cliente e dati veicolo</li>
-      <li>Fotografie per fase di lavorazione</li>
-      <li>Danni rilevati sul modello 3D</li>
-      <li>Documenti acquisiti con OCR</li>
-      <li>Privacy, firma e allegati</li>
-    </ul>
-  </div>
-</section>
-
-<section class="pricing-section" id="prezzi">
-  <p class="section-kicker">Prezzi</p>
-  <h2>Una licenza semplice. Tutto incluso.</h2>
-  <div class="pricing-grid pricing-two">
-    <article class="price-main">
-      <p>Licenza annuale</p>
-      <h3>165 € <small>+ IVA / anno</small></h3>
-      <ul>
-        <li>Aggiornamenti software inclusi</li>
-        <li>Cloud incluso</li>
-        <li>Backup automatici inclusi</li>
-        <li>Assistenza inclusa</li>
-      </ul>
-      <a class="button primary" href="https://app.carpractice.it">Inizia la prova gratuita</a>
-    </article>
-    <article>
-      <h3>Crediti ricerca targa</h3>
-      <p>Le interrogazioni alle banche dati ministeriali utilizzano crediti acquistabili separatamente.</p>
-      <strong>1 ricerca = 1 credito</strong>
-    </article>
-  </div>
-</section>
-
-<section class="modules-section">
-  <p class="section-kicker">Piattaforma modulare</p>
-  <h2>Costruisci il tuo CarPractice. Un modulo alla volta.</h2>
-  <p class="modules-lead">Parti con tutto ciò che serve oggi. Espandi la piattaforma quando la tua carrozzeria cresce.</p>
-
-  <div class="status-legend">
-    <span class="status included">Incluso nella licenza</span>
-    <span class="status soon">Prossimamente</span>
-    <span class="status development">In sviluppo</span>
-  </div>
-
-  <div class="module-system">
-    <article class="core-module">
-      <div class="module-topline">
-        <span class="module-code">CORE PLATFORM</span>
-        <span class="status included">Incluso nella licenza</span>
-      </div>
-      <h3>La base operativa di CarPractice.</h3>
-      <ul>
-        <li>Gestione pratiche</li>
-        <li>Ricerca veicolo tramite targa</li>
-        <li>Dossier fotografico intelligente</li>
-        <li>Modello 3D dei danni</li>
-        <li>Acquisizione documenti con OCR</li>
-        <li>Cloud e backup automatici</li>
-        <li>Aggiornamenti continui</li>
-        <li>Assistenza</li>
-      </ul>
-    </article>
-
-    <div class="module-connectors" aria-hidden="true"><span></span><span></span><span></span></div>
-
-    <div class="module-grid">
-      <article class="module-card"><div class="module-icon">01</div><span class="status soon">Prossimamente</span><h3>Magazzino</h3><ul><li>Carico merce</li><li>Scarico merce</li><li>Inventario</li><li>Riordino intelligente</li></ul></article>
-      <article class="module-card"><div class="module-icon">02</div><span class="status soon">Prossimamente</span><h3>Fatturazione</h3><ul><li>Fatture</li><li>Note di credito</li><li>Prima nota</li><li>Integrazione con i principali software di contabilità</li></ul></article>
-      <article class="module-card"><div class="module-icon">03</div><span class="status soon">Prossimamente</span><h3>Consuntivo di lavorazione</h3><ul><li>Ore di lavorazione</li><li>Costi</li><li>Marginalità</li><li>Analisi della produttività</li></ul></article>
-      <article class="module-card"><div class="module-icon">04</div><span class="status development">In sviluppo</span><h3>AI Assistant</h3><ul><li>Suggerimenti automatici</li><li>Controllo anomalie</li><li>Ricerca intelligente</li><li>Automazione delle attività ripetitive</li></ul></article>
-      <article class="module-card"><div class="module-icon">05</div><span class="status development">In sviluppo</span><h3>Business Intelligence</h3><ul><li>Dashboard KPI</li><li>Analisi della redditività</li><li>Statistiche avanzate</li><li>Performance della carrozzeria</li></ul></article>
-      <article class="module-card"><div class="module-icon">06</div><span class="status soon">Prossimamente</span><h3>Integrazioni</h3><ul><li>Assicurazioni</li><li>Periti</li><li>API</li><li>Software esterni</li></ul></article>
+      <div class="ai-input">Chiedi qualcosa a Daphne DAS… <b>→</b></div>
     </div>
   </div>
+</section>
 
-  <div class="modules-closing">
-    <strong>Non paghi funzioni che oggi non utilizzi.</strong>
-    <p>Ogni nuova funzionalità viene progettata per integrarsi perfettamente con il tuo modo di lavorare, senza costringerti a cambiare software o ricominciare da capo.</p>
+<section class="client-app section-pad" id="app-clienti">
+  <div class="client-copy reveal">
+    <span class="label">APP CLIENTI</span>
+    <h2>Il tuo centro,<br><em>sempre nelle loro mani.</em></h2>
+    <p>Un’app coordinata con il tuo brand, pensata per aumentare frequenza, fedeltà e valore di ogni cliente.</p>
+    <div class="benefits"><span>◷ Prenotazioni 24/7</span><span>✦ Pacchetti e gift card</span><span>▣ Wallet e crediti</span><span>◇ Dati protetti</span></div>
+  </div>
+  <div class="phone-wall reveal delay-1">
+    <div class="mini-phone tilt-left"><h4>PRENOTA</h4><strong>Maggio</strong><p>L M M G V S D<br>5 6 7 8 9 10 11<br>12 13 14 15 16 17 18</p><button>10:30</button></div>
+    <div class="mini-phone"><h4>WALLET</h4><div class="wallet"><small>Credito disponibile</small><strong>€120,00</strong></div><p>+ €50,00 Ricarica</p><p>- €35,00 Trattamento</p></div>
+    <div class="mini-phone tilt-right"><h4>PER TE</h4><div class="promo"><strong>-20%</strong><span>Trattamento corpo</span><small>Valido fino al 30 maggio</small></div><button>Scopri</button></div>
   </div>
 </section>
 
-<section class="fenix-section">
-  <p class="section-kicker">Powered by Fenix System</p>
-  <h2>Una tecnologia pensata per il settore automotive.</h2>
-  <p>
-    CarPractice è sviluppato da Fenix System, software house italiana dedicata alla creazione
-    di piattaforme digitali, automazioni e soluzioni AI per processi operativi complessi.
-  </p>
-</section>
-
-<section class="final-section" id="contatti">
-  <h2>Inizia oggi.</h2>
-  <p>Registrati gratuitamente. Dopo la validazione dell'account potrai usare CarPractice per 72 ore senza limitazioni.</p>
-  <div class="actions center">
-    <a class="button primary" href="https://app.carpractice.it">Inizia la prova gratuita</a>
-    <a class="button secondary" href="https://app.carpractice.it">Accedi</a>
+<section class="social-proof section-pad">
+  <div class="proof-heading reveal">
+    <span class="label">SCELTO DAI CENTRI CHE VOGLIONO CRESCERE</span>
+    <h2>Più di un gestionale.<br><em>Un partner strategico.</em></h2>
+  </div>
+  <div class="logo-strip reveal delay-1">
+    <span>BEAUTYLINE</span><span>ARMONIA</span><span>ESSENTIA</span><span>LUMIÈRE</span><span>VENERE</span><span>BIANCA</span>
+  </div>
+  <div class="proof-metrics reveal delay-2">
+    <article><strong>4.9/5</strong><span>valutazione media</span></article>
+    <article><strong>+2.500</strong><span>centri estetici</span></article>
+    <article><strong>+35%</strong><span>crescita media</span></article>
+    <article><strong>-40%</strong><span>tempo amministrativo</span></article>
   </div>
 </section>
 
-<footer class="footer">
-  <img src="logo-carpractice.png" alt="CarPractice">
-  <span>Powered by Fenix System</span>
-  <span>Privacy · Cookie · Termini · Contatti</span>
-</footer>
+<section class="results" id="risultati">
+  <span class="label">IL VALORE DI AESTRA</span>
+  <h2>Più controllo oggi.<br><em>Più crescita domani.</em></h2>
+  <div class="stats"><article><strong>1</strong><span>ecosistema unico</span></article><article><strong>24/7</strong><span>prenotazioni e assistenza digitale</span></article><article><strong>360°</strong><span>visione completa del cliente</span></article><article><strong>AI</strong><span>decisioni guidate dai dati</span></article></div>
+</section>
 
+
+
+<section class="brand-architecture">
+  <div class="brand-architecture-inner">
+    <article>
+      <span>AZIENDA</span>
+      <strong>AESTRA Technologies</strong>
+      <p>La realtà che sviluppa l’ecosistema, la tecnologia e la visione.</p>
+    </article>
+    <i>→</i>
+    <article>
+      <span>PIATTAFORMA</span>
+      <strong>AESTRA</strong>
+      <p>Il sistema operativo intelligente per i centri estetici.</p>
+    </article>
+    <i>→</i>
+    <article>
+      <span>ASSISTENTE DIGITALE</span>
+      <strong>Daphne DAS</strong>
+      <p>Digital AESTRA Specialist, powered by AESTRA Technologies.</p>
+    </article>
+  </div>
+</section>
+
+<section class="signature-strip">
+  <div>
+    <img src="assets/icons/daphne-das.svg" alt="Daphne DAS">
+    <p>Più di un assistente. La presenza intelligente che accompagna ogni decisione del centro.</p>
+  </div>
+  <a class="button" href="pages/demo.html">Conosci Daphne DAS →</a>
+</section>
+
+<section class="cta" id="demo">
+  <div class="cta-glow"></div>
+  <img src="assets/icons/logo.svg" alt="AESTRA">
+  <h2>Il centro estetico del futuro<br>può iniziare oggi.</h2>
+  <p>Scopri come AESTRA può adattarsi al tuo centro con una demo personalizzata e una lettura concreta del tuo modo di lavorare.</p>
+  <a class="button light-button" href="pages/demo.html">Prenota la tua demo →</a>
+  <small>Demo gratuita · Nessun impegno · Supporto dedicato</small>
+</section>
 </main>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const intro = document.getElementById('siteIntro');
-  window.setTimeout(() => {
-    if (intro) {
-      intro.classList.add('is-leaving');
-      window.setTimeout(() => intro.remove(), 700);
-    }
-  }, 4200);
-
-  const model = document.getElementById('heroModel');
-  if (model) {
-    const fallbackPaths = [
-      'models/Fiat_Grande_Panda_2025.glb',
-      './models/Fiat_Grande_Panda_2025.glb'
-    ];
-    let fallbackIndex = 0;
-
-    model.addEventListener('error', () => {
-      if (fallbackIndex < fallbackPaths.length) {
-        model.src = fallbackPaths[fallbackIndex++];
-      }
-    });
-
-    // Modifiche applicate esclusivamente su smartphone/tablet.
-    if (window.matchMedia('(max-width: 900px)').matches) {
-      model.removeAttribute('auto-rotate');
-      model.setAttribute('camera-orbit', '32deg 72deg 7.1m');
-      model.setAttribute('field-of-view', '31deg');
-      model.setAttribute('min-camera-orbit', 'auto auto 6.5m');
-      model.setAttribute('max-camera-orbit', 'auto auto 8.2m');
-      model.setAttribute('shadow-intensity', '0.28');
-      model.setAttribute('minimum-render-scale', '0.5');
-      model.setAttribute('interaction-prompt', 'none');
-
-      // Conserva la posizione scelta dall'utente.
-      const stopAutomaticRotation = () => {
-        model.removeAttribute('auto-rotate');
-      };
-      model.addEventListener('pointerdown', stopAutomaticRotation, { once: true });
-      model.addEventListener('touchstart', stopAutomaticRotation, {
-        once: true,
-        passive: true
-      });
-    }
-  }
-});
-</script>
-
+<footer><img src="assets/icons/logo.svg" alt="AESTRA"><p>AESTRA è il sistema operativo intelligente per i centri estetici, sviluppato da AESTRA Technologies.</p><div><a href="#">Privacy</a><a href="#">Termini</a><a href="https://app.aestra.it">Accedi</a></div></footer>
+<script src="js/main.js"></script>
 </body>
 </html>
