@@ -1,0 +1,16 @@
+CARPRACTICE — HEADER V4 / HERO RAVVICINATA
+
+Questa versione mantiene:
+- dimensioni originali delle icone;
+- altezza e proporzioni del menu nero approvato;
+- logo e pulsanti invariati.
+
+Modifica effettuata:
+- eliminato lo spazio nero eccessivo tra il menu e la Hero;
+- la scritta Digital Repair Platform inizia subito sotto l’header;
+- altezza Hero ricalcolata sottraendo l’altezza del menu;
+- correzione applicata anche alla versione mobile.
+
+Carica tutto il contenuto su GitHub.
+Commit suggerito:
+CarPractice - Header V4 hero ravvicinata
