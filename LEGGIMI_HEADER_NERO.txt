@@ -1,0 +1,5 @@
+HEADER NERO COMPATTO
+
+Carica tutto il contenuto su GitHub.
+Il nuovo header è applicato alle pagine pubbliche. Workspace Demo e AI Center mantengono il proprio header applicativo.
+Commit: CarPractice - header nero compatto

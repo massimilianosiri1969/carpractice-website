@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{const b=document.getElementById("cpMenuToggle"),n=document.getElementById("cpNav");if(!b||!n)return;b.addEventListener("click",()=>n.classList.toggle("open"));n.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>n.classList.remove("open")));});
