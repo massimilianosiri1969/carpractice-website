@@ -1,0 +1,15 @@
+CARPRACTICE — HEADER V3
+
+Miglioramenti:
+- altezza header ridotta da 112px a 92px;
+- logo leggermente più grande;
+- payoff Digital Repair Platform molto più vicino al logo;
+- spazio icona/testo ridotto;
+- voci perfettamente centrate;
+- pulsanti Accedi e Prova gratis riallineati;
+- menu mobile mantenuto.
+
+Carica tutto il contenuto su GitHub.
+
+Commit suggerito:
+CarPractice - Header V3 compatto
