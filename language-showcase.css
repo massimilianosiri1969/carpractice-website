@@ -1,0 +1,27 @@
+.language-showcase{max-width:1440px;margin:0 auto;padding:100px 5vw 115px;display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:clamp(35px,6vw,110px);align-items:center}
+.language-copy h2{font-size:clamp(44px,5.5vw,78px);line-height:1.03;letter-spacing:-.055em;margin:17px 0 24px;max-width:640px}
+.language-copy>p:not(.section-kicker){color:#b8b0a7;font-size:19px;line-height:1.6;max-width:580px}
+.language-picker{display:flex;flex-wrap:wrap;gap:9px;margin-top:32px;max-width:540px}
+.language-picker button{border:1px solid #41352e;border-radius:100px;background:#121315;color:#d4cbc1;padding:10px 15px;font-family:inherit;font-size:14px;font-weight:600;line-height:1.3;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.language-picker button:hover,.language-picker button:focus-visible{border-color:#ff8a31;color:#fff;outline:none;transform:translateY(-2px)}
+.language-picker button[aria-pressed="true"]{background:#ff831c;color:#190e06;border-color:#ff831c}
+.language-copy .language-note{font-size:14px!important;color:#9e958d!important;margin-top:25px}
+.language-device{position:relative;isolation:isolate;overflow:hidden;border:1px solid #57402e;border-radius:34px;background:radial-gradient(circle at 50% -20%,#392416,#161412 48%,#0d0e10 100%);box-shadow:0 32px 85px rgba(0,0,0,.42),0 0 70px rgba(255,117,25,.08);padding:26px;max-width:690px;width:100%;justify-self:end}
+.language-device:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 20%,rgba(255,255,255,.03) 45%,transparent 60%);pointer-events:none}
+.language-device-top{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #3b3029;padding:0 3px 22px}
+.language-device-brand{font-size:22px;font-weight:850;letter-spacing:-.055em;color:#f9f2eb}.language-device-brand span{color:#ff831c}
+.language-device-locale{border:1px solid #694126;border-radius:100px;color:#ffae70;padding:8px 12px;font-size:13px;white-space:nowrap}
+.language-device-body{padding:22px 0 7px;transition:opacity .24s ease,transform .24s ease}.language-device-body.changing{opacity:0;transform:translateY(8px)}
+.language-device-body>small{color:#e6a472;letter-spacing:.18em;font-size:12px;font-weight:800}
+.language-camera{min-height:202px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px solid #a05621;border-radius:23px;background:radial-gradient(circle at 50% 0%,rgba(255,131,28,.24),transparent 62%),#151210;margin:17px 0 13px;padding:22px}
+.language-camera-icon{font-size:37px;color:#ff9140;line-height:1;margin-bottom:15px}
+.language-camera strong{font-size:clamp(19px,2vw,26px);line-height:1.15;color:#fff7f0}
+.language-camera>span:last-child{color:#c1b5aa;font-size:14px;line-height:1.4;margin-top:9px;max-width:450px}
+.language-row{display:flex;align-items:center;gap:15px;border:1px solid #39302b;border-radius:17px;padding:17px 19px;background:#151413}
+.language-row>span{color:#ff8a31;font-size:27px}.language-row strong{display:block;color:#fff2e7;font-size:16px}.language-row small{display:block;color:#a99e94;font-size:13px;margin-top:4px}
+.language-tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-top:13px}.language-tiles span{padding:17px 14px;border:1px solid #39302b;border-radius:15px;background:#151413;color:#e8ded4;font-size:14px;font-weight:650}
+.language-progress{height:3px;background:#3b2a20;border-radius:9px;overflow:hidden;margin:21px 2px 0}.language-progress span{display:block;height:100%;width:0;background:#ff831c}
+.language-showcase[data-playing="true"] .language-progress span{animation:language-countdown 3.8s linear forwards}@keyframes language-countdown{to{width:100%}}
+@media(max-width:900px){.language-showcase{grid-template-columns:1fr;padding-top:65px;padding-bottom:75px}.language-device{justify-self:center;max-width:650px}}
+@media(max-width:520px){.language-showcase{padding-left:20px;padding-right:20px}.language-device{padding:16px;border-radius:23px}.language-device-top{padding-bottom:16px}.language-device-brand{font-size:19px}.language-device-locale{font-size:12px}.language-camera{min-height:185px}.language-tiles span{padding:14px 10px}}
+@media(prefers-reduced-motion:reduce){.language-device-body,.language-picker button{transition:none}.language-showcase[data-playing="true"] .language-progress span{animation:none}}
