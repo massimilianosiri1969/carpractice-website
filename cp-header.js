@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded",()=>{
  if(n){
   const here=(location.pathname.split("/").pop()||"index.html"); const hash=location.hash;
   const items=[
-   ["/index.html","Home","M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"],
    ["/scopri-carpractice.html","Scopri<br>CarPractice","M3 14h18M5 14l1-5h12l1 5M7 14v3m10-3v3M8 9l2 3"],
    ["/perche-carpractice.html","Perché<br>CarPractice","M12 2l3 3 4 .5.5 4 2.5 2.5-2.5 2.5-.5 4-4 .5-3 3-3-3-4-.5-.5-4L2 12l2.5-2.5.5-4L9 5l3-3z"],
    ["/ecosistema-carpractice.html","Ecosistema","M4 12h16M12 4v16M6 6l12 12M18 6L6 18"],
@@ -13,6 +12,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   ];
   n.innerHTML=items.map(([href,label,path])=>`<a class="cp-nav-item ${(href.includes("#") ? ("/"+here===href.split("#")[0] && hash===href.slice(href.indexOf("#"))) : ("/"+here===href))?"active":""}" href="${href}"><svg viewBox="0 0 24 24"><path d="${path}"/></svg><span>${label}</span></a>`).join("");
  }
+ const topButton=document.createElement("button");topButton.className="cp-back-to-top";topButton.type="button";topButton.setAttribute("aria-label","Torna in cima alla pagina");topButton.title="Torna in cima";topButton.textContent="↑";document.body.appendChild(topButton);const updateTop=()=>topButton.classList.toggle("visible",window.scrollY>600);window.addEventListener("scroll",updateTop,{passive:true});updateTop();topButton.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
  document.querySelectorAll(".cp-login").forEach(a=>a.href="https://app.carpractice.it/accesso");
  document.querySelectorAll(".cp-trial").forEach(a=>a.href="/prova.html");
  if(b&&n)b.addEventListener("click",()=>n.classList.toggle("open"));
