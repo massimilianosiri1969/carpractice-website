@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   n.innerHTML=items.map(([href,label,path])=>`<a class="cp-nav-item ${(href.includes("#") ? ("/"+here===href.split("#")[0] && hash===href.slice(href.indexOf("#"))) : ("/"+here===href))?"active":""}" href="${href}"><svg viewBox="0 0 24 24"><path d="${path}"/></svg><span>${label}</span></a>`).join("");
  }
  const topButton=document.createElement("button");topButton.className="cp-back-to-top";topButton.type="button";topButton.setAttribute("aria-label","Torna in cima alla pagina");topButton.title="Torna in cima";topButton.textContent="↑";document.body.appendChild(topButton);const updateTop=()=>topButton.classList.toggle("visible",window.scrollY>600);window.addEventListener("scroll",updateTop,{passive:true});updateTop();topButton.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
- document.querySelectorAll(".cp-login:not(.cp-home)").forEach(a=>a.href="https://app.carpractice.it/accesso");
+ document.querySelectorAll(".cp-login:not(.cp-home)").forEach(a=>a.href="https://app.carpractice.it/login?from=website");
  document.querySelectorAll(".cp-trial").forEach(a=>a.href="/prova.html");
  if(b&&n)b.addEventListener("click",()=>n.classList.toggle("open"));
  n?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>n.classList.remove("open")));
