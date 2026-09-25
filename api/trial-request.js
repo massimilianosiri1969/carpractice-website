@@ -9,5 +9,5 @@ export default async function handler(req,res){
     const r=await fetch(target,{method:"POST",headers:{"Content-Type":"application/json","Origin":"https://carpractice.it"},body:JSON.stringify(body)});
     const text=await r.text();let data;try{data=JSON.parse(text)}catch{data={error:text||"Servizio non disponibile"}}
     return res.status(r.status).json(data);
-  }catch(e){return res.status(502).json({error:"Collegamento a SM Control non disponibile"})}
+  }catch(e){console.error('trial request forwarding failed', e);return res.status(502).json({error:"Non siamo riusciti a inviare la richiesta. Riprova tra poco."})}
 }
