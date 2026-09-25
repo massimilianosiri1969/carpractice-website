@@ -43,7 +43,7 @@
     root.dataset.playing = 'true';
     timer = setInterval(() => setLanguage((current + 1) % buttons.length), 3800);
   };
-  buttons.forEach((button, index) => button.addEventListener('click', () => { stop(); setLanguage(index); start(); }));
+  buttons.forEach((button, index) => button.addEventListener('click', () => { stop(); setLanguage(index); }));
   root.addEventListener('mouseenter', stop);
   root.addEventListener('mouseleave', start);
   root.addEventListener('focusin', stop);
