@@ -61,7 +61,7 @@
   const annualHours = document.getElementById("annualHours");
 
   const formatHours = (value) => {
-    return new Intl.NumberFormat("it-IT", {
+    return new Intl.NumberFormat(window.CPi18n?.locale || "it-IT", {
       minimumFractionDigits: value < 10 ? 1 : 0,
       maximumFractionDigits: 1
     }).format(value);
@@ -88,5 +88,6 @@
     input?.addEventListener("input", updateEstimator);
   });
 
+  document.addEventListener("cp:languagechange",updateEstimator);
   updateEstimator();
 })();
