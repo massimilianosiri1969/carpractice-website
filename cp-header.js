@@ -29,6 +29,11 @@ document.addEventListener("DOMContentLoaded",()=>{
  const topButton=document.createElement("button");topButton.className="cp-back-to-top";topButton.type="button";topButton.setAttribute("aria-label","Torna in cima alla pagina");topButton.title="Torna in cima";topButton.textContent="↑";document.body.appendChild(topButton);const updateTop=()=>topButton.classList.toggle("visible",window.scrollY>600);window.addEventListener("scroll",updateTop,{passive:true});updateTop();topButton.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
  document.querySelectorAll(".cp-login:not(.cp-home)").forEach(a=>a.href="https://app.carpractice.it/login?from=website");
  document.querySelectorAll(".cp-trial").forEach(a=>a.href="/prova.html");
- if(b&&n)b.addEventListener("click",()=>{const open=n.classList.toggle("open");b.setAttribute("aria-expanded",String(open));b.setAttribute("aria-label",open?"Chiudi menu":"Apri menu")});
+ if(b&&n){
+  b.setAttribute("aria-controls",n.id);
+  b.setAttribute("aria-expanded","false");
+  b.addEventListener("click",()=>{const open=n.classList.toggle("open");b.setAttribute("aria-expanded",String(open));b.setAttribute("aria-label",open?"Chiudi menu":"Apri menu")});
+  document.addEventListener("keydown",event=>{if(event.key==="Escape"&&n.classList.contains("open")){n.classList.remove("open");b.setAttribute("aria-expanded","false");b.setAttribute("aria-label","Apri menu");b.focus()}});
+ }
  n?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{n.classList.remove("open");b?.setAttribute("aria-expanded","false");b?.setAttribute("aria-label","Apri menu")}));
 });
